@@ -23,15 +23,16 @@ data/.csv is from those authors.
 
 To generate the output:
 
-- download DrRacket 6.0 (http://download.racket-lang.org/)
+- install DrRacket 6.0 (http://download.racket-lang.org/)
 
 Then either:
 
-- load "gen-output.rkt" in DrRacket
+- load emit.rkt in DrRacket
 - click "Run"
 
-or, assuming your path refers to the install directory:
+or (assuming your path includes the Racket binary):
 
-- run this command: racket gen-output.rkt
+- run this command: racket emit.rkt
 
-This should produce an output file, index.html, that generates the appropriate output.
+This should generate output/index.html.
+
