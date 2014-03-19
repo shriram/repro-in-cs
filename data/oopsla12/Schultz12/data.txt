@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student4
+ARTICLE:ANALYSIS_TIME[minutes] 999
+ARTICLE:COMMENT[string] student5: the links is downloading 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] none 
+ARTICLE:NSF-SUPPORT[none or number] none
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] dl.acm.org/citation.cfm?id=2384743
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] ups@mmmi.sdu.dk 
+BIBTEX:LABEL[string] Schultz12
+AUTHOR:NAMES[list of first_last] Ulrik_Pagh_Schultz
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/oopsla/Schultz12
+BUILD:ANALYSIS_BY[name] student1
+BUILD:ANALYSIS_TIME[minutes] 25
+BUILD:COMMENT[string] Failed to build. Perl script for installation returned an error. Details in build_notes
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded
+BUILD:ERROR_COMMENT[none,not_needed,comment] RUNTIME_ERROR
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] RoCE 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] none 
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] http://www.systemfabricworks.com/downloads/roce
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url]  
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown 
+VERIFY:ANALYSIS_BY[name] student3
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] none
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment]

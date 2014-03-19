@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student2
+ARTICLE:ANALYSIS_TIME[minutes] 10
+ARTICLE:COMMENT[string] This is a study where they analyzed bugs by hand then created rules for checking other code. https://www.cs.wisc.edu/users/shanlu/performance-bugs 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] Shan Lu is supported by a Claire Boothe Luce faculty fellowship, and her research group is supported by NSF under grants CCF-1018180 and CCF-1054616.
+ARTICLE:NSF-SUPPORT[none or number] CCF-1018180,CCF-1054616.,
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://doi.acm.org/10.1145/2254064.2254075
+ARTICLE:STATUS[not_finished,finished] finished
+AUTHOR:EMAIL_REAL[list of strings] aliang@cs.wisc.edu songlh@cs.wisc.edu xiaoming@cs.wisc.edu shanlu@cs.wisc.edu joel.scherpelz@gmail.com 
+BIBTEX:LABEL[string] JinSSSL12
+AUTHOR:NAMES[list of first_last] Guoliang_Jin Linhai_Song Xiaoming_Shi Joel_Scherpelz Shan_Lu
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/pldi/JinSSSL12
+BUILD:ANALYSIS_BY[name] student4
+BUILD:ANALYSIS_TIME[minutes] 10
+BUILD:COMMENT[string] Script sent rhough email is missing required header perfvo.h
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded
+BUILD:ERROR_COMMENT[none,not_needed,comment] DISTRIBUTION_IS_MISSING_FILES
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] needed request_1 response_1 sent_thank_you
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] none
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] none
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] unknown
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown
+VERIFY:ANALYSIS_BY[name] student1
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] decided authors have implementation of static checkers in addition to the study performed, email status set to needed, added article link
+EMAIL1:CODE_AVAILABLE[yes,no,no_response] yes
+EMAIL1:REMARK[comment]

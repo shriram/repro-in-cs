@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student3
+ARTICLE:ANALYSIS_TIME[minutes] 999
+ARTICLE:COMMENT[string] student5: unsure about the tool as it downloads the source code | student3: added article link, build status to needed, email status to not_needed, does not have email 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] This work is supported in part by the European Research Council, grant #203099 
+ARTICLE:NSF-SUPPORT[none or number] none
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://dl.acm.org/citation.cfm?id=2384735&dl=ACM
+ARTICLE:STATUS[not_finished,finished] finished
+AUTHOR:EMAIL_REAL[list of strings] pgiarrusso@informatik.uni-marburg.de
+BIBTEX:LABEL[string] Giarrusso12
+AUTHOR:NAMES[list of first_last] Paolo_G._Giarrusso
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/oopsla/Giarrusso12
+BUILD:ANALYSIS_BY[name] student1
+BUILD:ANALYSIS_TIME[minutes] 35
+BUILD:COMMENT[string] Can be given BOD. SBT installs, compiles and builds. Not sure how to set appropriate directory present in LinqonSteroids with sbt.
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded compiles runs 
+BUILD:ERROR_COMMENT[none,not_needed,comment] NONE
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] SQUOPT 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url]  http://www.informatik.uni-marburg.de/~pgiarrusso/SQuOpt
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] none 
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url]  
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown 
+VERIFY:ANALYSIS_BY[name] student1
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] grant to yes and added information, verified link works
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment]

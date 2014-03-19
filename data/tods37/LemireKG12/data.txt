@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student1
+ARTICLE:ANALYSIS_TIME[minutes] 5
+ARTICLE:COMMENT[string] 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] This work is supported by Natural Sciences and Engineering Research Council of Canada grants 261437 and 155967 and a Quebec/NB Cooperation grant.
+ARTICLE:NSF-SUPPORT[none or number] none
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://doi.acm.org/10.1145/2338626.2338633
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] lemire@gmail.com 
+BIBTEX:LABEL[string] LemireKG12
+AUTHOR:NAMES[list of first_last] Daniel_Lemire Owen_Kaser Eduardo_Gutarra 
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/tods/LemireKG12
+BUILD:ANALYSIS_BY[name] student1
+BUILD:ANALYSIS_TIME[minutes] 20
+BUILD:COMMENT[string] Not sure how to test the implementation. Can be given the benefit of doubt. 
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded compiles runs 
+BUILD:ERROR_COMMENT[none,not_needed,comment] NONE
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed 
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] VORTEX and MULTIPLE LISTS
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] http://code.google.com/p/rowreorderingjavalibrary/
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] none
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url]  
+TOOL:DATA_LINK[unknown,none,url,broken and url] none
+VERIFY:ANALYSIS_BY[name] student3
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] changed tool name to Vortex and Multiple Lists. Put none to Google
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment]

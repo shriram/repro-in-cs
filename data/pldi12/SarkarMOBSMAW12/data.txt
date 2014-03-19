@@ -1,0 +1,33 @@
+ARTICLE:ANALYSIS_BY[name] student2
+ARTICLE:ANALYSIS_TIME[minutes] 8
+ARTICLE:COMMENT[string] 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] part
+ARTICLE:GRANT_SUPPORT[none or string] We acknowledge funding from EPSRC grants EP/F036345, EP/H005633, EP/H027351, and EP/G026254/1, and from ANR project WMC (ANR-11-JS02-011)
+ARTICLE:NSF-SUPPORT[none or number] none
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://dl.acm.org/results.cfm?h=1&cfid=332772085&cftoken=30429386
+ARTICLE:STATUS[not_finished,finished] finished
+AUTHOR:EMAIL_ORIG[string] {first.last}@cl.cam.ac.uk luc.maranget@inria.fr jade.alglave@comlab.ox.ac.uk striker@us.ibm.com
+AUTHOR:EMAIL_PARSED[list of strings] susmit.sarkar@cl.cam.ac.uk  luc.maranget@inria.fr  jade.alglave@comlab.ox.ac.uk  striker@us.ibm.com
+AUTHOR:NAMES[list of first_last] Susmit_Sarkar Kayvan_Memarian Scott_Owens Mark_Batty Peter_Sewell Luc_Maranget Jade_Alglave Derek_Williams
+AUTHOR:EMAIL_REAL[list of strings] first.last@cl.cam.ac.uk  luc.maranget@inria.fr  jade.alglave@comlab.ox.ac.uk  striker@us.ibm.com
+BIBTEX:LABEL[string] SarkarMOBSMAW12
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/pldi/SarkarMOBSMAW12
+BUILD:ANALYSIS_BY[name] student3
+BUILD:ANALYSIS_TIME[minutes] 20
+BUILD:COMMENT[string] Needs lem to read the codes. Downloaded lem.
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded compiles
+BUILD:ERROR_COMMENT[none,not_needed,comment] RUNTIME_ERROR
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] Synchronising C/C++ and POWER
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url]  http://www.cl.cam.ac.uk/~pes20/cppppc-supplemental/
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] none
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] 
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown
+VERIFY:ANALYSIS_BY[name] student3 
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] needed article link
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment]

@@ -1,0 +1,50 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+make returned an error. 
+
+[  8%] Generating deps/ocamlyices/ocamlyices.cmxa, deps/ocamlyices/yices.cmi
+yices_stubs.c: In function ‘camlidl_yices_yices_enable_log_file’:
+yices_stubs.c:235:3: warning: passing argument 1 of ‘yices_enable_log_file’ discards ‘const’ qualifier from pointer target type [enabled by default]
+/usr/local/include/yices_c.h:127:6: note: expected ‘char *’ but argument is of type ‘const char *’
+yices_stubs.c: In function ‘camlidl_yices_yices_mk_type’:
+yices_stubs.c:811:3: warning: passing argument 2 of ‘yices_mk_type’ discards ‘const’ qualifier from pointer target type [enabled by default]
+/usr/local/include/yices_c.h:684:12: note: expected ‘char *’ but argument is of type ‘const char *’
+yices_stubs.c: In function ‘camlidl_yices_yices_mk_bool_var’:
+yices_stubs.c:948:3: warning: passing argument 2 of ‘yices_mk_bool_var’ discards ‘const’ qualifier from pointer target type [enabled by default]
+/usr/local/include/yices_c.h:539:12: note: expected ‘char *’ but argument is of type ‘const char *’
+yices_stubs.c: In function ‘camlidl_yices_yices_mk_bool_var_decl’:
+yices_stubs.c:1002:3: warning: passing argument 2 of ‘yices_mk_bool_var_decl’ discards ‘const’ qualifier from pointer target type [enabled by default]
+/usr/local/include/yices_c.h:561:16: note: expected ‘char *’ but argument is of type ‘const char *’
+yices_stubs.c: In function ‘camlidl_yices_yices_mk_var_decl’:
+yices_stubs.c:1287:3: warning: passing argument 2 of ‘yices_mk_var_decl’ discards ‘const’ qualifier from pointer target type [enabled by default]
+/usr/local/include/yices_c.h:712:16: note: expected ‘char *’ but argument is of type ‘const char *’
+yices_stubs.c: In function ‘camlidl_yices_yices_get_var_decl_from_name’:
+yices_stubs.c:1307:3: warning: passing argument 2 of ‘yices_get_var_decl_from_name’ discards ‘const’ qualifier from pointer target type [enabled by default]
+/usr/local/include/yices_c.h:719:16: note: expected ‘char *’ but argument is of type ‘const char *’
+yices_stubs.c: In function ‘camlidl_yices_yices_mk_num_from_string’:
+yices_stubs.c:1400:3: warning: passing argument 2 of ‘yices_mk_num_from_string’ discards ‘const’ qualifier from pointer target type [enabled by default]
+/usr/local/include/yices_c.h:743:12: note: expected ‘char *’ but argument is of type ‘const char *’
+yices_stubs.c: In function ‘camlidl_ml2c_yices_struct_unsat_core’:
+yices_stubs.c:2273:1: internal compiler error: Aborted
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.6/README.Bugs> for instructions.
+Preprocessed source stored into /tmp/ccxfOsON.out file, please attach this to your bugreport.
+make[3]: *** [yices_stubs.o] Error 1
+make[2]: *** [deps/ocamlyices/ocamlyices.cmxa] Error 2
+make[1]: *** [CMakeFiles/CSur.dir/all] Error 2
+make: *** [all] Error 2
+student1@ubuntu:~/Downloads/builds/ccs12/AizatulinG/csec-modex$ 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

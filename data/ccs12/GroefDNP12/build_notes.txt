@@ -1,0 +1,39 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+tried the regular installation. Could not proceed due to error.
+
+Needed virtual box.
+Hence did the virtual machine version. Downloads and returns an error. A lot of disk space will be required. 
+student1@ubuntu:~/Downloads/builds/ccs12/Groef$ VBoxManage import --vmname "FlowFox" flowfox.ova
+WARNING: The character device /dev/vboxdrv does not exist.
+	 Please install the virtualbox-ose-dkms package and the appropriate
+	 headers, most likely linux-headers-generic.
+
+	 You will not be able to start VMs until this problem is fixed.
+Oracle VM VirtualBox Command Line Management Interface Version 4.1.12_Ubuntu
+(C) 2005-2012 Oracle Corporation
+All rights reserved.
+
+Usage:
+
+VBoxManage import           <ovf/ova>
+                            [--dry-run|-n]
+                            [--options keepallmacs|keepnatmacs]
+                            [more options]
+                            (run with -n to have options displayed
+                             for a particular OVF)
+
+
+Syntax error: Option "--vmname" requires preceding --vsys argument.
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

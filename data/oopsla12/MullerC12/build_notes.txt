@@ -1,0 +1,31 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+Java
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Error in building the tool in spite of setting JAVA_HOME and LD_PATH environment variables. 
+
+     [exec] Exception in thread "main" java.lang.NullPointerException: No sx10Config file specified
+     [exec] 	at x10.sx10.SX10CCompilerOptions.sx10PlaceConfiguration(SX10CCompilerOptions.java:87)
+     [exec] 	at x10.sx10.SX10CScheduler.<init>(SX10CScheduler.java:38)
+     [exec] 	at x10c.ExtensionInfo.createScheduler(ExtensionInfo.java:48)
+     [exec] 	at polyglot.frontend.AbstractExtensionInfo.scheduler(AbstractExtensionInfo.java:118)
+     [exec] 	at polyglot.frontend.AbstractExtensionInfo.initCompiler(AbstractExtensionInfo.java:61)
+     [exec] 	at polyglot.frontend.Compiler.<init>(Compiler.java:77)
+     [exec] 	at polyglot.main.Main.getCompiler(Main.java:123)
+     [exec] 	at polyglot.main.Main.start(Main.java:134)
+     [exec] 	at polyglot.main.Main.start(Main.java:76)
+     [exec] 	at polyglot.main.Main.main(Main.java:185)
+
+BUILD FAILED
+/home/student1/Downloads/builds/from emails/oopsla-Muller/oopsla-impl/x10.dist/build.xml:299: The following error occurred while executing this line:
+/home/student1/Downloads/builds/from emails/oopsla-Muller/oopsla-impl/x10.runtime/build.xml:313: exec returned: 1
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

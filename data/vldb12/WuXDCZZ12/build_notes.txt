@@ -1,0 +1,16 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 64 
+1:DEPENDENCIES[list of dependencies with where to get them]
+7zip archive extractor.
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Attemped to use QMake to build, but make produced following error:
+command/../io/../datastr/graph/path.h:332:2: error: expected unqualified-id at end of input
+make: *** [main.o] Error 1
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

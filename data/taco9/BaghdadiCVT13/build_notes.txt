@@ -1,0 +1,39 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+These are the steps to install:
+        git clone git://repo.or.cz/ppcg.git
+        cd ppcg
+        git submodule init
+        git submodule update
+        ./autogen.sh
+        ./configure
+        make
+        make check
+
+build failed with internal compiler error. No particular version of gcc specified.
+
+isl_aff.c: In function 'plug_in_unit_divs':
+isl_aff.c:6013:1: internal compiler error: Aborted
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.6/README.Bugs> for instructions.
+Preprocessed source stored into /tmp/ccZTZMWm.out file, please attach this to your bugreport.
+make[3]: *** [libisl_la-isl_aff.lo] Error 1
+make[3]: Leaving directory `/home/student1/Downloads/builds/from emails/taco-Baghdadi/ppcg/isl'
+make[2]: *** [all-recursive] Error 1
+make[2]: Leaving directory `/home/student1/Downloads/builds/from emails/taco-Baghdadi/ppcg/isl'
+make[1]: *** [all] Error 2
+make[1]: Leaving directory `/home/student1/Downloads/builds/from emails/taco-Baghdadi/ppcg/isl'
+make: *** [all-recursive] Error 1
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

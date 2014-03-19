@@ -1,0 +1,24 @@
+1:BUILD_BY[name] student3 
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+Mercurial : downloaded by using $sudo apt-get install mercuial
+Ant : downloaded by using $sudo apt-get install ant
+Btrace: can be downloaded from http://kenai.com/projects/btrace
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+I installed mercurial and then I tried to use the command $hg clone http://jikesrvm.hg.sourceforge.net:8000/hgroot/jikesrvm/jikesrvm
+I got abort: error: connection timed out, I tried 3 times and got the same error
+
+Installed ant succesfully and Btrace works
+student3@ubuntu:~/documents/oopsla12/kalabera$ btrace
+Usage: btrace [-s] [-t] [-w N] [-n N] [-b N] [-a <trace>...] [-r <dbg mnt>] <dev>...
+given proper files as an input btrace will run 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

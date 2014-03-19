@@ -1,0 +1,18 @@
+1:BUILD_BY[name] student3
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Nvidia 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+CCI https://cciast.codeplex.com/ but needes TortoiseSVN 
+Roslyn https://www.microsoft.com/en-us/download/details.aspx?id=27746
+
+TortoiseSVN  http://codeplex.codeplex.com/wikipage?title=Using%20TortoiseSVN%20with%20CodePlex 
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+TortoiseSVN is a windows shell, couldn't use linux. Link to download Roslyn could not be found.
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

@@ -1,0 +1,67 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Windows7 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+Matlab
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Implementation works. 
+
+m:10 n:128
+m:10, n:128, r:12, r:12
+iter: 1, |W-QT|_F: 12.20974, beta:1.00, improve: 1.05e+03, cur rank:12, time(s): 0.254000
+iter: 2, |W-QT|_F: 6.59461, beta:1.00, improve: 8.79e+02, cur rank:12, time(s): 0.138000
+iter: 3, |W-QT|_F: 6.54231, beta:1.00, improve: 8.24e+02, cur rank:12, time(s): 0.137000
+iter: 4, |W-QT|_F: 6.75828, beta:1.00, improve: 8.05e+02, cur rank:12, time(s): 0.139000
+iter: 5, |W-QT|_F: 6.91321, beta:1.00, improve: 7.88e+02, cur rank:12, time(s): 0.136000
+iter: 6, |W-QT|_F: 7.37566, beta:1.00, improve: 7.86e+02, cur rank:12, time(s): 0.138000
+iter: 7, |W-QT|_F: 7.18406, beta:1.00, improve: 7.84e+02, cur rank:12, time(s): 0.136000
+iter: 8, |W-QT|_F: 7.16261, beta:5.00, improve: 7.81e+02, cur rank:12, time(s): 0.189000
+iter: 9, |W-QT|_F: 5.12800, beta:5.00, improve: 6.52e+02, cur rank:12, time(s): 0.288000
+iter: 10, |W-QT|_F: 1.45012, beta:5.00, improve: 6.79e+02, cur rank:12, time(s): 0.220000
+iter: 11, |W-QT|_F: 1.21810, beta:5.00, improve: 6.80e+02, cur rank:12, time(s): 0.217000
+iter: 12, |W-QT|_F: 1.13455, beta:5.00, improve: 6.74e+02, cur rank:12, time(s): 2.146000
+iter: 13, |W-QT|_F: 1.19057, beta:5.00, improve: 6.70e+02, cur rank:12, time(s): 0.215000
+iter: 14, |W-QT|_F: 1.26494, beta:5.00, improve: 6.70e+02, cur rank:12, time(s): 0.216000
+iter: 15, |W-QT|_F: 1.23458, beta:5.00, improve: 6.70e+02, cur rank:12, time(s): 0.212000
+iter: 16, |W-QT|_F: 1.26975, beta:25.00, improve: 6.69e+02, cur rank:12, time(s): 0.216000
+iter: 17, |W-QT|_F: 0.77222, beta:25.00, improve: 6.43e+02, cur rank:12, time(s): 0.215000
+iter: 18, |W-QT|_F: 0.26847, beta:25.00, improve: 6.42e+02, cur rank:12, time(s): 0.215000
+iter: 19, |W-QT|_F: 0.20824, beta:25.00, improve: 6.45e+02, cur rank:12, time(s): 0.214000
+iter: 20, |W-QT|_F: 0.20062, beta:25.00, improve: 6.48e+02, cur rank:12, time(s): 0.216000
+iter: 21, |W-QT|_F: 0.20089, beta:25.00, improve: 6.51e+02, cur rank:12, time(s): 0.219000
+iter: 22, |W-QT|_F: 0.18383, beta:25.00, improve: 6.53e+02, cur rank:12, time(s): 0.217000
+iter: 23, |W-QT|_F: 0.17515, beta:25.00, improve: 6.54e+02, cur rank:12, time(s): 0.217000
+iter: 24, |W-QT|_F: 0.16784, beta:125.00, improve: 6.55e+02, cur rank:12, time(s): 0.217000
+iter: 25, |W-QT|_F: 0.09619, beta:125.00, improve: 6.53e+02, cur rank:12, time(s): 0.214000
+iter: 26, |W-QT|_F: 0.05363, beta:125.00, improve: 6.53e+02, cur rank:12, time(s): 0.216000
+iter: 27, |W-QT|_F: 0.04015, beta:125.00, improve: 6.53e+02, cur rank:12, time(s): 0.216000
+iter: 28, |W-QT|_F: 0.03929, beta:125.00, improve: 6.52e+02, cur rank:12, time(s): 0.218000
+iter: 29, |W-QT|_F: 0.03740, beta:125.00, improve: 6.52e+02, cur rank:12, time(s): 0.217000
+iter: 30, |W-QT|_F: 0.03373, beta:125.00, improve: 6.53e+02, cur rank:12, time(s): 0.215000
+iter: 31, |W-QT|_F: 0.02872, beta:125.00, improve: 6.53e+02, cur rank:12, time(s): 0.214000
+iter: 32, |W-QT|_F: 0.02631, beta:625.00, improve: 6.53e+02, cur rank:12, time(s): 0.215000
+iter: 33, |W-QT|_F: 0.01787, beta:625.00, improve: 6.54e+02, cur rank:12, time(s): 0.190000
+iter: 34, |W-QT|_F: 0.01054, beta:625.00, improve: 6.54e+02, cur rank:12, time(s): 0.183000
+gamma: 0.006641, Sen: 1.000000, W: 1280.000000, Q: 626.333800, IError:1280.000000, ExpectedError:626.333800, totaltime:9.031000
+Average Squared Error:
+Laplacian Mechanism (noise on data): 2.757002e+05
+Laplacian Mechanism (noise on results): 2.189760e+05
+Wavelet Mechanism: 4.502845e+06
+Hierarchical Mechanism: 8.388496e+06
+Low-Rank Mechanism: 1.280454e+05
+>> mex_file
+ 
+Select a compiler: 
+[1] Microsoft Visual C++ 2008 SP1 in c:\Program Files (x86)\Microsoft Visual Studio 9.0 
+ 
+[0] None 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

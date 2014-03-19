@@ -1,0 +1,16 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Windows7 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+
+Makefile returned an error, Visual Studio returned errors. Tried to debug the code but errors were still persistent.
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

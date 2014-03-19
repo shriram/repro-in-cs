@@ -1,0 +1,20 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Windows 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+  - Windows XP/Vista/7
+  - Java 5 or higher
+  - C run-time libraries (http://www.microsoft.com/downloads/details.aspx?FamilyID=9b2da534-3e03-4391-8a4d-074b9f2bc1bf)
+  
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Navigate to the installed directory.
+java -jar vericool-x.y.jar examples\file.sf
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

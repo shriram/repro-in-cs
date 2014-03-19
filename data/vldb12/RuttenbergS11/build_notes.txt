@@ -1,0 +1,20 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 64 
+1:DEPENDENCIES[list of dependencies with where to get them]
+libboost
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Tried to use QMake to generate make file for running, but the make was unnsucessful.
+Error:
+/usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crt1.o: In function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [QMake] Error 1
+
+I included QMake.pro to assist in late qmake attempts to build the file.
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

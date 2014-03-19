@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student4
+ARTICLE:ANALYSIS_TIME[minutes] 5
+ARTICLE:COMMENT[string] 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] Supported by the National Natural Science Foundation of China under Grant No. 60933004 and 61073019.
+ARTICLE:NSF-SUPPORT[none or number] none
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://www.vldb.org/pvldb/vol5/p896_hongzhiyin_vldb2012.pdf
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] bestzhi@pku.edu.cn bin.cui@pku.edu.cn leaKing@pku.edu.cn junjie.yao@pku.edu.cn chenchen@pku.edu.cn 
+BIBTEX:LABEL[string] YinCLYC12
+AUTHOR:NAMES[list of first_last] Hongzhi_Yin Bin_Cui Jing_Li Junjie_Yao Chen_Chen 
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/journals/pvldb/YinCLYC12
+BUILD:ANALYSIS_BY[name] student4
+BUILD:ANALYSIS_TIME[minutes] 5
+BUILD:COMMENT[string] not enough files given to ensure successful run.
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded 
+BUILD:ERROR_COMMENT[none,not_needed,comment] DISTRIBUTION_IS_MISSING_FILES
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] needed request_1 response_1 sent_thank_you
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] none 
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] none 
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] unknown 
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown 
+VERIFY:ANALYSIS_BY[name] student1
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] none
+EMAIL1:CODE_AVAILABLE[yes,no,no_response] yes
+EMAIL1:REMARK[comment] 

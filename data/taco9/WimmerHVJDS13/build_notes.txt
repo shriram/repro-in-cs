@@ -1,0 +1,53 @@
+1:BUILD_BY[name] student2
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Linux xyxy-VPCSE13FX 3.2.0-52-generic #78-Ubuntu SMP Fri Jul 26 16:21:44 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux 12.04
+1:DEPENDENCIES[list of dependencies with where to get them]
+Python 2.7
+Java 
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Used:
+find /usr/ -iname *jdk*
+
+to find jdk version 6 that it wants. Then looking at page 5 of the paper shows:
+mxtool/mx build
+mxtool/mx image
+mxtool/mx vm ...
+mxtool/mx inspect ...
+
+xyxy@xyxy-VPCSE13FX:~/build_repro/WimmerHVJDS13/maxine$ export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64
+xyxy@xyxy-VPCSE13FX:~/build_repro/WimmerHVJDS13/maxine$ mxtool/mx -V build
+Downloading JUNIT from ['http://repo1.maven.org/maven2/junit/junit/4.8/junit-4.8.jar']
+Traceback (most recent call last):
+  File "/home/xyxy/build_repro/WimmerHVJDS13/maxine/mxtool/mx.py", line 2582, in <module>
+    main()
+  File "/home/xyxy/build_repro/WimmerHVJDS13/maxine/mxtool/mx.py", line 2571, in main
+    retcode = c(command_args)
+  File "/home/xyxy/build_repro/WimmerHVJDS13/maxine/mxtool/mx.py", line 1256, in build
+    cp = classpath(p.name, includeSelf=True)
+  File "/home/xyxy/build_repro/WimmerHVJDS13/maxine/mxtool/mx.py", line 642, in classpath
+    result = _as_classpath(deps, resolve)
+  File "/home/xyxy/build_repro/WimmerHVJDS13/maxine/mxtool/mx.py", line 623, in _as_classpath
+    d.append_to_classpath(cp, resolve)
+  File "/home/xyxy/build_repro/WimmerHVJDS13/maxine/mxtool/mx.py", line 347, in append_to_classpath
+    path = self.get_path(resolve)
+  File "/home/xyxy/build_repro/WimmerHVJDS13/maxine/mxtool/mx.py", line 332, in get_path
+    download(path, self.urls)
+  File "/home/xyxy/build_repro/WimmerHVJDS13/maxine/mxtool/mx.py", line 1109, in download
+    subprocess.check_call([java().javac, '-d', myDir, javaSource])
+  File "/usr/lib/python2.7/subprocess.py", line 506, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python2.7/subprocess.py", line 493, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib/python2.7/subprocess.py", line 679, in __init__
+    errread, errwrite)
+  File "/usr/lib/python2.7/subprocess.py", line 1249, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory
+
+tried /usr/lib/jvm/java-1.6.0-openjdk-amd64 for java path but still no dice
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

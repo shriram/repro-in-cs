@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student4
+ARTICLE:ANALYSIS_TIME[minutes] 7
+ARTICLE:COMMENT[string] 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] Supported in part by the A*STAR Thematic Strategic Research Programme Grant (102 158 0034), and the AcRF Tier-1 Grant (M52020092) from Ministry of Education of Singapore.
+ARTICLE:NSF-SUPPORT[none or number] none
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://doi.acm.org/10.1145/2213836.2213888
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] j.cheng@acm.org shumo.chu@acm.org keyp@ihpc.a-star.edu.sg carter.cheng.w@acm.org 
+BIBTEX:LABEL[string] ChengKCC12
+AUTHOR:NAMES[list of first_last] James_Cheng Shumo_Chu Yiping_Ke Carter_Cheng 
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/sigmod/ChengKCC12
+BUILD:ANALYSIS_BY[name] student1
+BUILD:ANALYSIS_TIME[minutes] 10
+BUILD:COMMENT[string] code builds. 
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded compiles runs 
+BUILD:ERROR_COMMENT[none,not_needed,comment] NONE
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed 
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] VC-index 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] none 
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url]  https://github.com/stechu/vcindex
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url]  
+TOOL:DATA_LINK[unknown,none,url,broken and url]  
+VERIFY:ANALYSIS_BY[name] student3
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] datasets for experiments USA road network (http://www.dis.uniroma1.it/~challenge9/download.shtml), Web (http://barcelona.research.yahoo.net/webspam) and Billion Triple Challenge 2009 RDFdataset (http://vmlion25.deri.ie/)
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment]

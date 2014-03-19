@@ -1,0 +1,30 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Linux 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+GMP. MPFR and Valgrind are required dependencies
+
+Download GMP in version 5.0.1: http://ftp.gnu.org/gnu/gmp/
+Apply the patch in the main directory: patch -p1 -i gmp-5.0.1.patch
+Build and install GMP
+
+Download MPFR in version 3.0.0: http://www.mpfr.org/mpfr-3.0.0/
+Apply the patch in the main directory: patch -p1 -i mpfr-3.0.0.patch
+Copy src/valgrind_additions.c into the src folder of MPFR.
+Build and install MPFR
+
+Download Valgrind
+http://valgrind.org/downloads/current.html
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build] 
+When MPFR 3.0.0 was configured, it returned an error message: 
+configure: error: libgmp not found or uses a different ABI.
+Please read the INSTALL file -- see "In case of problem".
+
+The INSTALL file could not provide much insights into how to correct this error.
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

@@ -1,0 +1,49 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. OCaml
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+make returns an error and Ubuntu crashes on OCaml installation, even though OCaml was installed prior to downloading this build. 
+student1@ubuntu:~/Downloads/builds/ccs12/BarthePB12$ cd easycrypt/
+student1@ubuntu:~/Downloads/builds/ccs12/BarthePB12/easycrypt$ make toolchain provers
+export OPAMVERBOSE=1; bash ./scripts/ec-build-toolchain
++ rm -rf /home/student1/Downloads/builds/ccs12/BarthePB12/easycrypt/_tools
++ mkdir /home/student1/Downloads/builds/ccs12/BarthePB12/easycrypt/_tools /home/student1/Downloads/builds/ccs12/BarthePB12/easycrypt/_tools/src
++ curl -f -kL -o /home/student1/Downloads/builds/ccs12/BarthePB12/easycrypt/_tools/src/ocamlbrew https://raw.github.com/hcarty/ocamlbrew/master/ocamlbrew-install
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   970  100   970    0     0    159      0  0:00:06  0:00:06 --:--:--  1250
++ bash /home/student1/Downloads/builds/ccs12/BarthePB12/easycrypt/_tools/src/ocamlbrew
+
+## Download the latest ocamlbrew
+
+## Starting ocamlbrew
+Welcome to ocamlbrew!
+
+Working with http://caml.inria.fr/pub/distrib/ocaml-4.00/ocaml-4.00.1.tar.gz
+Software will be built and installed under /home/student1/Downloads/builds/ccs12/BarthePB12/easycrypt/_tools/ocaml-4.00.1
+Output will be written to /tmp/ocamlbrew.Zcd3nqp3fh
+You can "tail -f /tmp/ocamlbrew.Zcd3nqp3fh" in another terminal to track
+the build process.
+
+This script is about to:
+Install OCaml
+and install findlib
+
+Retrieving OCaml
+Building OCaml
+Something errored out, please check the log file for details:
+/tmp/ocamlbrew.Zcd3nqp3fh
+Exiting...
+make: *** [toolchain] Error 1
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

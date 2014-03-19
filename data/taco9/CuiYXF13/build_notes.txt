@@ -1,0 +1,40 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 32
+1:DEPENDENCIES[list of dependencies with where to get them]
+GNU Make (apt-get)
+POET C Compiler- https://github.com/mshahriarinia/POET-C-Compiler
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Building using the poet tool produces the following error:
+
+Done reading POET instructions file utils.incl
+Reading POET instructions from file ExpStmt.incl
+Done reading POET instructions file ExpStmt.incl
+Done reading POET instructions file Loops.incl
+Done reading POET instructions file normalize.pt
+Reading POET syntax from file matrix_annot.code
+Line 1 of file matrix_annot.code: syntax error, unexpected LIST : LIST
+make: *** [all] Error 1
+
+Using the following makefile:
+
+DRIVER=normalize.pt
+GRAMMAR=matrix_annot.code
+INPUT=test.c
+OUTPUT=test.out
+PCG=pcg
+DEBUG=-dp
+
+all: $(INPUT) $(GRAMMAR) $(DRIVER)
+	$(PCG) $(DEBUG) \
+	  -pinputFile=$(INPUT) \
+	  -psyntaxFile=$(GRAMMAR) \
+	  $(DRIVER)
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

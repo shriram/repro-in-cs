@@ -1,0 +1,24 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+hardware pre-requisites cannot be fulfilled on the host machine. Ubuntu crashes when I tried:
+make all
+
+MOSBENCH's "primary host" runs the benchmark applications and should
+be a large multicore machine.  For the memcached and Apache
+benchmarks, it should have at very fast connection to the load
+generators.  For the Metis benchmark, it needs to have at least 20GB
+of RAM.  At MIT, our primary host is a 2.4GHz 8x6-core AMD Opteron
+8431 with 64 GB of RAM and an Intel 82599 10Gbit Ethernet card
+(IXGBE).
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

@@ -1,0 +1,17 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Windows7 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+requires microsoft z3 theorem prover.
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+There is an online implementation with provided examples which works.
+I tried to modify the example input file and the implementation returned meaningful errors which made sense. 
+Not sure how to run the downloaded source code. 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student3
+ARTICLE:ANALYSIS_TIME[minutes] 999
+ARTICLE:COMMENT[string] student5: link is downloading the app | student3: commercial effort to none, added grant support and article link, build status to needed, email status to not_needed, article status to finished 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] supported by the National Science Foundation under Grant No. CCF-1144520 and DARPA Award N10AP2026. The fourth author is supported by the National Science Foundation under Grant No. CCF-0953754
+ARTICLE:NSF-SUPPORT[none or number] CCF-1144520, CCF-0953754
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] dl.acm.org/citation.cfm?id=2384663&dl=ACM
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] dbarowy@cs.umass.edu charlie@cs.umass.edu emery@cs.umass.edu mcgregor@cs.umass.edu 
+BIBTEX:LABEL[string] BarowyCBM12
+AUTHOR:NAMES[list of first_last] Daniel_W._Barowy Charlie_Curtsinger Emery_D._Berger Andrew_McGregor
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/oopsla/BarowyCBM12
+BUILD:ANALYSIS_BY[name] student1
+BUILD:ANALYSIS_TIME[minutes] 35
+BUILD:COMMENT[string] Failed to build pre-requisites. See build_notes
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded
+BUILD:ERROR_COMMENT[none,not_needed,comment] PREREQUISITE_FAILED_TO_BUILD
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] AutoMan 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url]  http://plasma.cs.umass.edu/emery/automan
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] none 
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url]  
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown 
+VERIFY:ANALYSIS_BY[name] student1
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] added emails, checked link
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment]

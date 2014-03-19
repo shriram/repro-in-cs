@@ -1,0 +1,37 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+  1.scons  
+  $sudo apt-get install scons
+  2. other dependencies as mentioned in the readme of the project.
+  
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+make failed and returned multiple errors. 
+
+Compiling build/Event/File.cc
+scons: *** [build/Client/Client.o] Error 1
+scons: *** [build/Core/Checksum.o] Error 1
+scons: *** [build/Client/LeaderRPC.o] Error 1
+scons: *** [build/Client/ClientImpl.o] Error 1
+In file included from build/Core/ProtoBufTest.cc:18:0:
+./Core/ProtoBuf.h:16:37: fatal error: google/protobuf/message.h: No such file or directory
+compilation terminated.
+scons: *** [build/Core/ProtoBufTest.pb.o] Error 1
+scons: *** [build/Core/ProtoBuf.o] Error 1
+scons: *** [build/Client/LeaderRPCTest.o] Error 1
+scons: *** [build/Client/ClientTest.o] Error 1
+scons: *** [build/Client/LeaderRPCMock.o] Error 1
+scons: *** [build/Client/MockClientImplTest.o] Error 1
+scons: *** [build/Core/ProtoBufTest.o] Error 1
+scons: building terminated because of errors.
+make: *** [logcabin] Error 2
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

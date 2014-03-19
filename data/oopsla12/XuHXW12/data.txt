@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student4
+ARTICLE:ANALYSIS_TIME[minutes] 999
+ARTICLE:COMMENT[string] student5: no downloads  | student4: Corrected student5's wrong link. Found a download link. 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] supported by NSFC under grant Nos61003001, 61170006 and 61033010. Specialized Research Fund for the Doctoral Program of Higher Education No. 20100071120032
+ARTICLE:NSF-SUPPORT[none or number] Nos61003001,,61170006,61033010.,20100071120032,
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] dl.acm.org/citation.cfm?id=2384731
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] 10210240041@fudan.edu.cn shhuang@fudan.edu.cn shawyh@fudan.edu.cn weiwang1@fudan.edu.cn 
+BIBTEX:LABEL[string] XuHXW12
+AUTHOR:NAMES[list of first_last] Xiaomin_Xu Sheng_Huang Yanghua_Xiao Wei_Wang
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/oopsla/XuHXW12
+BUILD:ANALYSIS_BY[name] student4
+BUILD:ANALYSIS_TIME[minutes] 10
+BUILD:COMMENT[string] jar file given by website runs and works on sample file.
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded compiles runs
+BUILD:ERROR_COMMENT[none,not_needed,comment] NONE
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] SCuV 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] none 
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] http://gdm.fudan.edu.cn/GDMWiki/Wiki.jsp?page=ScuV
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] unknown 
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown 
+VERIFY:ANALYSIS_BY[name] student3
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] added grant supported
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment]

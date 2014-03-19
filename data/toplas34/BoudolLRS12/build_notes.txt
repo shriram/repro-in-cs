@@ -1,0 +1,19 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. Bigloo compiler
+2. Java
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Unable to download the Bigloo compiler for Ubuntu. This is needed to run the implementation.
+Altenatively, there is a windows distribution available which can be tried. 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

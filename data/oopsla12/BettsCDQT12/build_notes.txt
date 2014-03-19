@@ -1,0 +1,50 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Instructions to build the code (on Linux).
+
+$ cd ${INSTALL_ROOT}
+$ export MONO_VERSION=3.0.7
+$ wget http://download.mono-project.com/sources/mono/mono-${MONO_VERSION}.tar.bz2
+$ tar jxf mono-${MONO_VERSION}.tar.bz2
+$ cd ${INSTALL_ROOT}/mono-${MONO_VERSION}
+$ ./configure --prefix=${INSTALL_ROOT}/local --with-large-heap=yes --enable-nls=no
+$ make
+$ make install
+
+
+make command returns error and hence could not proceed.
+
+make  all-recursive
+make[1]: Entering directory `/home/student1/Downloads/builds for oopsla12/BettsCDQT12/GPUVerify/mono-3.0.7'
+Making all in po
+make[2]: Entering directory `/home/student1/Downloads/builds for oopsla12/BettsCDQT12/GPUVerify/mono-3.0.7/po'
+Making all in mcs
+make[3]: Entering directory `/home/student1/Downloads/builds for oopsla12/BettsCDQT12/GPUVerify/mono-3.0.7/po/mcs'
+make[3]: Leaving directory `/home/student1/Downloads/builds for oopsla12/BettsCDQT12/GPUVerify/mono-3.0.7/po/mcs'
+make[3]: Entering directory `/home/student1/Downloads/builds for oopsla12/BettsCDQT12/GPUVerify/mono-3.0.7/po'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/home/student1/Downloads/builds for oopsla12/BettsCDQT12/GPUVerify/mono-3.0.7/po'
+make[2]: Leaving directory `/home/student1/Downloads/builds for oopsla12/BettsCDQT12/GPUVerify/mono-3.0.7/po'
+Making all in libgc
+make[2]: Entering directory `/home/student1/Downloads/builds for oopsla12/BettsCDQT12/GPUVerify/mono-3.0.7/libgc'
+Making all in m4
+make[3]: Entering directory `/home/student1/Downloads/builds for oopsla12/BettsCDQT12/GPUVerify/mono-3.0.7/libgc/m4'
+make[3]: *** No rule to make target `for'.  Stop.
+make[3]: Leaving directory `/home/student1/Downloads/builds for oopsla12/BettsCDQT12/GPUVerify/mono-3.0.7/libgc/m4'
+make[2]: *** [all-recursive] Error 1
+make[2]: Leaving directory `/home/student1/Downloads/builds for oopsla12/BettsCDQT12/GPUVerify/mono-3.0.7/libgc'
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory `/home/student1/Downloads/builds for oopsla12/BettsCDQT12/GPUVerify/mono-3.0.7'
+make: *** [all] Error 2
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

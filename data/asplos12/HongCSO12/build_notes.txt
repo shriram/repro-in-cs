@@ -1,0 +1,23 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Implementation runs. Follow the procedure: 
+cd $(top)/apps
+cat Programs.mk  
+make gen
+%%%% Source codes are generated in the following location.
+%%%% Check if source codes are successfully generated.
+cd $(top)/apps/output_cpp/generated/ 
+
+Output files present as indicated. 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

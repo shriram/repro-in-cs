@@ -1,0 +1,30 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+tried the following:
+
+$./configure
+$make 
+
+make returned an internal compiler error. Could not proceed beyond. 
+make[1]: Entering directory `/home/student1/Downloads/builds/taco9/DolanMG13/llvm-swapstack/lib/Support'
+llvm[1]: Compiling APFloat.cpp for Release+Asserts build
+APFloat.cpp: In function ‘char* writeUnsignedDecimal(char*, unsigned int)’:
+APFloat.cpp:3616:1: internal compiler error: Aborted
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.6/README.Bugs> for instructions.
+Preprocessed source stored into /tmp/cctspiNR.out file, please attach this to your bugreport.
+make[1]: *** [/home/student1/Downloads/builds/taco9/DolanMG13/llvm-swapstack/lib/Support/Release+Asserts/APFloat.o] Error 1
+make[1]: Leaving directory `/home/student1/Downloads/builds/taco9/DolanMG13/llvm-swapstack/lib/Support'
+make: *** [all] Error 1
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

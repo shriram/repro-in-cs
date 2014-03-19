@@ -1,0 +1,35 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Build sbt
+
+- go to the sbt/bin directory. 
+
+Type the command -
+
+java -Xms512M -Xmx2048M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=384M -jar sbt-launch.jar
+
+build with -Xmx2048m as per specifications of LinqonSteroids
+
+sbt will download all necessary files including the Scala compiler.
+
+then the SBT command prompt will appear.
+Enter the following commands:
+package
+compile
+test:compile
+
+This will compile and package the library as a JAR file under the target folder.
+SBT installs, compiles and builds. Not sure how to test code present in LinqonSteroids. 
+Can be given BOD as it is a matter of setting proper directory I think. 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

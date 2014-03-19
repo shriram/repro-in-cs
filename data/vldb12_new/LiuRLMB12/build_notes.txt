@@ -1,0 +1,44 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Error while building gecode
+
+student1@ubuntu:~/Downloads/gecode-3.7.1$ make
+make[1]: Entering directory `/home/student1/Downloads/gecode-3.7.1'
+make[1]: `gecode/kernel/var-type.hpp' is up to date.
+make[1]: `gecode/kernel/var-imp.hpp' is up to date.
+make[1]: `libgecodesupport.so.30.0' is up to date.
+g++ -I. -ffast-math -fno-strict-aliasing -O3 -fvisibility=hidden -ggdb -pipe -Wall -Wextra -fPIC -pthread -DNDEBUG    \
+	-c -o gecode/kernel/archive.o  gecode/kernel/archive.cpp
+gecode/kernel/archive.cpp: In member function ‘T* Gecode::Heap::alloc(long unsigned int) [with T = unsigned int]’:
+gecode/kernel/archive.cpp:68:1: internal compiler error: Aborted
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.6/README.Bugs> for instructions.
+Preprocessed source stored into /tmp/ccHcAvpF.out file, please attach this to your bugreport.
+make[1]: *** [gecode/kernel/archive.o] Error 1
+make[1]: Leaving directory `/home/student1/Downloads/gecode-3.7.1'
+make: *** [compilelib] Error 2
+student1@ubuntu:~/Downloads/gecode-3.7.1$ 
+
+and hence, build failed for Cologne
+
+Preprocessed source stored into /tmp/ccMpIjF8.out file, please attach this to your bugreport.
+[390/726] cxx: src/core/config.cc -> build/debug/src/core/config_1.o
+[391/726] cxx: src/core/callback.cc -> build/debug/src/core/callback_1.o
+Waf: Leaving directory `/home/student1/Downloads/builds/vldb12_new/LiuRL/cologne_v0.1/build'
+Build failed
+ -> task failed (err #1): 
+	{task: cxx random-variable.cc -> random-variable_1.o}
+student1@ubuntu:~/Downloads/builds/vldb12_new/LiuRL/cologne_v0.1$ 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

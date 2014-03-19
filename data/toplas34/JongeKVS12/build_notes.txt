@@ -1,0 +1,29 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 32
+1:DEPENDENCIES[list of dependencies with where to get them]
+Java
+Mercurial (use apt-get install)
+Ant (apt-get install)
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Makefiles under the org.spoofax.jsglr directory and org.spoofax.jsslr git parent directory does not run without error:
+
+For jssglr:
+BUILD FAILED
+/home/student4/Desktop/repro/toplas34/JongeKVS12/src/jsglr-master/org.spoofax.jssglr/build.xml:16: /home/student4/Desktop/repro/toplas34/JongeKVS12/src/jsglr-master/gwt-2.4.0 does not exist.
+
+Total time: 0 seconds
+make: *** [all] Error 1
+
+For jsglr:
+BUILD FAILED
+/home/student4/Desktop/repro/toplas34/JongeKVS12/src/jsglr-master/org.spoofax.jsglr/build.ant.xml:20: Compile failed; see the compiler error output for details.
+
+Attemping to compile in Java does not find the right libraries.
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

@@ -1,0 +1,57 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+Boost
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Possibly boost was not properly configured. Given more time, this should be resolved. Tried to modify makefile for new settings with boost, but errors remain. 
+
+Error while compiling datagen module:
+
+student1@ubuntu:~/Downloads/builds/vldb12_new/Dallachiesa- to be done/sourcecode/datagen$ make
+%
+%  Compiling datagen 
+%
+%  CCX..................: g++ 
+%  CFLAGS...............: -Wall -O3 -ffast-math -msse2 -msse3
+%  INCLUDES.............: -I./boost_1_46_1
+%  LIBS.................: -L./boost_1_46_1/stage/lib -lgsl -lgslcblas
+%  DEFINES..............: 
+%
+Compiling: dataset.o ( dataset.cpp )
+In file included from dataset.cpp:1:0:
+boost/random.hpp:36:48: fatal error: boost/random/linear_congruential.hpp: No such file or directory
+compilation terminated.
+make: *** [dataset.o] Error 1
+
+
+Error while compiling the "dust" module:
+
+student1@ubuntu:~/Downloads/builds/vldb12_new/Dallachiesa- to be done/sourcecode/dust$ make
+%
+%  Compiling dust
+%
+%  CCX..................: g++ 
+%  CFLAGS...............: -Wall -ggdb -O3 -ffast-math -msse2 -msse3
+%  INCLUDES.............: -I./
+%  LIBS.................: -L./lib -lgsl -lgslcblas
+%  DEFINES..............: 
+%
+Compiling: dataset.o ( dataset.cpp )
+dataset.cpp: In member function ‘void DataSet::writeMultiSamplesDir(const char*)’:
+dataset.cpp:167:1: internal compiler error: Aborted
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.6/README.Bugs> for instructions.
+Preprocessed source stored into /tmp/ccKKHHCA.out file, please attach this to your bugreport.
+make: *** [dataset.o] Error 1
+student1@ubuntu:~/Downloads/builds/vldb12_new/Dallachiesa- to be done/sourcecode/dust$ 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

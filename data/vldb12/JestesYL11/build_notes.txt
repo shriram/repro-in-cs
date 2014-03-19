@@ -1,0 +1,16 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+javac - from any Java sdk package.
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+At first, building generates errors because a directory called "bin" could not be found in the same directory as "makefile"
+After creating ./bin, the string of errors that follows is:
+LocalTaskSchedulerSingleReducer.java:27: error: package org.apache.commons.logging does not exist
+Multiple java compile errors seem to exist, so build is stopped.
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

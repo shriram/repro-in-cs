@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student2
+ARTICLE:ANALYSIS_TIME[minutes] 999
+ARTICLE:COMMENT[string] student0: PIQL implemented on top of SCADS More related code found on google: https://github.com/radlab/SCADS/blob/v2.1.3/piql/scadr/src/main/scala/ScadrClient.scala | student2: article checks out. 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] supported in part by gifts from Google, SAP, Ama- zon Web Services, Cloudera, Ericsson, Huawei, IBM, Intel, Mark Logic, Microsoft, NEC Labs, NetApp, Oracle, Splunk, and VMware and by DARPA (contract #FA8650-11-C-7136).
+ARTICLE:NSF-SUPPORT[none or number] none
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://www.vldb.org/pvldb/vol5/p181_michaelarmbrust_vldb2012.pdf
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] fmarmbrus@cs.berkeley.edu kcurtis@cs.berkeley.edu kraska@cs.berkeley.edu fox@cs.berkeley.edu franklin@cs.berkeley.edu pattrsng@cs.berkeley.edu 
+BIBTEX:LABEL[string] ArmbrustCKFFP11
+AUTHOR:NAMES[list of first_last] Michael_Armbrust Kristal_Curtis Tim_Kraska Armando_Fox Michael_J._Franklin David_A._Patterson
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/journals/pvldb/ArmbrustCKFFP11
+BUILD:ANALYSIS_BY[name] student4
+BUILD:ANALYSIS_TIME[minutes] 60
+BUILD:COMMENT[string] Was working on other builds while the build compiles
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded compiles runs 
+BUILD:ERROR_COMMENT[none,not_needed,comment] NONE
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] PIQL 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] none 
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url]  https://github.com/radlab/scads
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] unknown 
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown 
+VERIFY:ANALYSIS_BY[name] student4
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] Verified that link works. Set build status to needed.
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment]

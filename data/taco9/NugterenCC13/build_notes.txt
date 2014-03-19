@@ -1,0 +1,29 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+- pet 0.01 (http://repo.or.cz/w/pet.git) [Verdoolaege, Grosser 2012]
+- Python 2.7 (tested with 2.7, 2.6 or below is not working)
+- The following Python libraries:
+  * sympy (http://code.google.com/p/sympy/)
+  * pydot (optionally, used when printing AST to PDF with -t switch) (http://code.google.com/p/pydot/)
+  
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Tried two different features of implementations.
+One worked, whereas the second reported a package missing error. Given benefit of doubt, implementation works. 
+This is the error:
+Traceback (most recent call last):
+  File "aset.py", line 8, in <module>
+    import IO, Tree, TreeNode, ConnectSRC, ArraySizes, AlgorithmClass
+  File "Modules/IO.py", line 5, in <module>
+    import yaml
+ImportError: No module named yaml
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

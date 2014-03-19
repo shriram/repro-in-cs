@@ -1,0 +1,29 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+failed to build pre-req
+
+There might possibly be a bug in the tool as I saw a post in a gnu forum about the same topic. It was referring to an older version (1.12) and I used 1.16. The post had no replies on how to resolve or whether it will be resolved in later versions. 
+
+ldfrexp.c: In function 'gsl_frexp':
+ldfrexp.c:56:1: internal compiler error: Aborted
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.6/README.Bugs> for instructions.
+Preprocessed source stored into /tmp/cc0Ps4js.out file, please attach this to your bugreport.
+make[2]: *** [ldfrexp.lo] Error 1
+make[2]: Leaving directory `/home/student1/Downloads/gsl-1.16/sys'
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory `/home/student1/Downloads/gsl-1.16'
+make: *** [all] Error 2
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

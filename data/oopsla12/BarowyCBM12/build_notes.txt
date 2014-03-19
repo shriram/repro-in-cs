@@ -1,0 +1,43 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+Ruby
+Ruby-gems
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+It will be easier to run this on a Mac system as it comes with Ruby and ruby-gems (according to readme file given)
+1. Install Ruby and Ruby-gems (It will usually install a bunch of other dependencies as well). 
+2. Install buildr using -
+sudo gem install buildr
+
+Getting an error while executing the above command. 
+
+ERROR:  Error installing buildr:
+  ERROR: Failed to build gem native extension.
+
+        /usr/bin/ruby1.8 extconf.rb
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/usr/bin/ruby1.8
+extconf.rb:53: JAVA_HOME is not set. (RuntimeError)
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

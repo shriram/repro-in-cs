@@ -1,0 +1,19 @@
+1:BUILD_BY[name] student2
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Linux ubuntu 3.8.0-23-generic #34-Ubuntu SMP Wed May 29 20:22:58 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+followed directions in README
+got error with:
+make
+:
+m_debuginfo/readstabs.c:56:39: fatal error: a.out.h: No such file or directory
+compilation terminated.
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

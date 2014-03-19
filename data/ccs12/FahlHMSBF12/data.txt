@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student4
+ARTICLE:ANALYSIS_TIME[minutes] 12
+ARTICLE:COMMENT[string] Article says implementation is availible online, but it cannot be found.
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] none
+ARTICLE:NSF-SUPPORT[none or number] none
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://doi.acm.org/10.1145/2382196.2382205
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] fahl@dcsec.unihannover.de harbach@dcsec.unihannover.de muders@dcsec.unihannover.de smith@dcsec.unihannover.de lbaumgaertner@informatik.uni-marburg.de freisleb@informatik.uni-marburg.de 
+BIBTEX:LABEL[string] FahlHMSBF12
+AUTHOR:NAMES[list of first_last] Sascha_Fahl Marian_Harbach Thomas_Muders Matthew_Smith Lars_Baumgartner Bernd_Freisleben 
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/ccs/FahlHMSBF12
+BUILD:ANALYSIS_BY[name] student4
+BUILD:ANALYSIS_TIME[minutes] 10
+BUILD:COMMENT[string] Run on test .apk file "Voice Search Advanced.apk" and "Dialapp - context aware dialer.apk" found on the internet produced same running errors.
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded compiles
+BUILD:ERROR_COMMENT[none,not_needed,comment] MISSING_THIRD_PARTY_PACKAGE
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] needed request_1 response_1 sent_thank_you
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] MalloDroid
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] none 
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] none 
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url]  
+TOOL:DATA_LINK[unknown,none,url,broken and url]  
+VERIFY:ANALYSIS_BY[name] student3
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] http://code.google.com/p/androguard/ is where MalloDroid is base on
+EMAIL1:CODE_AVAILABLE[yes,no,no_response] yes
+EMAIL1:REMARK[comment] 

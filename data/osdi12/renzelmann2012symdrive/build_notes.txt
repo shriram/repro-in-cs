@@ -1,0 +1,22 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 64 
+1:DEPENDENCIES[list of dependencies with where to get them]
+https://s2e.epfl.ch/embedded/s2e/BuildingS2E.html
+s2e, which in it's 
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+All pre-reqs for S2E install correctly. 
+Error while trying to build s2e platform. 
+
+make[2]: *** [/home/student1/s2e/build/llvm-native/lib/Support/Release/DeltaAlgorithm.o] Error 1
+make[2]: Leaving directory `/home/student1/s2e/build/llvm-native/lib/Support'
+make[1]: *** [all] Error 1
+make[1]: Leaving directory `/home/student1/s2e/build/llvm-native'
+make: *** [stamps/llvm-native-make] Error 2
+student1@ubuntu:~/s2e/build$ 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]

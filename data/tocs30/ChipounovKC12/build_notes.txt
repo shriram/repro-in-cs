@@ -1,0 +1,18 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+gave an error on Ubuntu while executing the command:
+debootstrap --arch i386 lenny debian32/ http://mirror.switch.ch/ftp/mirror/debian/ 
+
+The error message:
+/usr/sbin/debootstrap: 382: cd: can't cd to debian32/http://mirror.switch.ch/ftp/mirror
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

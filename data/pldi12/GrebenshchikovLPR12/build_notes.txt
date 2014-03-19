@@ -1,0 +1,17 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build] 
+gave an error ./qarmc.sh: 3: ./qarmc.sh: ./main.native: not found
+UNKNOWN
+Please try to verify on a 32bit linux, since the file name indicates a 32bit version.
+There is no data to test the script with
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

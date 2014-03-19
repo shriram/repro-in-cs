@@ -1,0 +1,22 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 64 
+1:DEPENDENCIES[list of dependencies with where to get them]
+Jikes RVM - hg clone http://hg.code.sourceforge.net/p/jikesrvm/code jikesrvm
+Java and ant - apt-get
+gcc
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Building Jikes RVM failed after patching with the given patch file.
+First two errors are as such:
+    [javac] import org.apache.tools.ant.taskdefs.optional.XMLValidateTask;
+    [javac]                                              ^
+    [javac] /home/zms/Desktop/builds/KumarFBGT12/src/retry/jikesrvm/tools/ant-tasks/src/org/jikesrvm/tools/ant/ErrorRecordingXMLValidateTask.java:21: error: cannot find symbol
+    [javac] public class ErrorRecordingXMLValidateTask extends XMLValidateTask {
+    [javac]                                                    ^
+    [javac]   symbol: class XMLValidateTask
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student4
+ARTICLE:ANALYSIS_TIME[minutes] 1
+ARTICLE:COMMENT[string] A hardware implementation that is not commercially availible. 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] none
+ARTICLE:NSF-SUPPORT[none or number] none
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://doi.acm.org/10.1145/2150976.2150994
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] jlgreath@umich.edu hxin@cs.cmu.edu luoyixin@umich.edu austin@umich.edu 
+BIBTEX:LABEL[string] GreathouseXLA12
+AUTHOR:NAMES[list of first_last] Joseph_L._Greathouse Hongyi_Xin Yixin_Luo Todd_Austin 
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/asplos/GreathouseXLA12
+BUILD:ANALYSIS_BY[name] student1
+BUILD:ANALYSIS_TIME[minutes] 10
+BUILD:COMMENT[string] make returns an internal compiler error
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded 
+BUILD:ERROR_COMMENT[none,not_needed,comment] INTERNAL_COMPILER_ERROR
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] needed request_1 response_1 sent_thank_you
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] none
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] none
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url]  
+TOOL:DATA_LINK[unknown,none,url,broken and url]  
+VERIFY:ANALYSIS_BY[name] student1
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] They should have simulation code - 'We implemented a high-level simulation environment using Pin [25] running on x86-64 Linux hosts', set email to needed
+EMAIL1:CODE_AVAILABLE[yes,no,no_response] yes
+EMAIL1:REMARK[comment] 

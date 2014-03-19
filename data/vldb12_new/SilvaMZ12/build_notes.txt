@@ -1,0 +1,29 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Tried to compile with gcc/g++ 4.5 and 4.6. Still complains about internal compiler error. 
+
+student1@ubuntu:~/Downloads/builds/vldb12_new/SilvaMZ/scpm-read-only/trunk$ make --- COMPILING OBJECT "str_corr.o"
+str_corr.cc: In static member function ‘static double StrCorrPattern::compute_epsilon(Subgraph*)’:
+str_corr.cc:1021:15: warning: variable ‘num_removed’ set but not used [-Wunused-but-set-variable]
+str_corr.cc: In member function ‘void StrCorrPattern::compute_epsilon_naive()’:
+str_corr.cc:2203:15: warning: variable ‘num_removed’ set but not used [-Wunused-but-set-variable]
+str_corr.cc: In function ‘const double num_combinations(unsigned int, unsigned int)’:
+str_corr.cc:2322:1: internal compiler error: Aborted
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.6/README.Bugs> for instructions.
+Preprocessed source stored into /tmp/cc17c7b2.out file, please attach this to your bugreport.
+make: *** [str_corr.o] Error 1
+student1@ubuntu:~/Downloads/builds/vldb12_new/SilvaMZ/scpm-read-only/trunk$ 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

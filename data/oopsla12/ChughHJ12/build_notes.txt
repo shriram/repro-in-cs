@@ -1,0 +1,30 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+1. ocaml
+2. Microsoft Z3 theorem prover (they already provide a version with the download, but I'm not sure how to use it. 
+   The other alternative is to try a build in windows, where I ran into problems on getting ocaml running.)
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+make command returns an error. Unable to make.
+
+student1@ubuntu:~/Downloads/builds for oopsla12/Chugh/djs-master/src$ make
+([ -d out ] && echo "out/ exists") || (mkdir out && echo "out/ created")
+out/ created
+ocamlbuild -libs unix,str -use-menhir -yaccflag --explain  -I LamJS -I BNstats -no-links main.native
++ menhir --raw-depend --ocamldep '/usr/bin/ocamldep -modules' langParser2.mly > langParser2.mly.depends
+/bin/sh: 1: menhir: not found
+Command exited with code 127.
+Compilation unsuccessful after building 22 targets (0 cached) in 00:00:01.
+make: *** [all] Error 10
+
+I wasn't sure how to use the theorem prover so perhaps that could've caused the build to return unsuccessfully.
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

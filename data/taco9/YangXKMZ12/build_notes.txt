@@ -1,0 +1,16 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. Java
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Make sure you download the .tgz file. 
+Follow the install.txt file with the download. It is pretty straight forward. 
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

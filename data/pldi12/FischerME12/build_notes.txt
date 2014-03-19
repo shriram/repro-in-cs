@@ -1,0 +1,54 @@
+1:BUILD_BY[name]
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Linux ubuntu 3.8.0-23-generic #34-Ubuntu SMP Wed May 29 20:22:58 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux (Ubuntu 13.04)
+1:DEPENDENCIES[list of dependencies with where to get them]
+coppied from README.srt
+* The GNU g++ compiler
+ * Python 2.6.x or 2.7.x
+ * ocaml (http://caml.inria.fr/)
+ * zlib header files
+ * The following Python packages:
+   - virtualenv (http://pypi.python.org/pypi/virtualenv)
+   - setuptools (http://pypi.python.org/pypi/setuptools)
+   - pycrypto (http://pypi.python.org/pypi/pycrypto)
+note: use pip <-Python package manager
+
+Also need engage utils:
+https://github.com/genforma/engage-utils
+I put this in the parent directory of engage but it looks other places also
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+make all
+then
+python bootstrap.py dj
+then
+student2@ubuntu:~/test_repro/engage/dj/engage/bin$ ./install django
+configuration option ? 2
+Application Archive File ? ../../../test_data/django_test_app_v1.tgz
+>> Running safe validations
+home (Install directory for Django application) [django_app] ? djapp
+app_admin_password (Application Administrator's Password) [test] ? password
+admin_email (Application Administrator's Email Address) [admin@example.com] ? thefatstudent2@gmail.com
+log_directory (Directory for logfiles) [If not specified, will use value chosen by configuration engine] ? 
+Configuration successful.
+Using software library /home/student2/Rtest/engage/dj/config/resource_library.json.
+Master password:
+Master password (re-enter):
+Sudo password:
+Sudo password (re-enter):
+Writing password file to /home/student2/Rtest/engage/dj/config/pw_repository
+
+...
+
+File "/home/student2/Rtest/engage/dj/engage/local/lib/python2.7/site-packages/engage-1.0.6-py2.7.egg/engage/drivers/genforma/django.py", line 517, in install
+    raise UserError(errors[ERR_NO_DJANGO_ADMIN_SCRIPT],
+NameError: global name 'ERR_NO_DJANGO_ADMIN_SCRIPT' is not defined
+Aborting install due to unexpected error.
+
+Error is too much
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

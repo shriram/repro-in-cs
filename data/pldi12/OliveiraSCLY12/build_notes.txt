@@ -1,0 +1,43 @@
+1:BUILD_BY[name] student2
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Linux student2-Inspiron-530 3.5.0-17-generic #28-Ubuntu SMP Tue Oct 9 19:32:08 UTC 2012 i686 i686 i686 GNU/Linux (Linux Mint 14 Nadia)
+1:DEPENDENCIES[list of dependencies with where to get them]
+GHC compiler: google http://www.haskell.org/ghc/download_ghc_7_6_3#x86_64linux
+used:
+sudo apt-get install ghc6 ghc6-prof ghc6-doc
+
+Cabal google needs  Haskell Platform http://hackage.haskell.org/trac/hackage/wiki/CabalInstall
+Haskell Platform(http://www.haskell.org/platform/linux.html ) which needs a GHC 7.6.3
+A lex
+Happy
+for A lex and Happy:
+sudo apt-get install a lex
+sudo apt-get install happy
+
+Also when trying to configure:
+cabal: At least the following dependencies are missing:
+parsec -any, syb -any
+
+same to get those
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+first
+cabal configure
+then
+cabal build
+I got an error that 
+Main.hs:1:1:
+    Ambiguous module name `Prelude':
+      it was found in multiple packages: base haskell98-2.0.0.1
+and I found this:
+http://stackoverflow.com/questions/7339635/ambiguous-module-name-prelude
+also:
+http://hackage.haskell.org/trac/ghc/ticket/4958
+
+but when I remove haskell98 from rho_poly.cabal it gives a missing dependency error
+perhaps needs to be done using older version of Haskell
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

@@ -1,0 +1,20 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. coq
+2. ocaml
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Need to install pre-reqs initially. Only coq should also suffice. 
+type 'make' by navigating to the x86model folder inside the installation. 
+No examples have been provided or described to test the code. 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

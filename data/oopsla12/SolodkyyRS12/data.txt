@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student4
+ARTICLE:ANALYSIS_TIME[minutes] 999
+ARTICLE:COMMENT[string] student5: The link also says newer version coming out soon  | student4: Corrected tool name. The link is correct and working. 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] Partially supported by NSF grants CCF-0702765, CCF-1043084, and CCF-1150055. 
+ARTICLE:NSF-SUPPORT[none or number] CCF-0702765,,CCF-1043084,,CCF-1150055.,
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] dl.acm.org/citation.cfm?id=2384686
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] yuriys@cse.tamu.edu gdr@cse.tamu.edu bs@cse.tamu.edu 
+BIBTEX:LABEL[string] SolodkyyRS12
+AUTHOR:NAMES[list of first_last] Yuriy_Solodkyy Gabriel_Dos_Reis Bjarne_Stroustrup
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/oopsla/SolodkyyRS12
+BUILD:ANALYSIS_BY[name] student1
+BUILD:ANALYSIS_TIME[minutes] 10
+BUILD:COMMENT[string] make command returns an error. The documentation mentioned to delete "some" source files if they caused make to crash. I deleted 6 of them but still the error persists. However they have published detailed results on the web page. 
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded 
+BUILD:ERROR_COMMENT[none,not_needed,comment] INTERNAL_COMPILER_ERROR
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] Mach7 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] https://parasol.tamu.edu/~yuriys/pm/
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] none
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] unknown 
+TOOL:DATA_LINK[unknown,none,url,broken and url] https://parasol.tamu.edu/~yuriys/pm/
+VERIFY:ANALYSIS_BY[name] student3
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] email status to not_needed, google link to none
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment]

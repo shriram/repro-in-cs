@@ -1,0 +1,35 @@
+1:BUILD_BY[name] student2
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Linux ubuntu 3.8.0-23-generic #34-Ubuntu SMP Wed May 29 20:22:58 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
+1:DEPENDENCIES[list of dependencies with where to get them]
+From INSTALL:
+http://teem.sourceforge.net/download/index.html
+and
+http://smlnj.org/dist/working/110.74/index.html (the link with the code was incorrect)
+and must be 64 bit
+but smlnj needs support for 32-bit executables. On there website it said I could:
+apt-get install gcc-multilib ia32-libs
+also needed crc32 
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Used INSTALL for help with install - had wrong version for smlnj
+Installing teem:
+had to make sure I had permissions for folder I installed to
+
+Finally after doing make install and things appeared to work, tried to test:
+student2@ubuntu:~/test_repro/diderot/rtest/tests/vr-taxi$ ../../../bin/diderotc vr-taxi.diderot
+and this gave an error:
+/usr/local/src/tm/lib/libteem.a(gzio.o): In function `_nrrdGzRead':
+gzio.c:(.text+0x9e8): undefined reference to `inflate'
+gzio.c:(.text+0xa33): undefined reference to `crc32'
+gzio.c:(.text+0xaba): undefined reference to `inflateReset'
+gzio.c:(.text+0xae6): undefined reference to `crc32'
+gzio.c:(.text+0xb4a): undefined reference to `crc32'
+
+I tried to install something with crc32 but this didn't work.
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

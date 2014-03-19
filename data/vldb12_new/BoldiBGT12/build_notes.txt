@@ -1,0 +1,21 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+Java
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Online implementation works. Produces multiple charts, but I don't know how to interpret these charts. 
+
+.jar file in the download returns the following message
+
+student1@ubuntu:~/Downloads/builds/vldb12_new/BoldiBG$ java -jar obfuscation-1.0-bin.jar
+no main manifest attribute, in obfuscation-1.0-bin.jar
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

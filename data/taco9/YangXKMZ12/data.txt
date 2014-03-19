@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student4
+ARTICLE:ANALYSIS_TIME[minutes] 9
+ARTICLE:COMMENT[string] The link appears to be in the bibilo section.
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] part
+ARTICLE:GRANT_SUPPORT[none or string] supported by the National Science Foundation, CAREER award CCF-0968667 and an AMD grant.
+ARTICLE:NSF-SUPPORT[none or number] CAREER award CCF-0968667
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://doi.acm.org/10.1145/2207222.2207225
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] yyang14@ncsu.edu 
+BIBTEX:LABEL[string] YangXKMZ12
+AUTHOR:NAMES[list of first_last] Yi_Yang Ping_Xiang Jingfei_Kong Mike_Mantor Huiyang_Zhou 
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/taco/YangXKMZ12
+BUILD:ANALYSIS_BY[name] student1
+BUILD:ANALYSIS_TIME[minutes] 20
+BUILD:COMMENT[string] Not sure how to test output, but the code runs. 
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded compiles runs 
+BUILD:ERROR_COMMENT[none,not_needed,comment] NONE
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed 
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url]  https://code.google.com/p/gpgpucompiler/
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] none
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url]  
+TOOL:DATA_LINK[unknown,none,url,broken and url]  
+VERIFY:ANALYSIS_BY[name] student3
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] added nsf-support
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment] 

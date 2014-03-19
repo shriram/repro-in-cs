@@ -1,0 +1,23 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+config file returned an error after following instructions given in the INSTALL.txt
+
+student1@ubuntu:~/Downloads/builds/from emails/pldi12-zhang/PLTimingSim/simpleutils-990811$ ./configure –host=$HOST –with-gnu-as –with-gnu-ld –prefix=$IDIR
+*** Can only configure for one host and one target at a time.
+*** Can only configure for one host and one target at a time.
+*** Can only configure for one host and one target at a time.
+*** Can only configure for one host and one target at a time.
+Usage: configure [OPTIONS] [HOST]
+
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

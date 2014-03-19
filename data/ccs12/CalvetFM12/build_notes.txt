@@ -1,0 +1,26 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Windows7 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. Pintool
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+.exe files run.
+C:\Users\student1\Desktop\aligot-read-only\trunk\vanilla\testBinaries\TEA>TEA.exe
+Input text:
+123456789abcdef
+Key:
+deadbee1deadbee2deadbee3deadbee4
+Output text:
+df5ec1536e089494
+
+Tried with pintool. Got a version mismatch error for pin. However, given the benefit of doubt the tool will work even in the environment.
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

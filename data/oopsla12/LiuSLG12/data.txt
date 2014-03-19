@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student4
+ARTICLE:ANALYSIS_TIME[minutes] 999
+ARTICLE:COMMENT[string] student5: no idea what this paper is about and there is no web sites mentioned in the paper  | student4: A prototype is said to be implemented but has no name. The tool cannot be found. 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] Supported in part by ONR under grant N000140910651 and N000140710928; and NSF under grant CCF-0964196 and CNS- 0831298. 
+ARTICLE:NSF-SUPPORT[none or number] N000140910651,N000140710928;,CCF-0964196,CNS-0831298.,0831298.,
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] dl.acm.org/citation.cfm?id=2384645
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] liu@cs.stonybrook.edu stoller@cs.stonybrook.edu bolin@cs.stonybrook.edu mickg@cs.stonybrook.edu 
+BIBTEX:LABEL[string] LiuSLG12
+AUTHOR:NAMES[list of first_last] Yanhong_A._Liu Scott_D._Stoller Bo_Lin Michael_Gorbovitski
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/oopsla/LiuSLG12
+BUILD:ANALYSIS_BY[name] student4
+BUILD:ANALYSIS_TIME[minutes] 20
+BUILD:COMMENT[string] assumed runs, since running requires writing a source file in a new langueage.
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded compiles runs 
+BUILD:ERROR_COMMENT[none,not_needed,comment] NONE
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] needed request_1 response_1 sent_thank_you
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] none
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] none 
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] none 
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] unknown 
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown 
+VERIFY:ANALYSIS_BY[name] student3
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] none
+EMAIL1:CODE_AVAILABLE[yes,no,no_response] yes
+EMAIL1:REMARK[comment] 

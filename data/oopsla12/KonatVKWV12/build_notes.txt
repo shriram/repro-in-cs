@@ -1,0 +1,19 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+Eclipse (version 3.5 or 3.7)
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Tried duplicating settings as mentioned in the readme on Eclipse 4.2, however it does not accept it. 
+Probable reason could be the version mismatch of Eclipse. Could not find version 3.7 or 3.5 of Eclipse on the home page for download. 
+Otherwise procedure is pretty straight forward. 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

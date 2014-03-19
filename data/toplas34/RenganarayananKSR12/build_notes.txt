@@ -1,0 +1,22 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. CLOOG 
+http://www.cloog.org
+2. Polylib
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Download file is corrupted (ubuntu tgz manager gave an error while trying to extract the file) hence could not proceed.
+gzip: stdin: not in gzip format
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student3
+ARTICLE:ANALYSIS_TIME[minutes] 8
+ARTICLE:COMMENT[string] Additional information about this project is at http://sss.cs.purdue.edu/projects/aj. Implementations in AJ, weblech program(http://weblech.sourceforge.net), jphonelite(http://jphonelite.sourceforge.net), tuplesoup(http://sourceforge.net/projects/tuplesoup/), cewolf(http://cewolf.sourceforge.net), mailpuccino(http://www.kingkongs.org/mailpuccino/), SPECjbb(http://www.spec.org/jbb2005) 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] part
+ARTICLE:GRANT_SUPPORT[none or string] supported by National Science Foundation grants CCF-1048398, CCF-0938232, and CNS-0716659
+ARTICLE:NSF-SUPPORT[none or number] CCF-1048398, CCF-0938232, and CNS-0716659 
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://doi.acm.org/10.1145/2160910.2160913
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] tip@acm.org 
+BIBTEX:LABEL[string] DolbyHMTVV12
+AUTHOR:NAMES[list of first_last] Frank_Tip Mandana_Vaziri Jan_Vitek Julian_Dolby Christian_Hammer Daniel_Marino 
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/journals/toplas/DolbyHMTVV12
+BUILD:ANALYSIS_BY[name] student1
+BUILD:ANALYSIS_TIME[minutes] 30
+BUILD:COMMENT[string] Unable to build 2/5 benchmarks. Did not proceed with the others due to time constraint.
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded
+BUILD:ERROR_COMMENT[none,not_needed,comment] DISTRIBUTION_IS_MISSING_FILES
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed 
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] AJ 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url]  http://sss.cs.purdue.edu/projects/aj
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] none 
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url]  
+TOOL:DATA_LINK[unknown,none,url,broken and url] none 
+VERIFY:ANALYSIS_BY[name] student1
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] checked links
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment]

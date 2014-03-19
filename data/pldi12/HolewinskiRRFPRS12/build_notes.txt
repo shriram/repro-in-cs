@@ -1,0 +1,33 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 32 
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. CMake: (http://www.cmake.org/cmake/resources/software.html)
+2. LLVM-3.1 and Clang: (svn locations specified at http://llvm.org/docs/GettingStarted.html#quickstart)
+3. Dragon egg: (http://dragonegg.llvm.org/)
+4. zlib (needed by boost): (http://www.zlib.net/) -yes
+5. Boost: (http://sourceforge.net/projects/boost/files/boost/1.49.0/boost_1_49_0.tar.gz/download)
+6. Berkeley DB: (http://www.oracle.com/technetwork/products/berkeleydb/downloads/index.html)
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Try building ddg yields:
+
+-- Could NOT find DB (missing:  DB_LIBRARY DB_INCLUDE_DIR) 
+CMake Error: The following variables are used in this project, but they are set to NOTFOUND.
+Please set them or make sure they are set and tested correctly in the CMake files:
+DB_INCLUDE_DIR (ADVANCED)
+   used as include directory in directory /home/student4/Desktop/Holewinski/trunk/tools/ddg-vect
+DB_LIBRARY (ADVANCED)
+    linked by target "ddg-vect" in directory /home/student4/Desktop/Holewinski/trunk/tools/ddg-vect
+    linked by target "ddg-vect-rt" in directory /home/student4/Desktop/Holewinski/trunk/tools/ddg-vect
+
+-- Configuring incomplete, errors occurred!
+
+Linking the missing environment variables does not seem to fix the issue.
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

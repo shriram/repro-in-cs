@@ -1,0 +1,86 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. Ant
+2. Java 1.6+
+3. Python 2.6+
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Builds and runs successfully. Tried the java version, assuming python version will run successfully as well. 
+
+Compile and Run results: 
+
+create_run_jar:
+      [jar] Building jar: /home/student1/Downloads/builds/from emails/asplos-greathouse/BigHouse/master.jar
+      [jar] Building jar: /home/student1/Downloads/builds/from emails/asplos-greathouse/BigHouse/slave.jar
+      [jar] Building jar: /home/student1/Downloads/builds/from emails/asplos-greathouse/BigHouse/powercap.jar
+
+BUILD SUCCESSFUL
+Total time: 4 seconds
+student1@ubuntu:~/Downloads/builds/from emails/asplos-greathouse/BigHouse$ java -jar powercap.jar ./ csedns 100
+Copyright (c) 2011 The Regents of The University of Michigan
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met: redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer;
+redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution;
+neither the name of the copyright holders nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+The BigHouse Simulator
+www.eecs.umich.edu/bighouse
+Author: David Meisner (meisner@umich.edu)
+
+Starting simulation
+SOJOURN_TIME reported it is warm
+SOJOURN_TIME entered calibration
+Creating histogram with min 0.0 maxValue 1.2812028016729187
+SOJOURN_TIME entered steady state, lag spacing of 4
+Processed 100001 events
+Still waiting for SOJOURN_TIME at mean converge of 0.02282827071937591 and quantile converge of 0.16255220283376276
+name: SOJOURN_TIME, averageValue: 0.10891304171225386, averageAccuracy: 0.02282827071937591, quatileTarget: 0.95, quantileValue: 0.3447524558881181, quantileAccuracy: 0.16255220283376276, goodSamples: 9983, warmupSamples: 5000, calibrationSamples: 5000, stdDev: 0.12674398725501326, lag: 4
+Still waiting for SERVER_LEVEL_CAP at mean converge of NaN and quantile converge of NaN
+name: SERVER_LEVEL_CAP, averageValue: NaN, averageAccuracy: NaN, quatileTarget: 0.95, quantileValue: 0.0, quantileAccuracy: NaN, goodSamples: 0, warmupSamples: 47, calibrationSamples: 5000, stdDev: NaN, lag: 1
+Processed 1000001 events
+Still waiting for SERVER_LEVEL_CAP at mean converge of NaN and quantile converge of NaN
+name: SERVER_LEVEL_CAP, averageValue: NaN, averageAccuracy: NaN, quatileTarget: 0.95, quantileValue: 0.0, quantileAccuracy: NaN, goodSamples: 0, warmupSamples: 473, calibrationSamples: 5000, stdDev: NaN, lag: 1
+Processed 10000001 events
+Still waiting for SERVER_LEVEL_CAP at mean converge of NaN and quantile converge of NaN
+name: SERVER_LEVEL_CAP, averageValue: NaN, averageAccuracy: NaN, quatileTarget: 0.95, quantileValue: 0.0, quantileAccuracy: NaN, goodSamples: 0, warmupSamples: 4726, calibrationSamples: 5000, stdDev: NaN, lag: 1
+SERVER_LEVEL_CAP reported it is warm
+SERVER_LEVEL_CAP entered calibration
+Creating histogram with min 1.0720000000000007 maxValue 8.97600000000001
+SERVER_LEVEL_CAP entered steady state, lag spacing of 3
+Ending from convergence
+The experiment took 25.773 seconds to run
+====== Results ======
+Response Mean: 0.1064394185394282
+Response 95: 0.33488852890153065
+Average Server Cap : 4.634702702702703
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

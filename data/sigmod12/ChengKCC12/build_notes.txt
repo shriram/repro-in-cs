@@ -1,0 +1,24 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. g++ 
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Code builds. However, no sample data provided to test the code. 
+
+student1@ubuntu:~/Downloads/builds/sigmod12/Cheng/vcindex-master/src$ g++ vcindex.cpp 
+vcindex.cpp: In function ‘void bin2text(FILE*, const char*)’:
+vcindex.cpp:554:58: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘FILE* {aka _IO_FILE*}’ [-Wformat]
+student1@ubuntu:~/Downloads/builds/sigmod12/Cheng/vcindex-master/src$ ./a.out 
+Input Parameter: [input graph] [number of vertices] [max vertex allowed in leaf]student1@ubuntu:~/Downloads/builds/sigmod12/Cheng/vcindex-master/src$ 
+
+Given benefit of doubt, it will probably run. 
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

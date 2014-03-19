@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student3
+ARTICLE:ANALYSIS_TIME[minutes] 14
+ARTICLE:COMMENT[string] This article is based on a prior publication in ASPLOS 2011, Barrelfish is released under the MIT Open Source license. 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] none
+ARTICLE:NSF-SUPPORT[none or number] none
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://dl.acm.org/citation.cfm?id=2110361&dl=ACM&coll=DL&CFID=217587786&CFTOKEN=30613891
+ARTICLE:STATUS[not_finished,finished] finished
+AUTHOR:EMAIL_REAL[list of strings] Adrian.schuepbach@inf.ethz.ch 
+BIBTEX:LABEL[string] SchupbachBRP12
+AUTHOR:NAMES[list of first_last] Adrian_Schupbach Andrew_Baumann Timothy_Roscoe Simon_Peter
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/journals/tocs/SchupbachBRP12
+BUILD:ANALYSIS_BY[name] student1
+BUILD:ANALYSIS_TIME[minutes] 40
+BUILD:COMMENT[string] Error while building pre-requisites. 
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded 
+BUILD:ERROR_COMMENT[none,not_needed,comment] PREREQUISITE_FAILED_TO_BUILD
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] Barrelfish operating system 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] none
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url]  http://www.barrelfish.org/#release
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] 
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown
+VERIFY:ANALYSIS_BY[name] student1
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] grant support to NO, verified link works, build set to needed, article status set to found_link
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment]

@@ -1,0 +1,36 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+nodejs (maybe)
+can be installed using:
+$sudo apt-get install nodejs
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Failed to build web-bits. 
+No readme has been provided. There is a .hs file (google says it is a haskell file but no download for haskell available). Tried to run the above using javascript (sudo apt-get install nodejs) and got the following error:
+Got an error when trying to run:
+student1@ubuntu:~/Downloads/builds for oopsla12/KangR12/webbits$ js Setup.hs
+/home/student1/Downloads/builds for oopsla12/KangR12/webbits/Setup.hs:2
+import Distribution.Simple
+^^^^^^
+
+node.js:201
+        throw e; // process.nextTick error, or 'error' event on first tick
+              ^
+SyntaxError: Unexpected reserved word
+    at Module._compile (module.js:429:25)
+    at Object..js (module.js:459:10)
+    at Module.load (module.js:348:32)
+    at Function._load (module.js:308:12)
+    at Array.0 (module.js:479:10)
+    at EventEmitter._tickCallback (node.js:192:41)
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

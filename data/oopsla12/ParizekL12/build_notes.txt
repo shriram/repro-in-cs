@@ -1,0 +1,21 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. Java
+2. Scala ( http://www.scala-lang.org/ )
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Error message while trying to build scala libraries.  
+student1@ubuntu:~/Downloads/builds for oopsla12/ParizekL12/scala-2.10.2$ ./bin/scala
+Error: Could not find or load main class for
+
+Instructions to run scala are given in the readme file that comes with it and I got the error message when I ran ./bin/scala 
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

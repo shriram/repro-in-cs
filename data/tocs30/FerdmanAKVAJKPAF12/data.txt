@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student3
+ARTICLE:ANALYSIS_TIME[minutes] 15
+ARTICLE:COMMENT[string] 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] EuroCloud, Project No 247779 of the European Commission 7th RTD Framework Programme � Information and Communication Technologies: Computing Systems
+ARTICLE:NSF-SUPPORT[none or number] none
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://dl.acm.org/citation.cfm?id=2382557&dl=ACM&coll=DL&CFID=217587786&CFTOKEN=30613891
+ARTICLE:STATUS[not_finished,finished] finished
+AUTHOR:EMAIL_REAL[list of strings] mferdman@cs.stonybrook.edu almutaz.adileh@epfl.ch onur.kocberber@epfl.ch stavros.volos@epfl.ch adrian.popescu@epfl.ch anastasia.ailamaki@epfl.ch
+BIBTEX:LABEL[string] FerdmanAKVAJKPAF12
+AUTHOR:NAMES[list of first_last] Michael_Ferdman Almutaz_Adileh Yusuf_Onur_Kocberber Stavros_Volos Mohammad_Alisafaee Djordje_Jevdjic Cansu_Kaynak Adrian_Daniel_Popescu Anastasia_Ailamaki Babak_Falsafi
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/journals/tocs/FerdmanAKVAJKPAF12
+BUILD:ANALYSIS_BY[name] student1
+BUILD:ANALYSIS_TIME[minutes] 45
+BUILD:COMMENT[string] It comprises a suite of 6 different benchmarks, tried to build DataServing benchmark. Comments in build_notes.txt
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded
+BUILD:ERROR_COMMENT[none,not_needed,comment] PREREQUISITE_FAILED_TO_BUILD
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] CloudSuite 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] none
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url]  http://parsa.epfl.ch/cloudsuite/downloads.html
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] 
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown
+VERIFY:ANALYSIS_BY[name] student1
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] added "Analysis by" name(field was blank), changed commercial effort from full to none, build set to needed
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment]

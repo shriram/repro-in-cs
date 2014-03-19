@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student4
+ARTICLE:ANALYSIS_TIME[minutes] 999
+ARTICLE:COMMENT[string] student5: this paper makes no sense to me what is it talking about  | student4: Does have implementation and no link. However, a sound proof does exist. (I later found the link under CC's response)
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] Sponsored by DARPA under the programs Automated Program Analysis for Cybersecurity (FA8750-12-2- 0106) and Clean-Slate Resilient Adaptive Hosts (CRASH). 
+ARTICLE:NSF-SUPPORT[none or number] (FA8750-12-2-0106),0106),Clean-SlateResilient,
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] dl.acm.org/citation.cfm?id=2384655
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] samth@ccs.neu.edu dvanhorn@ccs.neu.edu 
+BIBTEX:LABEL[string] Tobin-HochstadtH12
+AUTHOR:NAMES[list of first_last] Sam_Tobin-Hochstadt David_Van_Horn
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/oopsla/Tobin-HochstadtH12
+BUILD:ANALYSIS_BY[name] student3
+BUILD:ANALYSIS_TIME[minutes] 14 
+BUILD:COMMENT[string] could not finished installing var
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded
+BUILD:ERROR_COMMENT[none,not_needed,comment] OTHER_ERRORS
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed
+PI:COMMENT_CC[string] They measure performance. So, we need access to their code. Proof of correctness means nothing, by the way!
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] Higher-Order Symbolic Execution via Contracts 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] https://github.com/samth/var
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] none 
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] unknown 
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown 
+VERIFY:ANALYSIS_BY[name] student3
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] none
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment]

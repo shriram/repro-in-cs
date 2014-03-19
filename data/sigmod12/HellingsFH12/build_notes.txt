@@ -1,0 +1,23 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Windows7 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. Boost C++
+2. libxml
+3. stxxl
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Failed to build pre-reqs on windows -
+libxml
+stxxl
+
+It would be easier to build these libraries in linux, however the developer has tested his work on Visual Studio 2010 only. 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

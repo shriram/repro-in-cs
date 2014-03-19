@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student4
+ARTICLE:ANALYSIS_TIME[minutes] 9
+ARTICLE:COMMENT[string] IMPORTANT: Check PDF for the correct spelling for the first author's last name. 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] Funded by the Swiss NSF (grant FNS 200021- 130265). Dejan Novakovi�Lc is also supported by the Swiss NSF (grant FNS 200021-125140).
+ARTICLE:NSF-SUPPORT[none or number] none
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://doi.acm.org/10.1145/2150976.2151021
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] Nedeljko.Vasic@epfl.ch Dejan.Novakovic@epfl.ch Svetozar.Miucin@epfl.ch Dejan.Kostic@epfl.ch ricardob@cs.rutgers.edu 
+BIBTEX:LABEL[string] VasicNMKB12
+AUTHOR:NAMES[list of first_last] Nedeljko_Vasic Dejan_Novakovic Svetozar_Miucin Dejan_Kostic Ricardo_Bianchini 
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/asplos/VasicNMKB12
+BUILD:ANALYSIS_BY[name] student1
+BUILD:ANALYSIS_TIME[minutes] 10
+BUILD:COMMENT[string] Implementation compiles and runs. 
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded compiles runs 
+BUILD:ERROR_COMMENT[none,not_needed,comment] NONE
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] needed request_1 response_1 sent_thank_you
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] DejaVu 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] none 
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] none 
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url]  
+TOOL:DATA_LINK[unknown,none,url,broken and url]  
+VERIFY:ANALYSIS_BY[name] student1
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] corrected the Swiss NSF part in NSF Grant field, couldn't find any links
+EMAIL1:CODE_AVAILABLE[yes,no,no_response] yes
+EMAIL1:REMARK[comment] 

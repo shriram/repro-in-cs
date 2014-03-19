@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student4
+ARTICLE:ANALYSIS_TIME[minutes] 3
+ARTICLE:COMMENT[string] Javascript implementation availible online.
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] This work was supported by gifts from Google, SAP, Amazon Web Services, Blue Goji, Cloudera, Ericsson, General Electric, Hewlett Packard, Huawei, IBM, Intel, MarkLogic, Microsoft, NEC, Labs, NetApp, NTT Multimedia Communications Laboratories, Oracle, Quanta, Splunk, and VMware. This material is based upon work supported by the National Science Foundation Graduate Research Fellowship under Grant DGE 1106400, National Science Foundation Grants IIS-0713661, CNS-0722077 and IIS-0803690, the Air Force Office of Scientific Research Grant FA95500810352, and by DARPA contract FA865011C7136. 
+ARTICLE:NSF-SUPPORT[none or number] IIS-0713661, CNS-0722077 and IIS-0803690
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://www.vldb.org/pvldb/vol5/p776_peterbailis_vldb2012.pdf
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] pbailis@cs.berkeley.edu shivaram@cs.berkeley.edu franklin@cs.berkeley.edu hellerstein@cs.berkeley.edu istoica@cs.berkeley.edu 
+BIBTEX:LABEL[string] BailisVFHS12
+AUTHOR:NAMES[list of first_last] Peter_Bailis Shivaram_Venkataraman Michael_J._Franklin Joseph_M._Hellerstein Ion_Stoica 
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/journals/pvldb/BailisVFHS12
+BUILD:ANALYSIS_BY[name] student1
+BUILD:ANALYSIS_TIME[minutes] 5
+BUILD:COMMENT[string] Online tool. Compiles and runs. 
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished online runs 
+BUILD:ERROR_COMMENT[none,not_needed,comment] NONE
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed 
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] Probabilistically Bounded Staleness (PBS)
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url]  http://pbs.cs.berkeley.edu/#demo
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] none 
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] unknown 
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown 
+VERIFY:ANALYSIS_BY[name] student3
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] none
+EMAIL1:CODE_AVAILABLE[yes,no,no_response] 
+EMAIL1:REMARK[comment] 

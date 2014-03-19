@@ -1,0 +1,27 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. Java
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Tried 2/5 benchmarks. 
+1. Tried to build TSP benchmark (no instructions provided) :
+failed with the error message:
+no main manifest attribute, in tsp.jar
+
+2. Tried to build weblech benchmark. It gave the error message:
+Note: src/weblech/spider/URLObject.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+Did not proceed with the remaining benchmarks due to time constraints. 
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

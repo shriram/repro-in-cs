@@ -1,0 +1,26 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+make command returns an internal compiler error. No readme provided with the code. 
+
+$ make
+g++ -Wall -Werror -O3 test/test_add.cpp -o test_add
+test/test_add.cpp: In member function ‘void std::_Deque_base<_Tp, _Alloc>::_M_destroy_nodes(_Tp**, _Tp**) [with _Tp = watchpoint_t<unsigned int, unsigned int>, _Alloc = std::allocator<watchpoint_t<unsigned int, unsigned int> >]’:
+test/test_add.cpp:79:1: internal compiler error: Aborted
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.6/README.Bugs> for instructions.
+Preprocessed source stored into /tmp/cc1rR9H7.out file, please attach this to your bugreport.
+make: *** [test/test_add] Error 1
+student1@ubuntu:~/Downloads/builds/from emails/asplos-greathouse/hongyiwpnew-read-only$ 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

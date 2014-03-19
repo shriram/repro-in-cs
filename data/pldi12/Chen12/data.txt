@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student2
+ARTICLE:ANALYSIS_TIME[minutes] 6
+ARTICLE:COMMENT[string] "Author Chun Chen passed away shortly after submission of this manuscript" website is down because hasn't been renewed. Link from http://www.cs.utah.edu/~chunchen/ SPECIAL_EMAIL
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] This research was funded in part by DARPA contract HR0011-10-9-0008, National Science Foundation award CCF-1018881, and Department of Energy Office of Science awards DE-SC0003777 and DE-SC0003520.
+ARTICLE:NSF-SUPPORT[none or number] CCF-1018881
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://doi.acm.org/10.1145/2254064.2254123
+ARTICLE:STATUS[not_finished,finished] finished
+AUTHOR:EMAIL_REAL[list of strings] anandv@cs.utah.edu protonu@cs.utah.edu mhall@cs.utah.edu 
+BIBTEX:LABEL[string] Chen12
+AUTHOR:NAMES[list of first_last] Chun_Chen
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/pldi/Chen12
+BUILD:ANALYSIS_BY[name] student4
+BUILD:ANALYSIS_TIME[minutes] 60
+BUILD:COMMENT[string] Running example file gives errors, even when setup was performed under instruction.
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded 
+BUILD:ERROR_COMMENT[none,not_needed,comment] OTHER_ERRORS
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] needed request_1 response_1 sent_thank_you
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] CodeGen+ 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] none
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url]  broken http://www.chunchen.info/omega/
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] http://ctop.cs.utah.edu/ctop/?page_id=21
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown
+VERIFY:ANALYSIS_BY[name] student1
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] Added information about broken link and where it was found. Implementation not found. Email status to needed 
+EMAIL1:CODE_AVAILABLE[yes,no,no_response] yes
+EMAIL1:REMARK[comment]

@@ -1,0 +1,13 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+curl
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Build requires setting up a home server and running VM's, given the benefit of doubt.
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

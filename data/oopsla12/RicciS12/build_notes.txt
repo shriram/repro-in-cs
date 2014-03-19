@@ -1,0 +1,16 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] windows 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+none
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+It is better not to try to download the source code/plugins to eclipse, which were
+not given use instructions for. Use the pre-build version of Eclipse they have for 
+windows here: simpal.sourceforge.net/?page_id=9.
+The Linux version of the IDE they provide does not seem to work on ubuntu.
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

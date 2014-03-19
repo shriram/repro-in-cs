@@ -1,0 +1,27 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 64 
+1:DEPENDENCIES[list of dependencies with where to get them]
+nginx: http://nginx.org/download/
+v8: https://developers.google.com/v8/build
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+!beware, make sure you get an older version of nginx that has a file named "configure" in the build directory. It is necessary later on.
+make with nginx after following instructions produces the following sample error:
+
+In file included from /home/zms/Desktop/builds/WangLZ012/src/extremejs/ngxv8/ngx_http_v8_embed_module.cpp:16:0:
+/home/zms/Desktop/builds/WangLZ012/src/extremejs/ngxv8/v8js.h: In member function ‘std::string V8Js::run(std::string)’:
+/home/zms/Desktop/builds/WangLZ012/src/extremejs/ngxv8/v8js.h:59:39: error: no matching function for call to ‘v8::Context::Scope::Scope(v8::Persistent<v8::Context>&)’
+/home/zms/Desktop/builds/WangLZ012/src/extremejs/ngxv8/v8js.h:59:39: note: candidates are:
+/home/zms/Desktop/builds/WangLZ012/src/v8/include/v8.h:4970:5: note: v8::Context::Scope::Scope(v8::Isolate*, v8::Persistent<v8::Context>&)
+/home/zms/Desktop/builds/WangLZ012/src/v8/include/v8.h:4970:5: note:   candidate expects 2 arguments, 1 provided
+/home/zms/Desktop/builds/WangLZ012/src/v8/include/v8.h:4966:14: note: v8::Context::Scope::Scope(v8::Handle<v8::Context>)
+/home/zms/Desktop/builds/WangLZ012/src/v8/include/v8.h:4966:14: note:   no known conversion for argument 1 from ‘v8::Persistent<v8::Context>’ to ‘v8::Handle<v8::Context>’
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

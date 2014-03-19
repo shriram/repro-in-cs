@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student4
+ARTICLE:ANALYSIS_TIME[minutes] 8
+ARTICLE:COMMENT[string] The github link seems to be the program, though I cannot prove in conclusively.
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] M. Tartara was partially supported by a Roberto Rocca Doctoral Fellowship, awarded by "Fondazione Fratelli Agostino ed Enrico Rocca" Lugano, CH.
+ARTICLE:NSF-SUPPORT[none or number] none
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://doi.acm.org/10.1145/2400682.2400705
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] mtartara@elet.polimi.it 
+BIBTEX:LABEL[string] TartaraC13
+AUTHOR:NAMES[list of first_last] Michele_Tartara Stefano_Crespi_Reghizzi 
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/taco/TartaraC13
+BUILD:ANALYSIS_BY[name] student1
+BUILD:ANALYSIS_TIME[minutes] 15
+BUILD:COMMENT[string] Contains a bunch of python scripts. Not sure how they can be tested. 
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded compiles runs 
+BUILD:ERROR_COMMENT[none,not_needed,comment] NONE
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed 
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] none 
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url]  https://github.com/mikyt/learninggcc
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url]  
+TOOL:DATA_LINK[unknown,none,url,broken and url]  
+VERIFY:ANALYSIS_BY[name] student3
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] implementation used in GCC and PetaBricks but in the link it just GCC, the tests perfomed were on multiple hardware configurations
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment] 

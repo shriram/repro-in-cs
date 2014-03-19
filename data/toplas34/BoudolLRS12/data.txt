@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student3
+ARTICLE:ANALYSIS_TIME[minutes] 7
+ARTICLE:COMMENT[string] The code is on the paper. Link to HOP http://hop.inria.fr 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] part by the French ANR agency, grant ANR-09-EMER-009-01
+ARTICLE:NSF-SUPPORT[none or number] none
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://doi.acm.org/10.1145/2220365.2220369
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] zhengqin.luo@inria.fr 
+BIBTEX:LABEL[string] BoudolLRS12
+AUTHOR:NAMES[list of first_last] Zhengqin_luo Tamara_Rezk Manuel_Serrano Gerard_Boudol 
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/journals/toplas/BoudolLRS12
+BUILD:ANALYSIS_BY[name] student1
+BUILD:ANALYSIS_TIME[minutes] 20
+BUILD:COMMENT[string] Requires Bigloo compiler and unable to download it. Could try to build on a windows machine
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded 
+BUILD:ERROR_COMMENT[none,not_needed,comment] UNAVAILABLE_ENVIRONMENT
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] none 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url]  http://www-sop.inria.fr/members/Zhengqin.Luo/trwa-long/
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] none 
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] none 
+TOOL:DATA_LINK[unknown,none,url,broken and url] none 
+VERIFY:ANALYSIS_BY[name] student1
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] changed commercial to none, checked link 
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment]

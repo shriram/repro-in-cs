@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student3
+ARTICLE:ANALYSIS_TIME[minutes] 999
+ARTICLE:COMMENT[string] student5: the online links contain only pdf | student3: implementatio to yes, email status to needed 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] part
+ARTICLE:GRANT_SUPPORT[none or string] supported by the National Science Foundation Graduate Research Fellowship under Grant DGE-0718124, the National Science Foundation under Grants CCF-1064497 and CCF-0702226, the University of Washington Royalty Research Fund, and gifts from Google
+ARTICLE:NSF-SUPPORT[none or number] DGE-0718124, CCF-1064497, CCF-0702226
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://dl.acm.org/citation.cfm?doid=2384616.2384650
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] effinger@cs.washington.edu blucia0a@cs.washington.edu luisceze@cs.washington.edu djg@cs.washington.edu hans.boehm@hp.com 
+BIBTEX:LABEL[string] Effinger-DeanLCGB12
+AUTHOR:NAMES[list of first_last] Laura_Effinger-Dean Brandon_Lucia Luis_Ceze Dan_Grossman Hans-Juergen_Boehm
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/oopsla/Effinger-DeanLCGB12
+BUILD:ANALYSIS_BY[name] student4
+BUILD:ANALYSIS_TIME[minutes] 10
+BUILD:COMMENT[string] make generates error
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded
+BUILD:ERROR_COMMENT[none,not_needed,comment] OTHER_ERRORS
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] needed request_1 response_1 sent_thank_you
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] IFRit 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] none 
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] none 
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] https://dl.dropboxusercontent.com/u/19229/ifrit.tar.gz 
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown 
+VERIFY:ANALYSIS_BY[name] student1
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] added emails, couldn't find links
+EMAIL1:CODE_AVAILABLE[yes,no,no_response] yes
+EMAIL1:REMARK[comment] 

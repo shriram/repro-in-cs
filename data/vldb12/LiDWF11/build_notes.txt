@@ -1,0 +1,15 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+Have GCC 4.2.4 or higher
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Binary code that's downloaded works, but no source code.
+Tested using author.tar.gz
+Gives segfaults on larger sample sizes (author.data).
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

@@ -1,0 +1,25 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1) Java 1.6 or later with JRE (please check your JAVA_HOME environment variable is set) 
+2) Apache Ant 1.7 or later (please check your ANT_HOME environment variable is set)
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Got hj to build. Follow instructions provided in the INSTALL file. 
+Could not run any examples as all the examples described in readme are missing.
+There were some code files present. I tried to compile them and they were throwing errors in the file. 
+But my probable guess would be that if the right files as described in the readme were were present, then the system will work. 
+Given the BOD (Benefit of Doubt).
+
+Not sure how to build habanero-scala. There is no readme provided for it. 
+
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

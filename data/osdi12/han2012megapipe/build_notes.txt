@@ -1,0 +1,17 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+The makefile in "module directory reports the following (1st) error:
+"/home/zms/Desktop/builds/han2012megapipe/src/megapipe_release/module/megapipe.c:111:3: error: implicit declaration of function ‘ep_find’ [-Werror=implicit-function-declaration]"
+
+Several errors were to follow that were not attempted to be fixed.
+Consequently, the makefile in the microb/server also does not work, since it dpeends on the makefile in the module directory.
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

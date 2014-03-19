@@ -1,0 +1,18 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+Eclipse
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Unable to run the tool in eclipse. Most of the instructions provided on git access in eclipse. We did not receive credentials for git access.
+
+The readme did not describe how to go about building the tool from the download the author sent us. 
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

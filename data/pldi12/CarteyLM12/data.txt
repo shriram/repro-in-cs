@@ -1,0 +1,33 @@
+ARTICLE:ANALYSIS_BY[name] student2
+ARTICLE:ANALYSIS_TIME[minutes] 26
+ARTICLE:COMMENT[string] couldn't find on google
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] none 
+ARTICLE:NSF-SUPPORT[none or number] none
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://doi.acm.org/10.1145/2254064.2254080
+ARTICLE:STATUS[not_finished,finished] finished
+AUTHOR:EMAIL_ORIG[string] luke.cartey@cs.ox.ac.uk lyngsoe@stats.ox.ac.uk oege.de.moor@cs.ox.ac.uk
+AUTHOR:EMAIL_PARSED[list of strings]  luke.cartey@cs.ox.ac.uk  lyngsoe@stats.ox.ac.uk  oege.de.moor@cs.ox.ac.uk
+AUTHOR:NAMES[list of first_last] Luke_Cartey Rune_Lyngso Oege_de_Moor
+AUTHOR:EMAIL_REAL[list of strings] luke.cartey@cs.ox.ac.uk  lyngsoe@stats.ox.ac.uk  oege.de.moor@cs.ox.ac.uk
+BIBTEX:LABEL[string] CarteyLM12
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/pldi/CarteyLM12
+BUILD:ANALYSIS_BY[name] student2
+BUILD:ANALYSIS_TIME[minutes] 20
+BUILD:COMMENT[string] program couldn't find cuda http://www.hmmingbird.co.uk/downloads.html
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded
+BUILD:ERROR_COMMENT[none,not_needed,comment] MISSING_THIRD_PARTY_PACKAGE
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] needed request_1 response_1 request_2 response_2 sent_thank_you
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] Synthesising graphics card programs from DSLs
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] none
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] none
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] unknown
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown
+VERIFY:ANALYSIS_BY[name] student1
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] no link found on author's homepage
+EMAIL1:CODE_AVAILABLE[yes,no,no_response] yes
+EMAIL1:REMARK[comment] 

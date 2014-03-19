@@ -1,0 +1,20 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. http://www.cs.binghamton.edu/~davidL/et/install.html
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+It gave a compile error. Probable reason could be the JAVA version is a mismatch but not sure. I tried using openjdk-7
+
+BUILD FAILED
+/home/student1/Downloads/builds for oopsla12/COhen/polyglot-2.4.0-src/build.xml:224: Compile failed; see the compiler error output for details.
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

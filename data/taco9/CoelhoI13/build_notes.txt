@@ -1,0 +1,37 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+1. cproto
+$sudo apt-get install cproto
+
+(student2): the list of dependencies for Ubuntu 11.04 is
+sudo apt-get install subversion cproto flex bison texlive-fonts-recommended texlive-latex-extra tex4ht emacs23 openjdk-6-jdk gfortran indent libreadline5-dev
+
+but I was using 12.04 and it didn't have libreadline5-dev but I just did:
+cproto flex bison
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Error in the download file.
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -DPOLYLIB_BITS=64 -I./include -Iinclude    -g -O2 -MT libpolylib64_la-errors.lo -MD -MP -MF .deps/libpolylib64_la-errors.Tpo -c -o libpolylib64_la-errors.lo `test -f 'source/arith/errors.c' || echo './'`source/arith/errors.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -DPOLYLIB_BITS=64 -I./include -Iinclude -g -O2 -MT libpolylib64_la-errors.lo -MD -MP -MF .deps/libpolylib64_la-errors.Tpo -c source/arith/errors.c  -fPIC -DPIC -o .libs/libpolylib64_la-errors.o
+source/arith/errors.c: In function ‘throw_exception’:
+source/arith/errors.c:391:1: internal compiler error: Aborted
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.6/README.Bugs> for instructions.
+Preprocessed source stored into /tmp/ccurhnKi.out file, please attach this to your bugreport.
+make[2]: *** [libpolylib64_la-errors.lo] Error 1
+make[2]: Leaving directory `/tmp/polylib-5.22.5'
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory `/tmp/polylib-5.22.5'
+make: *** [all] Error 2
+cannot make polylib
+usage: setup_pips.sh [--opts] [directory [developer [checkout|export]]]
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name] student2
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string] when I tried, I just followed the directions in the script help and installed like they did. I ran into an issue with svn and it wanted me to use https, also I added more dependencies - ran out of time for error: programs swig2.0 not found program ipython not found
+
+

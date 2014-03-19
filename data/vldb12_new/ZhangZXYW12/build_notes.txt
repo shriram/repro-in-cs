@@ -1,0 +1,16 @@
+1:BUILD_BY[name] student1 
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Windows7 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+Matlab
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+No data provided to test the .m file. Skimming through the code, I could not find any errors that seemed very obvious. I'm giving it the benefit of doubt. 
+(it is a short matlab program less than 100 lines)
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

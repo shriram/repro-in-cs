@@ -1,0 +1,26 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 32 
+1:DEPENDENCIES[list of dependencies with where to get them]
+Python
+Androguard: https://code.google.com/p/androguard/
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Run on test .apk file "Voice Search Advanced.apk" and "Dialapp - context aware dialer.apk" found on the internet produced same running errors.
+
+Traceback (most recent call last):
+  File "./mallodroid.py", line 430, in <module>
+    main()
+  File "./mallodroid.py", line 416, in main
+    _result = _check_all(_vm, _vmx, _gx)
+  File "./mallodroid.py", line 188, in _check_all
+    _hv, _a = _check_hostname_verifier(_method, _vm, _vmx)
+  File "./mallodroid.py", line 150, in _check_hostname_verifier
+    if _has_signature(_method, [_verify_string_sslsession, _verify_string_x509cert, _verify_string_sslsocket, _verify_string_subj_alt]):
+  File "./mallodroid.py", line 49, in _has_signature
+    _return = _method.get_information().get('return', None)
+AttributeError: EncodedMethod instance has no attribute 'get_information'
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]

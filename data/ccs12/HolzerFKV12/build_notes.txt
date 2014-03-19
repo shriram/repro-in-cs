@@ -1,0 +1,34 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+make returns an "internal compiler error"
+
+student1@ubuntu:~/Downloads/builds/ccs12/HolzerFK/cbmc-gc-v0.8$ make
+cd src/cbmc-gc/src; make
+make[1]: Entering directory `/home/student1/Downloads/builds/ccs12/HolzerFK/cbmc-gc-v0.8/src/cbmc-gc/src'
+## Entering big-int
+make  -C big-int
+make[2]: Entering directory `/home/student1/Downloads/builds/ccs12/HolzerFK/cbmc-gc-v0.8/src/cbmc-gc/src/big-int'
+c++ -O   -c -o bigint-test.o bigint-test.cc
+bigint-test.cc: In function ‘void run_simple_tests()’:
+bigint-test.cc:292:1: internal compiler error: Aborted
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.6/README.Bugs> for instructions.
+Preprocessed source stored into /tmp/ccIpABHX.out file, please attach this to your bugreport.
+make[2]: *** [bigint-test.o] Error 1
+make[2]: Leaving directory `/home/student1/Downloads/builds/ccs12/HolzerFK/cbmc-gc-v0.8/src/cbmc-gc/src/big-int'
+make[1]: *** [big-int.dir] Error 2
+make[1]: Leaving directory `/home/student1/Downloads/builds/ccs12/HolzerFK/cbmc-gc-v0.8/src/cbmc-gc/src'
+make: *** [all] Error 2
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

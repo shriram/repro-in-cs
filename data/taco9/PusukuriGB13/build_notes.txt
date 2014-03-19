@@ -1,0 +1,22 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+$ sudo make
+make: Nothing to be done for `all'.
+
+$ sudo make 
+[sudo] password for student1: 
+o mpstat mpstat.o acquire.o walkers.o acquire_iodevs.o dsr.o mnt.o common.o timestamp.o -ldevinfo -lkstat -lavl
+make: o: Command not found
+make: [mpstat] Error 127 (ignored)
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string] download website says: Please note that these utilities are tested on AMD Opteron machines running Solaris 10 & 11
+
+

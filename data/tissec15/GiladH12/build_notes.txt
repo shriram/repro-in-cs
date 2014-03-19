@@ -1,0 +1,16 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+build-essential for Linux (for g++ compiler)
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Did not compile when using makefile, error below:
+g++: error: ControlThread.cpp: No such file or directory
+make: *** [all] Error 1
+Did quick search and could not find ControlThread.cpp in the source folder.
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

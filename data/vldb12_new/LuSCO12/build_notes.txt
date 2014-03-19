@@ -1,0 +1,36 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 32 
+1:DEPENDENCIES[list of dependencies with where to get them]
+Hadoop (Apache website)
+Other dependencies for installing Hadoop listed here: http://www.mylearning.in/2012/10/installing-hadoop-on-ubuntu-1204-single.html
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Running with Hadoop gives ClassNotFoundExceptions, examples below:
+
+Exception in thread "main" java.lang.ClassNotFoundException: sg.edu.nus.mda.simquery.preprocess.GeometricGrouping
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:270)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:205)
+Exception in thread "main" java.lang.ClassNotFoundException: sg.edu.nus.mda.simquery.preprocess.KNNJoin
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:270)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:205)
+	
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

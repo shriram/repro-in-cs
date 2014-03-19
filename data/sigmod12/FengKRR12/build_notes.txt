@@ -1,0 +1,24 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. postgresql
+2. python >=2.6 (optional)
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+could not locate postgresql path. 
+
+Installation reported an error
+In file included from crf.c:17:0:
+../c_udf_helper.h:24:22: fatal error: postgres.h: No such file or directory
+compilation terminated.
+make[1]: *** [crf-gp] Error 1
+make: *** [src/ports/postgres/crf-gp] Error 2
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

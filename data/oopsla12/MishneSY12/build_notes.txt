@@ -1,0 +1,17 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 64 
+1:DEPENDENCIES[list of dependencies with where to get them]
+Eclipse 3.6 with PDE http://archive.eclipse.org/eclipse/downloads/drops/R-3.6.2-201102101200/
+Subversive Client (use plug-in market in Eclipse)
+PPA plugin https://bitbucket.org/barthe/ppa/downloads
+"log4j bundle must be downloaded. One is provided alongside the Prime repository."
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Follow installation page here:
+http://sourceforge.net/p/priming/wiki/install/
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

@@ -1,0 +1,24 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 32
+1:DEPENDENCIES[list of dependencies with where to get them]
+if you are on a 64-bit machine- ia32-libs: sudo apt-get install ia32-libs 
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Attempted build produce the following error:
+
+/usr/bin/ld: i386:x86-64 architecture of input file `ident.o' is incompatible with i386 output
+collect2: ld returned 1 exit status
+make[1]: *** [test-ptrace-misc] Error 1
+make[1]: Leaving directory `/home/student4/Desktop/email_builds/oopsla/kling/bolt/libunwind/tests'
+make: *** [install-recursive] Error 1
+os.chdir('/home/student4/Desktop/email_builds/oopsla/kling/bolt')
+scons: *** [build-libunwind] Error 2
+scons: building terminated because of errors.
+
+This is possibly due to a incompatibility of architecture.
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

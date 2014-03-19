@@ -1,0 +1,50 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Time: 20mins
+
+Build is very memory intensive, Ubuntu reported Internal Error 4 times during the build process. 
+Internal Compiler Error: Aborted. 
+
+/home/student1/Downloads/builds/vldb12_new/LowGK/graphlab/deps/tcmalloc/src/libtcmalloc/src/common.cc: In function ‘int tcmalloc::LgFloor(size_t)’:
+/home/student1/Downloads/builds/vldb12_new/LowGK/graphlab/deps/tcmalloc/src/libtcmalloc/src/common.cc:202:1: internal compiler error: Aborted
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.6/README.Bugs> for instructions.
+Preprocessed source stored into /tmp/ccAzvZKY.out file, please attach this to your bugreport.
+/home/student1/Downloads/builds/vldb12_new/LowGK/graphlab/deps/tcmalloc/src/libtcmalloc/src/system-alloc.cc: In member function ‘virtual void* MmapSysAllocator::Alloc(size_t, size_t*, size_t)’:
+/home/student1/Downloads/builds/vldb12_new/LowGK/graphlab/deps/tcmalloc/src/libtcmalloc/src/system-alloc.cc:270:3: error: ‘failed_’ was not declared in this scope
+/home/student1/Downloads/builds/vldb12_new/LowGK/graphlab/deps/tcmalloc/src/libtcmalloc/src/system-alloc.cc: In member function ‘virtual void* DevMemSysAllocator::Alloc(size_t, size_t*, size_t)’:
+/home/student1/Downloads/builds/vldb12_new/LowGK/graphlab/deps/tcmalloc/src/libtcmalloc/src/system-alloc.cc:339:3: error: ‘failed_’ was not declared in this scope
+make[3]: *** [libtcmalloc_minimal_internal_la-system-alloc.lo] Error 1
+make[3]: *** Waiting for unfinished jobs....
+make[3]: *** [libtcmalloc_minimal_internal_la-common.lo] Error 1
+/home/student1/Downloads/builds/vldb12_new/LowGK/graphlab/deps/tcmalloc/src/libtcmalloc/src/internal_logging.cc: In member function ‘bool tcmalloc::Logger::AddNum(uint64_t, int)’:
+/home/student1/Downloads/builds/vldb12_new/LowGK/graphlab/deps/tcmalloc/src/libtcmalloc/src/internal_logging.cc:161:6: internal compiler error: Aborted
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.6/README.Bugs> for instructions.
+/home/student1/Downloads/builds/vldb12_new/LowGK/graphlab/deps/tcmalloc/src/libtcmalloc/src/tcmalloc.cc: In function ‘void ExtractStats(TCMallocStats*, uint64_t*, tcmalloc::PageHeap::SmallSpanStats*, tcmalloc::PageHeap::LargeSpanStats*)’:
+/home/student1/Downloads/builds/vldb12_new/LowGK/graphlab/deps/tcmalloc/src/libtcmalloc/src/tcmalloc.cc:1650:1: internal compiler error: Aborted
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.6/README.Bugs> for instructions.
+Preprocessed source stored into /tmp/ccWoGvg1.out file, please attach this to your bugreport.
+make[3]: *** [libtcmalloc_minimal_internal_la-internal_logging.lo] Error 1
+Preprocessed source stored into /tmp/ccZOl9B2.out file, please attach this to your bugreport.
+make[3]: *** [libtcmalloc_minimal_la-tcmalloc.lo] Error 1
+make[2]: *** [../deps/tcmalloc/src/libtcmalloc-stamp/libtcmalloc-build] Error 2
+make[1]: *** [CMakeFiles/libtcmalloc.dir/all] Error 2
+make: *** [all] Error 2
+student1@ubuntu:~/Downloads/builds/vldb12_new/LowGK/graphlab/release$ 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

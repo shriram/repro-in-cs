@@ -1,0 +1,14 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 64 
+1:DEPENDENCIES[list of dependencies with where to get them]
+racket: http://racket-lang.org/download/
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Compiling with raco make command obtains error:
+membrane.rkt:32:8: compile: unbound identifier in module in: Î»
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

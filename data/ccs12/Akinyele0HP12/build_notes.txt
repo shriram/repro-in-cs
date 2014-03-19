@@ -1,0 +1,22 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. Charm-crypto
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -DBENCHMARK_ENABLED=1 -Icharm/core/utilities/ -Icharm/core/benchmark/ -I/usr/include/python2.7 -c charm/core/math/pairing/pairingmodule.c -o build/temp.linux-x86_64-2.7/charm/core/math/pairing/pairingmodule.o
+In file included from charm/core/math/pairing/pairingmodule.c:30:0:
+charm/core/math/pairing/pairingmodule.h:38:21: fatal error: pbc/pbc.h: No such file or directory
+compilation terminated.
+error: command 'gcc' failed with exit status 1
+make: *** [all] Error 1
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

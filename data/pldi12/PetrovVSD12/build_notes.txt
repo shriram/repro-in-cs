@@ -1,0 +1,17 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+sparsehash : https://code.google.com/p/sparsehash/downloads/detail?name=sparsehash-2.0.2.zip&can=2&q=
+boost : http://www.boost.org/doc/libs/1_51_0/more/getting_started/unix-variants.html#easy-build-and-install
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+After building all the dependencies, the error 
+racea/raceanalyzer: error while loading shared libraries: libboost_thread.so.1.51.0: cannot open shared object file: No such file or directory 
+was encountered upon analyzing output.
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

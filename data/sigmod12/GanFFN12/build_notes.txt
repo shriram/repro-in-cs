@@ -1,0 +1,17 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Windows7 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+error while trying to build on MS Visual studio 2008
+
+1>g:\windows builds\gan\source\headers.h(16) : error C2871: '__gnu_cxx' : a namespace with this name does not exist
+1>g:\windows builds\gan\source\c2lsh_initializor.h(18) : fatal error C1083: Cannot open include file: 'ext/hash_map': No such file or directory
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

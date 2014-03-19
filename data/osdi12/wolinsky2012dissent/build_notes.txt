@@ -1,0 +1,19 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 64 
+1:DEPENDENCIES[list of dependencies with where to get them]
+qmake: sudo apt-get install qt3-dev-tools
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+After installing qmake, make did not terminate correctly.
+The following error was obtained:
+
+In file included from ext/qhttpserver/src/qhttpconnection.cpp:23:0:
+ext/qhttpserver/src/qhttpconnection.h:26:19: fatal error: QObject: No such file or directory
+compilation terminated.
+
+After a quick grep, QObject was not found in that directory.
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]

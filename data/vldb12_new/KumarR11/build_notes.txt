@@ -1,0 +1,32 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+openfst 
+postgresql
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Tried different versions of gcc but returned errors. 
+
+Error while building pre-requisites openfst1.1:
+flags.cc: In function ‘void SetFlags(const char*, int*, char***, bool)’:
+flags.cc:33:6: internal compiler error: Aborted
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.6/README.Bugs> for instructions.
+Preprocessed source stored into /tmp/cczqMYk4.out file, please attach this to your bugreport.
+make[3]: *** [flags.lo] Error 1
+make[3]: Leaving directory `/home/student1/Downloads/builds/vldb12_new/KumarR11/staccatoV2/openfst-1.1/src/lib'
+make[2]: *** [all-recursive] Error 1
+make[2]: Leaving directory `/home/student1/Downloads/builds/vldb12_new/KumarR11/staccatoV2/openfst-1.1/src'
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory `/home/student1/Downloads/builds/vldb12_new/KumarR11/staccatoV2/openfst-1.1'
+make: *** [all] Error 2
+student1@ubuntu:~/Downloads/builds/vldb12_new/KumarR11/staccatoV2/openfst-1.1$ 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

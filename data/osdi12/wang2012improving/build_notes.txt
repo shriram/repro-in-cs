@@ -1,0 +1,29 @@
+1:BUILD_BY[name] student4shi
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+autoconf: sudo apt-get install autoconf
+llvm-dev: sudo apt-get install llvm-dev
+clang   : sudo apt-get install clang
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+In the following instruction in INSTALL in root source:
+	$ mkdir build
+	$ cd build
+	$ ../configure
+	$ make
+The make step generated below errors:
+
+compilation terminated.
+make[2]: *** [IntRewrite.lo] Error 1
+make[2]: Leaving directory `/home/zms/Desktop/builds/wang2012improving/kint/build/src'
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory `/home/zms/Desktop/builds/wang2012improving/kint/build'
+make: *** [all] Error 2
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

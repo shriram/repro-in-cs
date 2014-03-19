@@ -1,0 +1,18 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+tool is an online implementation of a query processing language. 
+Not sure about the syntax, hence I was getting errors everytime I tried running a query. 
+Otherwise, the tool looks good. 
+Benefit of Doubt can be given to the developer that it is working.
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

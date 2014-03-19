@@ -1,0 +1,17 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 32 
+1:DEPENDENCIES[list of dependencies with where to get them]
+glib 2.0, g++
+Should come with the build-essential package
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Attempt to generate sample traces failed with the following error:
+../pin/pin -inline 0 -t rectrace.so -- ./simple
+./simple : No such file or directory
+make: *** [all-test] Error 255
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

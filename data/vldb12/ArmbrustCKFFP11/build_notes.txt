@@ -1,0 +1,17 @@
+1:BUILD_BY[name] student4
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+Use command "sbt piql/compile" to compile the specific piql project.
+sbt - scala compiler (I wrote a script that I put in the src folder)
+If sbt launcher is needed, download from "http://typesafe.artifactoryonline.com/typesafe/ivy-releases/org.scala-tools.sbt/sbt-launch/0.11.2/sbt-launch.jar"
+And place the .jar file in the directory specified by the compile message (you may need to create that directory.)
+Use command "sbt piql/test", which runs for a long time but succeeds in the end.
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

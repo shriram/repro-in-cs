@@ -1,0 +1,16 @@
+1:BUILD_BY[name] student3
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Nvidia 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+Scala version 2.9.1 (or higher) google http://www.scala-lang.org/downloads#
+JDK version 1.6 (or higher) google http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Downloaded Scala, JDK and Congete. JDK could not install, error :java.lang.ClassNotFoundException
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

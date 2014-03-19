@@ -1,0 +1,25 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Online programming language which requires credentials to log in.
+
+The team has not yet provided me with credentials. It has been about 2 weeks from the time I sent them an 
+email to the day I'm writing this comment.
+Credentials I used:
+Name: Kash Anderson
+School: University of Alberta
+Purpose: academic research
+
+The team provided me with credentials after about a month. 
+Their online system implementation works and generates results. 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

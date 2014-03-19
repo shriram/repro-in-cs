@@ -1,0 +1,29 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. Ant 
+Can be downloaded with the command on Ubuntu:
+$sudo apt-get install ant
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+cd into the extracted folder. 
+
+type:
+$ant
+
+$ant help-transform
+
+$ant transform-app -Dapp=pointcorrelation
+
+$ant run-app -Dapp=barneshut -Dconf=medium -Dsort=false
+
+runs a series of tests and finally stores all the results in 'stats.csv' with a message "Build Successful" 
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

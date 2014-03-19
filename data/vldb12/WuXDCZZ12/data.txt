@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student1
+ARTICLE:ANALYSIS_TIME[minutes] 999
+ARTICLE:COMMENT[string] student0: borrowed code: http://algo2.iti.kit.edu/english/routeplanning.php | student1: updated incorrect tool link, 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] supported by the Nanyang Technological Uni-versity under SUG Grant M58020016 and AcRF Tier 1 Grant RG 35/09
+ARTICLE:NSF-SUPPORT[none or number] none
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://vldb.org/pvldb/vol5/p406_lingkunwu_vldb2012.pdf
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] wulingkun@ntu.edu.sg xkxiao@ntu.edu.sg gaocong@ntu.edu.sg dwzhu@ntu.edu.sg dxdeng@fudan.edu.cn sgzhou@fudan.edu.cn 
+BIBTEX:LABEL[string] WuXDCZZ12
+AUTHOR:NAMES[list of first_last] Lingkun_Wu Xiaokui_Xiao Dingxiong_Deng Gao_Cong Andy_Diwen_Zhu Shuigeng_Zhou
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/journals/pvldb/WuXDCZZ12
+BUILD:ANALYSIS_BY[name] student4
+BUILD:ANALYSIS_TIME[minutes] 80
+BUILD:COMMENT[string] 
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded
+BUILD:ERROR_COMMENT[none,not_needed,comment] MISSING_THIRD_PARTY_PACKAGE
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] Shortest Path and Distance Queries Evaluation
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url]  http://sourceforge.net/projects/ntu-sp-exp/
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] unknown 
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] unknown 
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown 
+VERIFY:ANALYSIS_BY[name] student4
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] Verified link, shortened tool name. Set email status to unknown.
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment]

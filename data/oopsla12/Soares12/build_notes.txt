@@ -1,0 +1,21 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. Eclipse
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Download and install eclipse. 
+
+Install the plug-in following the instructions given in :
+http://www.dsc.ufcg.edu.br/~spg/saferefactor/usermanual.htm
+
+Not sure how to test it but the plug-in is visible in the menu bar with the options as specified in the documentation. 
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

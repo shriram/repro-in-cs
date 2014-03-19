@@ -1,0 +1,77 @@
+1:BUILD_BY[name] student2
+1:BUILD_ENVIRONMENT[operating system 32 vs 64]  Linux ubuntu 3.8.0-23-generic #34-Ubuntu SMP Wed May 29 20:22:58 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
+1:DEPENDENCIES[list of dependencies with where to get them]
+Coq (proof assistant)
++ got aptitude from apt-get
++ next$ sudo aptitude install coq
+Ocaml compiler
++ sudo apt-get install ocaml
+Also needed ocamlc
+and camlp5
+and ocaml-native-compilers
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+After installing all dependencies ran make in directory
+output:
+student2@ubuntu:~/test_repro/relax$ make                                                                    
+coqc  -q  -I .    AssertionLogic                                                                        
+NoDup_nil: forall A : Type, NoDup nil                                                                   
+NoDup_cons:                                                                                             
+  forall (A : Type) (x : A) (l : list A),                                                               
+  ~ In x l -> NoDup l -> NoDup (x :: l)                                                                 
+NoDup_ind:                                                                                              
+  forall (A : Type) (P : list A -> Prop),                                                               
+  P nil ->                                                                                              
+  (forall (x : A) (l : list A), ~ In x l -> NoDup l -> P l -> P (x :: l)) ->                            
+  forall l : list A, NoDup l -> P l                                                                     
+NoDup_remove_1:                                                                                         
+  forall (A : Type) (l l' : list A) (a : A),                                                            
+  NoDup (l ++ a :: l') -> NoDup (l ++ l')                                                               
+NoDup_remove_2:
+  forall (A : Type) (l l' : list A) (a : A),
+  NoDup (l ++ a :: l') -> ~ In a (l ++ l')
+nodup_map:
+  forall (A B : Type) (f : A -> B),
+  (forall x y : A, f x = f y -> x = y) ->
+  forall l : list A, NoDup l -> NoDup (map f l)
+gen_numbers_nodup: forall n start : nat, NoDup (gen_numbers n start)
+coqc  -q  -I .    Substitution
+coqc  -q  -I .    UnaryAssertionLogic
+pred_swap_subst:
+  forall (s : selector) (P : pred) (x : bvar) (n : nat),
+  pred_subst_var (pred_swap P) x s n =
+  pred_swap (pred_subst_var P x (select selector s Right Left) n)
+pred_swap_denote:
+  (forall (P : pred) (env1 env2 : environment),
+   pred_denote P env1 env2 -> pred_denote (pred_swap P) env2 env1) /\
+  (forall (P : pred) (env1 env2 : environment),
+   npred_denote P env1 env2 -> npred_denote (pred_swap P) env2 env1)
+pred_swap_free_vars:
+  forall P : pred, pred_free_vars (pred_swap P) Right = pred_free_vars P Left
+pred_array_free_pred_swap:
+  forall P : pred,
+  pred_array_free P Left -> pred_array_free (pred_swap P) Right
+coqc  -q  -I .    Orig inalAxiomatic
+Axioms:
+functional_extensionality_dep : forall (A : Type) (B : A -> Type)
+                                  (f g : forall x : A, B x),
+                                (forall x : A, f x = g x) -> f = g
+Axioms:
+functional_extensionality_dep : forall (A : Type) (B : A -> Type)
+                                  (f g : forall x : A, B x),
+                                (forall x : A, f x = g x) -> f = g
+coqc  -q  -I .    RelaxedDynamic
+coqc  -q  -I .    IntermediateAxiomatic
+Axioms:
+functional_extensionality_dep : forall (A : Type) (B : A -> Type)
+                                  (f g : forall x : A, B x),
+                                (forall x : A, f x = g x) -> f = g
+make: *** No rule to make target `RelaxedAxiomatic.vo', needed by `all'.  Stop.
+
+not sure where to go from here.
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

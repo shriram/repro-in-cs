@@ -1,0 +1,26 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. Cassandra 0.7.3
+http://grepcode.com/snapshot/repo1.maven.org/maven2/org.apache.cassandra/cassandra-all/0.7.3
+2. YCSB 0.1.3 Clone from git hub, use:
+git clone git://github.com/brianfrankcooper/YCSB.git
+3. Apache Ant and Java JDK (we tested with 1.6.0.23)
+http://ant.apache.org/bindownload.cgi
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+The pre-requisites could not be successfully installed.
+Failed with the following message while following the installation steps to install YCSB:
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-6-openjdk-amd64/lib/tools.jar
+Buildfile: build.xml does not exist!
+Build failed
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

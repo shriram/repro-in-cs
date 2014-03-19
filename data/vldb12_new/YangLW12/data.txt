@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student4
+ARTICLE:ANALYSIS_TIME[minutes] 3
+ARTICLE:COMMENT[string] 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] Partially supported by the National Natural Science Foundation of China (Nos. 60973018, 60973020), the Joint Research Fund for Overseas Natural Science of China (No. 61129002), the National Basic Research Program of China (973 Program) (No. 2012CB316201), the National Natural Science of China Key Program (No. 60933001), the National Natural Science Foundation for Distinguished Young Scholars (No. 61025007), the Doctoral Fund of Ministry of Education of China (No. 20110042110028), and the Fundamental Research Funds for the Central Universities (No. N110804002).
+ARTICLE:NSF-SUPPORT[none or number] none
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://www.vldb.org/pvldb/vol5/p1507_xiaochunyang_vldb2012.pdf
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] yangxc@mail.neu.edu.cn liuhonglei@gmail.com binwang@mail.neu.edu.cn 
+BIBTEX:LABEL[string] YangLW12
+AUTHOR:NAMES[list of first_last] Xiaochun_Yang Honglei_Liu Bin_Wang 
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/journals/pvldb/YangLW12
+BUILD:ANALYSIS_BY[name] student1
+BUILD:ANALYSIS_TIME[minutes] 15
+BUILD:COMMENT[string] Implementation runs
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded compiles runs 
+BUILD:ERROR_COMMENT[none,not_needed,comment] NONE
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed 
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] ALAE 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] unknown 
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url]  http://hongleiliu.weebly.com/research--projects.html
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] unknown 
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown 
+VERIFY:ANALYSIS_BY[name] student1
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] checked download link.
+EMAIL1:CODE_AVAILABLE[yes,no,no_response] 
+EMAIL1:REMARK[comment] 

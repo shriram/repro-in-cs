@@ -1,0 +1,33 @@
+ARTICLE:ANALYSIS_BY[name] student2
+ARTICLE:ANALYSIS_TIME[minutes] 7
+ARTICLE:COMMENT[string] 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] We thank the NVIDIA Corporation for their generous donation of both hardware and financial support. This material is based upon work performed in part while John Reppy was serving at the National Science Foundation.
+ARTICLE:NSF-SUPPORT[none or number] 0000000
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://doi.acm.org/10.1145/2254064.2254079
+ARTICLE:STATUS[not_finished,finished] finished
+AUTHOR:EMAIL_ORIG[string] {cchiw,glk,jhr,lamonts,nseltzer}@cs.uchicago.edu
+AUTHOR:EMAIL_PARSED[list of strings] cchiw@cs.uchicago.edu glk@cs.uchicago.edu jhr@cs.uchicago.edu lamonts@cs.uchicago.edu nseltzer@cs.uchicago.edu
+AUTHOR:NAMES[list of first_last] Charisee_Chiw Gordon_Kindlmann John_Reppy Lamont_Samuels Nick_Seltzer
+AUTHOR:EMAIL_REAL[list of strings] cchiw@cs.uchicago.edu glk@cs.uchicago.edu jhr@cs.uchicago.edu lamonts@cs.uchicago.edu nseltzer@cs.uchicago.edu
+BIBTEX:LABEL[string] ChiwKRSS12
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/conf/pldi/ChiwKRSS12
+BUILD:ANALYSIS_BY[name] student2
+BUILD:ANALYSIS_TIME[minutes] 34
+BUILD:COMMENT[string] Trouble getting it to run test cases appeared to have error missing some dependency see build_notes
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded compiles
+BUILD:ERROR_COMMENT[none,not_needed,comment] MISSING_THIRD_PARTY_PACKAGE
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] Diderot
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] none
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url]  http://diderot-language.cs.uchicago.edu/downloads.html
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] 
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown
+VERIFY:ANALYSIS_BY[name] student1
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] Decided Tool exists, build yet to be verified
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment]

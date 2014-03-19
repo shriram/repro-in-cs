@@ -1,0 +1,14 @@
+1:BUILD_BY[name] student2
+1:BUILD_ENVIRONMENT[operating system 32 vs 64]  Linux student2-Inspiron-530-12 3.2.0-54-generic #82-Ubuntu SMP Tue Sep 10 20:08:42 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux | GeForce 8800 GTS 512 | "Ubuntu 12.04.3 LTS"
+1:DEPENDENCIES[list of dependencies with where to get them]
+Get CUDA installers: https://developer.nvidia.com/cuda-downloads
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+tried to build but is missing gpu_spatial.h
+appears to be part of their code, they only sent one file, it is likely that many files are required to run the code. They did send what appears to be the core algorithm in the paper, however.
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

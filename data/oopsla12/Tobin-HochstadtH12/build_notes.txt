@@ -1,0 +1,18 @@
+1:BUILD_BY[name] student3
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] ubuntu 64 
+1:DEPENDENCIES[list of dependencies with where to get them]
+racket $sudo apt-get install racket
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+installed racket. Followed the command in githup README
+$git clone http://github.com/samth/var
+$raco link var
+$raco setup var
+However I get: collection-path: collection not found: #<path:var> in any of: (#<path:/home/student3/.racket/5.1.3/collects> #<path:/usr/share/racket/collects>)
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

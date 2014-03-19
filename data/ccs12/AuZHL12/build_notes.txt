@@ -1,0 +1,80 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. Android OS
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Gave the following on Ubuntu. The setup proceeds but fails to generate the output as described in the procedure. 
+student1@ubuntu:~/Downloads/builds/ccs12/AuZHL/PScout/ANDROID$ ../bin/setupanalysis.sh ./
+Setting up analysis...
+Getting relevant .class files...
+No such file or directory at ../bin/getclasses.pl line 8.
+ls: cannot access *.jar: No such file or directory
+Parsing AndroidManifest.xml files...
+Can't locate XML/Simple.pm in @INC (@INC contains: /etc/perl /usr/local/lib/perl/5.14.2 /usr/local/share/perl/5.14.2 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.14 /usr/share/perl/5.14 /usr/local/lib/site_perl .) at /home/student1/Downloads/builds/ccs12/AuZHL/PScout/ANDROID/../bin/parseandroidmanifest.pl line 3.
+BEGIN failed--compilation aborted at /home/student1/Downloads/builds/ccs12/AuZHL/PScout/ANDROID/../bin/parseandroidmanifest.pl line 3.
+mv: `contentproviderpermission' and `/home/student1/Downloads/builds/ccs12/AuZHL/PScout/ANDROID/contentproviderpermission' are the same file
+mv: `providerauth' and `/home/student1/Downloads/builds/ccs12/AuZHL/PScout/ANDROID/providerauth' are the same file
+mv: `intentpermission' and `/home/student1/Downloads/builds/ccs12/AuZHL/PScout/ANDROID/intentpermission' are the same file
+Generating 3rd party permission list...
+Can't locate XML/Simple.pm in @INC (@INC contains: /etc/perl /usr/local/lib/perl/5.14.2 /usr/local/share/perl/5.14.2 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.14 /usr/share/perl/5.14 /usr/local/lib/site_perl .) at ../bin/parsepermission.pl line 3.
+BEGIN failed--compilation aborted at ../bin/parsepermission.pl line 3.
+Creating empty dummy GSMPhone$1 class...
+mv: cannot move `GSMPhone$1.class' to `./com/android/internal/telephony/gsm/': No such file or directory
+Copying current.txt...
+cp: cannot stat `.//frameworks/base/api/current.txt': No such file or directory
+
+Please run the following line to test setup:
+runsoot dump.DumpClass com.android.internal.telephony.gsm.GSMPhone
+If no error, please run the following line to start analysis:
+../bin/dumpclass.sh
+student1@ubuntu:~/Downloads/builds/ccs12/AuZHL/PScout/ANDROID$ testsetup
+testsetup: command not found
+student1@ubuntu:~/Downloads/builds/ccs12/AuZHL/PScout/ANDROID$ ../bin/dumpclass.sh Thu Sep 26 13:32:27 MST 2013
+Thu Sep 26 13:32:27 MST 2013
+student1@ubuntu:~/Downloads/builds/ccs12/AuZHL/PScout/ANDROID$ ../bin/postprocess_1.sh 
+Building basic callgraph...
+No such file or directory at ../bin/buildcallgraph.pl line 20.
+Creating send messages edges...
+No such file or directory at ../bin/analyzemessages.pl line 9.
+Creating RPC edges...
+No such file or directory at ../bin/createrpcedge.pl line 26.
+Removing RPC edges...
+Generating permission string checks...
+No such file or directory at ../bin/analyzepermissionusage.pl line 46.
+Generating content provider checks...
+No such file or directory at ../bin/analyzeurifield.pl line 24.
+Identifying intents with dynamic permission...
+No such file or directory at ../bin/analyzeintent.pl line 18.
+Please run ../bin/intentpermissioncheck.sh
+student1@ubuntu:~/Downloads/builds/ccs12/AuZHL/PScout/ANDROID$ ../bin/intentpermissioncheck.sh 
+Thu Sep 26 13:32:59 MST 2013
+Thu Sep 26 13:32:59 MST 2013
+student1@ubuntu:~/Downloads/builds/ccs12/AuZHL/PScout/ANDROID$ ../bin/postprocess_2.sh 
+Generating intent permission check...
+No such file or directory at ../bin/analyzeintentcheck.pl line 45.
+Generating broadcaststicky check...
+First apimapping pass...
+Can't locate XML/Simple.pm in @INC (@INC contains: /etc/perl /usr/local/lib/perl/5.14.2 /usr/local/share/perl/5.14.2 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.14 /usr/share/perl/5.14 /usr/local/lib/site_perl .) at ../bin/apimapping.pl line 3.
+BEGIN failed--compilation aborted at ../bin/apimapping.pl line 3.
+Generating dynamic content provider check...
+No such file or directory at ../bin/analyzereachedprovider.pl line 24.
+No such file or directory at ../bin/analyzeurifield.pl line 24.
+Second apimapping pass...
+Can't locate XML/Simple.pm in @INC (@INC contains: /etc/perl /usr/local/lib/perl/5.14.2 /usr/local/share/perl/5.14.2 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.14 /usr/share/perl/5.14 /usr/local/lib/site_perl .) at ../bin/apimapping.pl line 3.
+BEGIN failed--compilation aborted at ../bin/apimapping.pl line 3.
+Generating stats...
+grep: publishedapimapping: No such file or directory
+No such file or directory at ../bin/generatestats.pl line 9.
+DONE!
+student1@ubuntu:~/Downloads/builds/ccs12/AuZHL/PScout/ANDROID 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

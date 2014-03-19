@@ -1,0 +1,28 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. Protobuf-2.5.0
+2. Boost C++ library. 
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Caused Ubuntu to crash as well-
+
+google/protobuf/stubs/stringprintf.cc: In function 'std::string google::protobuf::StringPrintfVector(const char*, const std::vector<std::basic_string<char> >&)':
+google/protobuf/stubs/stringprintf.cc:175:1: internal compiler error: Aborted
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.6/README.Bugs> for instructions.
+Preprocessed source stored into /tmp/cctX5I8g.out file, please attach this to your bugreport.
+make[1]: *** [stringprintf.lo] Error 1
+make[1]: Leaving directory `/home/student1/Downloads/builds/from emails/sosp-sovran/protobuf-2.5.0/src'
+make: *** [install-recursive] Error 1
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

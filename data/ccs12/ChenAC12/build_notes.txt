@@ -1,0 +1,38 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. Cython (python extension/library)
+2. gcc
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Python script returned a module missing error. 
+
+Tried installing module Cython (which was missing) from the webpage. It gave a gcc internal error. 
+
+student1@ubuntu:~/Downloads/Cython-0.19.1$ python setup.py install
+running install
+running build
+running build_py
+running build_ext
+building 'Cython.Plex.Scanners' extension
+creating build/temp.linux-x86_64-2.7/Cython
+creating build/temp.linux-x86_64-2.7/Cython/Plex
+gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c Cython/Plex/Scanners.c -o build/temp.linux-x86_64-2.7/Cython/Plex/Scanners.o
+Cython/Plex/Scanners.c: In function ‘__Pyx_ParseOptionalKeywords’:
+Cython/Plex/Scanners.c:8256:1: internal compiler error: Aborted
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.6/README.Bugs> for instructions.
+Preprocessed source stored into /tmp/cc9CfijO.out file, please attach this to your bugreport.
+error: command 'gcc' failed with exit status 1
+student1@ubuntu:~/Downloads/Cython-0.19.1$ 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

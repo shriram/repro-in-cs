@@ -1,0 +1,39 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. Pin tool (www.pintool.org)
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Received errors when trying to build each of the following components of the tool. 
+
+Makefile:50: *** "This version of libdft is for x86 only".  Stop.
+make[1]: Leaving directory `/home/student1/Downloads/builds/ccs12/to be done/Geneia-To be done/virtual-partitioning/partitioned_dta/libdft'
+make: *** [all] Error 2
+
+tioning/calltrace$ make
+g++ -Wno-unknown-pragmas  -DBIGARRAY_MULTIPLIER=1 -DUSING_XED -fno-strict-aliasing -fomit-frame-pointer -DTARGET_IA32 -DHOST_IA32 -DTARGET_LINUX -I/home/student1/Downloads/pin-2.13-61206-gcc.4.4.7-linux//extras/xed2-ia32/include -I/home/student1/Downloads/pin-2.13-61206-gcc.4.4.7-linux//source/include -I/home/student1/Downloads/pin-2.13-61206-gcc.4.4.7-linux//source/include/gen -I/home/student1/Downloads/pin-2.13-61206-gcc.4.4.7-linux//extras/components/include -O2 -Wall  -c calltrace.cpp 
+calltrace.cpp:1:1: error: stray ‘@’ in program
+calltrace.cpp:38:17: fatal error: pin.H: No such file or directory
+compilation terminated.
+make: *** [calltrace.o] Error 1
+
+$ make
+cd src && make
+make[1]: Entering directory `/home/student1/Downloads/builds/ccs12/to be done/Geneia-To be done/virtual-partitioning/switch/src'
+g++ -Wall -c -fomit-frame-pointer -std=c++0x -O3 -fno-strict-aliasing -fno-stack-protector -DBIGARRAY_MULTIPLIER=1 -DUSING_XED -DTARGET_IA32 -DHOST_IA32 -DTARGET_LINUX -mtune=core2 -ggdb -DDEBUG_MEMTRACK -I/home/student1/Downloads/pin-2.13-61206-gcc.4.4.7-linux//source/toos/InstLib -I/home/student1/Downloads/pin-2.13-61206-gcc.4.4.7-linux//extras/xed2-ia32/include -I/home/student1/Downloads/pin-2.13-61206-gcc.4.4.7-linux//source/include -I/home/student1/Downloads/pin-2.13-61206-gcc.4.4.7-linux//source/include/gen -I/home/student1/Downloads/pin-2.13-61206-gcc.4.4.7-linux//extras/components/include -o libdft_api.o libdft_api.c
+In file included from libdft_api.c:43:0:
+libdft_api.h:39:17: fatal error: pin.H: No such file or directory
+compilation terminated.
+make[1]: *** [libdft_api.o] Error 1
+make[1]: Leaving directory `/home/student1/Downloads/builds/ccs12/to be done/Geneia-To be done/virtual-partitioning/switch/src'
+make: *** [all] Error 2
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

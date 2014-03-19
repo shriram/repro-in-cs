@@ -1,0 +1,26 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+Maybe Python as it contains .py files
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+No documentation provided on how to run code. 
+
+when I go into the /exec folder and in the 168.wupwise folder, then
+>>./wupwise
+./wupwise: error while loading shared libraries: liblineage.so.1: cannot open shared object file: No such file or directory
+
+when I do 
+>>sh ./wupwise in the same directory , then
+./wupwise: 1: ./wupwise: Syntax error: ")" unexpected
+
+liblineage.so is located in the lib directory. 
+python files in the same directory give assertion errors. Not sure how to run it.
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

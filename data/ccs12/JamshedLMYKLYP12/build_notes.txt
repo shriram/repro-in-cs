@@ -1,0 +1,37 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1- Lua 5.1 development library (Debian/Ubuntu package: liblua5.1-0-dev)
+2- Readline development library (Debian/Ubuntu package: libreadline-dev)
+3- NUMA development scheduling & memory placement library (Debian/Ubuntu package: libnuma-dev)
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Error with the configure command
+
+student1@ubuntu:~/Downloads/builds/ccs12/JamshedL$ cd kargus-s-master/
+student1@ubuntu:~/Downloads/builds/ccs12/JamshedL/kargus-s-master$ export MAX_CPUS=`grep processor /proc/cpuinfo | sort -u | wc -l`
+student1@ubuntu:~/Downloads/builds/ccs12/JamshedL/kargus-s-master$ export SNORT_PREFIX=/usr/local/snort/
+student1@ubuntu:~/Downloads/builds/ccs12/JamshedL/kargus-s-master$ ./configure --prefix=$(SNORT_PREFIX) --disable-pthread CFLAGS="-O3 -m64 -D__USE_GNU -D_GNU_SOURCE -DMAX_CPUS=12 -DUSE_SPINLOCK -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fno-builtin-posix_memalign -ljemalloc" LIBS="-lnuma -llua5.1 -lpthread" CPPFLAGS="-I/usr/include/lua5.1 -DMAX_CPUS=12" --disable-dynamicplugin --disable-control-socket --disable-dlclose --disable-zlib --disable-gre --disable-mpls --disable-targetbased --disable-decoder-preprocessor-rules --disable-ppm --disable-perfprofiling --disable-linux-smp-stats --disable-prelude --disable-ppm-test --disable-active-response --disable-normalizer --disable-reload --disable-reload-error-restart --disable-paf --disable-react --disable-flexresp3 --disable-aruba --disable-intel-soft-cpm --disable-shared-rep --disable-rzb-saac --disable-large-pcap
+SNORT_PREFIX: command not found
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... no
+configure: error: in `/home/student1/Downloads/builds/ccs12/JamshedL/kargus-s-master':
+configure: error: C compiler cannot create executables
+See `config.log' for more details
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student2
+ARTICLE:ANALYSIS_TIME[minutes] 6
+ARTICLE:COMMENT[string] 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] part
+ARTICLE:GRANT_SUPPORT[none or string] Supported by NSF award CNS-1017148.
+ARTICLE:NSF-SUPPORT[none or number] CNS-1017148 
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] https://www.usenix.org/system/files/conference/osdi12/osdi12-final-33.pdf
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] monattar@nameofcompany.com mcchow@umich.edu jflinn@umich.edu 
+BIBTEX:LABEL[string] attariyan2012x
+AUTHOR:NAMES[list of first_last] Mona_Attariyan Michael_Chow Jason_Flinn 
+BIBTEX:LINK[url] 
+BUILD:ANALYSIS_BY[name] student4
+BUILD:ANALYSIS_TIME[minutes] 10
+BUILD:COMMENT[string] Assume works, since build requires a VM setup to modify the kernel and tested that the UI for kernel-modification works.
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded compiles runs
+BUILD:ERROR_COMMENT[none,not_needed,comment] NONE
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] needed request_1 response_1 sent_thank_you
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] X-ray 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] none 
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] none 
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] http://notrump.eecs.umich.edu/group/sw/xray.tgz 
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown 
+VERIFY:ANALYSIS_BY[name] student4
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] Oristudent3l file did not have grant filed or link status filled-out. 
+EMAIL1:CODE_AVAILABLE[yes,no,no_response] yes
+EMAIL1:REMARK[comment] 

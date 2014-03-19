@@ -1,0 +1,29 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Install racket from (select the appropriate operating system):
+http://racket-lang.org/download/
+
+run the script by going to the directory:
+sh ./racket-5.3.5-bin-x86_64-linux-ubuntu-precise.sh
+Enter the following options when the installation prompts in the given order:
+no
+./racket
+ skip links
+This will install the tool. 
+
+To run the tool:
+Navigate to the bin directory under the installation directory:
+$./drracket
+
+This will run the tool. 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

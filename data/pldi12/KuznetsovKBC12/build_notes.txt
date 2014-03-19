@@ -1,0 +1,38 @@
+1:BUILD_BY[name] student2
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Linux ubuntu 3.8.0-23-generic #34-Ubuntu SMP Wed May 29 20:22:58 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux (Ubuntu 13.04)
+1:DEPENDENCIES[list of dependencies with where to get them]
+Using: http://cloud9.epfl.ch/setting-up
+using setup automation script: build_install_cloud9.sh
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+At the end when it is apparently testing:
+
+Exception: Call to 'pkg-config freetype2 --libs' returned exit status 127. while loading dependencies of /home/student2/test_repro/cloud9/src/testing_targets/build/all_llvm.gyp while trying to load /home/student2/test_repro/cloud9/src/testing_targets/build/all_llvm.gyp
+Preparing LLVM+Gold environment
+-- Checking whether LD supports plug-ins... FAIL
+make: Entering directory `/home/student2/test_repro/cloud9/src/testing_targets'
+make: *** No targets specified and no makefile found.  Stop.
+make: Leaving directory `/home/student2/test_repro/cloud9/src/testing_targets'
+build_install_cloud9.sh: line 160: /home/student2/test_repro/cloud9/src/cloud9/Release+Asserts/bin/c9-worker: No such file or directory
+Cloud9 test c9-worker FAILED
+
+The LLVM directory in src/third_party/
+is missing
+
+Probably as a result of this error:
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://accounts.google.com/ServiceLogin?service=code&ltmpl=phosting&continue=http%3A%2F%2Fcloud9.googlecode.com%2Fissues%2Fattachment%3Faid%3D90003000%26name%3D0001-Corrected-patch-for-ar.proxy.patch%26token%3D5rhPS6uRakUK6BcZtUhhVdU3xyA%253A1347885678482 [following]
+--2013-06-16 17:30:54--  https://accounts.google.com/ServiceLogin?service=code&ltmpl=phosting&continue=http%3A%2F%2Fcloud9.googlecode.com%2Fissues%2Fattachment%3Faid%3D90003000%26name%3D0001-Corrected-patch-for-ar.proxy.patch%26token%3D5rhPS6uRakUK6BcZtUhhVdU3xyA%253A1347885678482
+Resolving accounts.google.com (accounts.google.com)... 74.125.130.84, 2607:f8b0:4002:c05::54
+Connecting to accounts.google.com (accounts.google.com)|74.125.130.84|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2013-06-16 17:30:55 ERROR 404: Not Found.
+
+Apparently an error with downloading
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

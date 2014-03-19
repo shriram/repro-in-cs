@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student3
+ARTICLE:ANALYSIS_TIME[minutes] 13
+ARTICLE:COMMENT[string] 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] supported by the National Science Foundation under CSR-1017518 as well as by generous donations from Network Appliance and Google
+ARTICLE:NSF-SUPPORT[none or number] CSR-1017518,
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://dl.acm.org/citation.cfm?id=2324878&dl=ACM&coll=DL&CFID=217587786&CFTOKEN=30613891
+ARTICLE:STATUS[not_finished,finished] finished
+AUTHOR:EMAIL_REAL[list of strings] tylerharter@gmail.com 
+BIBTEX:LABEL[string] HarterDVAA12
+AUTHOR:NAMES[list of first_last] Tyler_Harter Chris_Dragga Michael_Vaughn Andrea_C._Arpaci-Dusseau Remzi_H._Arpaci-Dusseau
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/journals/tocs/HarterDVAA12
+BUILD:ANALYSIS_BY[name] student1
+BUILD:ANALYSIS_TIME[minutes] 25
+BUILD:COMMENT[string] Data provided for testing in the same web page. More details on build_notes.
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded compiles runs 
+BUILD:ERROR_COMMENT[none,not_needed,comment] NONE
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] iBench 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] http://research.cs.wisc.edu/adsl/Traces/ibench/
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url] 
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] 
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown
+VERIFY:ANALYSIS_BY[name] student1
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] Tool has name, updated article status to found_link, email to unknown as build has not been performed yet 
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment]

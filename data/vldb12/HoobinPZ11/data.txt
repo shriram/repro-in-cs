@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student1
+ARTICLE:ANALYSIS_TIME[minutes] 999
+ARTICLE:COMMENT[string] student1: added grant, article status to finish, could not find an implementation link 
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] This work was supported by the Australian Research Coun- cil and the NICTA Victorian Research Laboratory. NICTA is funded by the Australian Government as represented by the Department of Broadband, Communications, and the Digital Economy, and the Australian Research Council through the ICT Centre of Excellence program. Simon J. Puglisi is supported by a Newton Fellowship
+ARTICLE:NSF-SUPPORT[none or number] Coun-cil,
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] http://www.vldb.org/pvldb/vol5/p265_christopherhoobin_vldb2012.pdf
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] christopher.hoobin@rmit.edu.au simon.puglisi@kcl.ac.uk jzobel@unimelb.edu.au 
+BIBTEX:LABEL[string] HoobinPZ11
+AUTHOR:NAMES[list of first_last] Christopher_Hoobin Simon_J._Puglisi Justin_Zobel
+BIBTEX:LINK[url] http://dblp.uni-trier.de/rec/bibtex/journals/pvldb/HoobinPZ11
+BUILD:ANALYSIS_BY[name] student4
+BUILD:ANALYSIS_TIME[minutes] 60
+BUILD:COMMENT[string] Tests did not work.
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded compiles 
+BUILD:ERROR_COMMENT[none,not_needed,comment] RUNTIME_ERROR
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] RLZ 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url] none 
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url]  https://github.com/skuruppu/RLZ
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url]  
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown 
+VERIFY:ANALYSIS_BY[name] student4
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] Found a link that used the compression scheme described in the paper via google. One of the authors of the source is the author of the paper.
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment]

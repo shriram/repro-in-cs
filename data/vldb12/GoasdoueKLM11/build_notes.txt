@@ -1,0 +1,21 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+1. postgre-sql 
+2. postgre-sql client
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Not sure how to provide authentication to access the database. Error message when trying to access the database. 
+
+student1@ubuntu:~/Downloads/builds/from emails/vldb-Goasdoe/RDFViewS_Christian/scripts$ psql -d ../inputFiles/barton/abadi-queries.sql -a -f ../inputFiles/barton/mo-queries.sql 
+psql: FATAL:  Ident authentication failed for user "student1"
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

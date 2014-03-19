@@ -1,0 +1,32 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+Java
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+Code runs , with an exception error.
+
+student1@ubuntu:~/Downloads/builds/from emails/sigmod-Mozafari$ java -jar engine.jar schema.txt uniprot.xsd head2.xml_sax_0 query.txt Minimal_Mode One_Match_Skip_One OPS_OPTIMIZATION
+"close" "uniprot" "" "</uniprot> 0
+java.lang.Exception: The input tuple does NOT consitent with schema.
+	at com.ucla.core.schema.Schema.readTupleManualParser(Schema.java:242)
+	at com.ucla.core.io.TupleStream.readTuples(TupleStream.java:74)
+	at com.ucla.core.io.TupleStream.<init>(TupleStream.java:27)
+	at com.ucla.core.main.DemoEntrance.main(DemoEntrance.java:48)
+RPB1_YEAST	DNA-directed RNA polymerase II subunit RPB1	216	234
+======================================
+Performance Report:
+number of tuple consisderations: 26767
+number of backtracks (in tuples): 5395
+Optimizer name: OPS optimizer
+Total optimization time: 27
+Total execution time: 509
+======================================
+Used memory in bytes: 4749928
+Used memory in KB: 4638
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

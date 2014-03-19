@@ -1,0 +1,31 @@
+ARTICLE:ANALYSIS_BY[name] student2
+ARTICLE:ANALYSIS_TIME[minutes] 6
+ARTICLE:COMMENT[string] none
+ARTICLE:COMMERCIAL_EFFORT[none,part,full] none
+ARTICLE:GRANT_SUPPORT[none or string] Based upon work supported by the Defense Advanced Research Agency (DARPA) and SPAWAR Systems Center Pacific, Contract No. N66001- 11-C-4018.
+ARTICLE:NSF-SUPPORT[none or number] N66001-,11-C-4018.,
+ARTICLE:IMPLEMENTATION_EXISTS[unknown,hardware,yes,no] yes
+ARTICLE:LINK[url] https://www.usenix.org/system/files/conference/osdi12/osdi12-final-115.pdf
+ARTICLE:STATUS[not_finished,finished]  finished
+AUTHOR:EMAIL_REAL[list of strings] isaac.wolinsky@gmail.com hcorrigangibbs@gmail.com bryan.ford@yale.edu aaron.m.johnson@nrl.navy.mil
+BIBTEX:LABEL[string] wolinsky2012dissent
+AUTHOR:NAMES[list of first_last] _David_Isaac_Wolinsky _Henry_Corrigan-Gibbs _Bryan_Ford _Aaron_Johnson
+BIBTEX:LINK[url] 
+BUILD:ANALYSIS_BY[name] student4
+BUILD:ANALYSIS_TIME[minutes] 45
+BUILD:COMMENT[string] building concurrently with wang's paper in the same conference.
+BUILD:STATUS[one of {unknown,needed,not_needed,started,finished} and list of {downloaded,compiles,runs}] finished downloaded
+BUILD:ERROR_COMMENT[none,not_needed,comment] DISTRIBUTION_IS_MISSING_FILES
+EMAIL:STATUS[unknown,not_needed,not_found or list of {needed,request_1,response_1,sent_thank_you}] not_needed
+PI:COMMENT_CC[string] 
+PI:COMMENT_TP[string] 
+TOOL:NAME[string] Dissent 
+TOOL:ARTICLE_LINK[unknown,none,url,broken and url]  http://dedis.cs.yale.edu/2010/anon/
+TOOL:GOOGLE_LINK[unknown,none,url,broken and url]  none
+TOOL:EMAIL_LINK[unknown,none,sent_no_url,url,broken and url] unknown
+TOOL:DATA_LINK[unknown,none,url,broken and url] unknown 
+VERIFY:ANALYSIS_BY[name] student4
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] finished
+VERIFY:COMMENT[string] Source code exists in article, no need to use google to find it. Code Available via GitHub. 
+EMAIL1:CODE_AVAILABLE[yes,no,no_response]
+EMAIL1:REMARK[comment]

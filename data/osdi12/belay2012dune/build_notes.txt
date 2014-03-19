@@ -1,0 +1,70 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+require Intel x86 CPUs with support for VT-x and EPT
+We also require recent Linux kernels operating in 64-bit mode. 
+Both of these requirements can be verified by running the script provided in the root: 
+$ sh dune_req.sh
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+student4- I do not have VTx, somebody else should try to build this one.
+
+Build failes when I tried to do 
+make
+cat: /boot/System.map-3.2.0-36-generic: Permission denied
+cat: /boot/System.map-3.2.0-36-generic: Permission denied
+cat: /boot/System.map-3.2.0-36-generic: Permission denied
+cat: /boot/System.map-3.2.0-36-generic: Permission denied
+cat: /boot/System.map-3.2.0-36-generic: Permission denied
+cat: /boot/System.map-3.2.0-36-generic: Permission denied
+cat: /boot/System.map-3.2.0-36-generic: Permission denied
+cat: /boot/System.map-3.2.0-36-generic: Permission denied
+cat: /boot/System.map-3.2.0-36-generic: Permission denied
+cat: /boot/System.map-3.2.0-36-generic: Permission denied
+cat: /boot/System.map-3.2.0-36-generic: Permission denied
+cat: /boot/System.map-3.2.0-36-generic: Permission denied
+  CC [M]  /home/student1/dune/dune/kern/vmx.o
+/home/student1/dune/dune/kern/vmx.c:1174:51: error: invalid suffix "x" on integer constant
+/home/student1/dune/dune/kern/vmx.c: In function ‘vmx_init_syscall’:
+/home/student1/dune/dune/kern/vmx.c:1218:36: error: invalid suffix "x" on integer constant
+make[3]: *** [/home/student1/dune/dune/kern/vmx.o] Error 1
+make[2]: *** [_module_/home/student1/dune/dune/kern] Error 2
+make[2]: Leaving directory `/usr/src/linux-headers-3.2.0-36-generic'
+make[1]: *** [modules] Error 2
+make[1]: Leaving directory `/home/student1/dune/dune/kern'
+make: *** [kern] Error 2
+
+then I tried 
+sudo make
+
+make -C kern
+make[1]: Entering directory `/home/student1/dune/dune/kern'
+mkdir -p /home/student1/dune/dune/kern/tmp/.tmp_versions
+make -C /lib/modules/3.2.0-36-generic/build M=/home/student1/dune/dune/kern MODVERDIR=/home/student1/dune/dune/kern/tmp/.tmp_versions modules
+make[2]: Entering directory `/usr/src/linux-headers-3.2.0-36-generic'
+  CC [M]  /home/student1/dune/dune/kern/vmx.o
+  CC [M]  /home/student1/dune/dune/kern/ept.o
+/home/student1/dune/dune/kern/ept.c: In function ‘vmx_free_ept’:
+/home/student1/dune/dune/kern/ept.c:621:1: internal compiler error: Aborted
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.6/README.Bugs> for instructions.
+Preprocessed source stored into /tmp/ccrGRXlo.out file, please attach this to your bugreport.
+make[3]: *** [/home/student1/dune/dune/kern/ept.o] Error 1
+make[2]: *** [_module_/home/student1/dune/dune/kern] Error 2
+make[2]: Leaving directory `/usr/src/linux-headers-3.2.0-36-generic'
+make[1]: *** [modules] Error 2
+make[1]: Leaving directory `/home/student1/dune/dune/kern'
+make: *** [kern] Error 2
+
+which still returns errors and build failed. 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+

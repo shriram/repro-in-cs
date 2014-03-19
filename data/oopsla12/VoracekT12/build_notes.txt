@@ -1,0 +1,23 @@
+1:BUILD_BY[name] student1
+1:BUILD_ENVIRONMENT[operating system 32 vs 64] Ubuntu12.04 Windows7 64
+1:DEPENDENCIES[list of dependencies with where to get them]
+
+Java
+
+1:END_DEPENDENCIES
+1:NOTES[notes on attempted build]
+
+Couldn't get CMake to compile on windows or linux. 
+
+On Ubuntu:
+CMake returns errors related to Windows
+
+On Windows:
+CMakeLists.txt file is not provided. 
+
+1:END_NOTES
+VERIFY:ANALYSIS_BY[name]
+VERIFY:STATUS[unknown,needed,not_needed,started,finished] unknown
+VERIFY:COMMENT[string]
+
+
