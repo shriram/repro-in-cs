@@ -6,7 +6,7 @@
 (require "gen-doc.rkt")
 (require scribble/render)
 
-(define f (parse-tsv/file (build-path "data" "summary.tsv")))
+(define f (parse-tsv/file (build-path "metadata" "summary.tsv")))
 (define g (convert-to-struct (strip-header f)))
 
 (define l1 (take (builds g) 5))
