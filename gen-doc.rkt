@@ -12,8 +12,7 @@
           (list (paper-group p)
                 (paper-authors p)
                 (paper-title p)
-                (paper-build-results p)
-                (paper-build-notes p)))
+                (hyperlink (paper-build-notes p) "notes")))
         ps)))
 
 (define (generate-document bs bfs)
