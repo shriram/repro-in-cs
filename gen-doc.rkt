@@ -1,6 +1,7 @@
 #lang racket
 
 (require "structure-data.rkt")
+(require "static-text.rkt")
 (require scribble/base)
 (require scribble/decode)
 
@@ -28,6 +29,10 @@
   (decode
    (list
     (title #:tag "how-to" "Examining ``Reproducibility in Computer Science''")
+    (section #:tag "what-doing" "What We Are Doing")
+    top-matter
+    threats-to-validity
+    review-format
     (section #:tag "build-fails" "Reported as Not Building")
     (generate-paper-list bfs)
     (section #:tag "builds" "Reported as Building")
