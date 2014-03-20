@@ -1,0 +1,21 @@
+/* Colors from palette "3" by Atomic Cocktail
+   http://www.colourlovers.com/palette/3019368/3 */
+
+body { background-color: #FFFCF2; }
+
+.tocview { background-color: #E4D0DB; }
+.tocsub { background-color: #E9E59E; }
+
+.tocviewlink { color: white; }
+.tocviewselflink { color: white; }
+
+.plainlink { color: #B5DAD2; }
+
+.navsettop { background-color: #B5DAD2; }
+.navsetbottom { background-color: #B5DAD2; }
+
+a:link, a:hover, a:active { color: grey; }
+a:visited { color: black; }
+
+table {border-spacing: 0 1em; padding: 1em}
+td {vertical-align: top}

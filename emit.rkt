@@ -17,4 +17,5 @@
 (render (list the-doc) 
         (list "index.html")
         #:dest-dir "data"
+        #:style-extra-files (list "style-changes.css")
         )
