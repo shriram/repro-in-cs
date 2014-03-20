@@ -16,5 +16,5 @@
 
 (render (list the-doc) 
         (list "index.html")
-        #:dest-dir "output"
+        #:dest-dir "data"
         )
