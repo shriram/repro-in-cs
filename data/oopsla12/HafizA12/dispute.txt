@@ -1,0 +1,7 @@
+The paper is an extended abstract for a poster that we submitted to SPLASH 2012.
+
+There are no artifacts associated. It describes a pattern language that we
+created for security patterns.
+
+The extended abstract contains one link, which is operational. 
+http://munawarhafiz.com/securitypatterncatalog/index.php
