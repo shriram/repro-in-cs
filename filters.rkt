@@ -4,7 +4,6 @@
 
 (provide builds)
 (provide build-fails)
-(provide build-notes)
 
 (define (get-papers-building expected papers)
   (filter (lambda (p)
@@ -14,4 +13,3 @@
 
 (define (builds ss) (get-papers-building "Builds" ss))
 (define (build-fails ss) (get-papers-building "Build fails" ss))
-(define (build-notes ss) (filter paper-build-notes ss))

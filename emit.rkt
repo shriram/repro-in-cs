@@ -9,9 +9,8 @@
 (define f (parse-tsv/file (build-path "metadata" "summary.tsv")))
 (define g (convert-to-struct (strip-header f)))
 
-(define l1 (take (builds g) 5))
-(define l2 (take (build-fails g) 5))
-(define l3 (build-notes g))
+(define l1 (builds g));(take (builds g) 5))
+(define l2 (build-fails g)); (take (build-fails g) 5))
 
 (define the-doc (generate-document l1 l2))
 
