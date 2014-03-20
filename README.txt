@@ -34,5 +34,5 @@ or (assuming your path includes the Racket binary):
 
 - run this command: racket emit.rkt
 
-This should generate output/index.html.
+This should generate data/index.html.
 
