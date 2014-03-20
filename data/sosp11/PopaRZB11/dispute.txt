@@ -1,0 +1,14 @@
+Time [in minutes]: 25?
+Platform [OS, libraries, etc.]: Ubuntu 13.10
+Skill level:
+
+I can build complex software like GCC and the Linux kernel
+
+Detailed evaluation:
+
+The provided build script took a while to run but did not require any
+changes to the code.
+
+git clone -b public git://g.csail.mit.edu/cryptdb
+cd cryptdb; sudo scripts/install.rb .
+

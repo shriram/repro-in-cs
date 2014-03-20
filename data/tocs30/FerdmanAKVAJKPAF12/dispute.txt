@@ -1,0 +1,15 @@
+Time [in minutes]: 5
+Platform [OS, libraries, etc.]: Ubuntu 13.10, Java, maven
+Skill level:
+
+I can build complex software like GCC and the Linux kernel.
+
+Detailed evaluation:
+
+The study authors were unable to build YCSB. I attempted to build YCSB
+from the GitHub repository and succeeded. I did not attempt to build
+the remaining source.
+
+sudo apt-get install maven openjdk-7-jdk
+git clone https://github.com/brianfrankcooper/YCSB.git
+cd YSCB; mvn package
