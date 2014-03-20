@@ -69,6 +69,9 @@
             into the directory corresponding to the paper. Needless to say,
             use these exact names.}
    
+   @para{(To find disputed reviews, search for ``dispute!''. We'll improve
+         the interface soon.)}
+   
    @para{We need a standard for judgment. We believe a useful standard is
          @(hyperlink "http://en.wikipedia.org/wiki/Person_having_ordinary_skill_in_the_art"
                      "PHOSITA"). 
