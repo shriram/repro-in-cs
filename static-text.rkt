@@ -57,8 +57,9 @@
          That is, when an artifact doesn't build or run out of the box, you 
          should make only reasonable (and minimal) changes. If with these it can 
          pass muster, consider clearing it (but indicate precisely what you had to 
-         do). If with these it does not, reject it. If in doubt, either use your 
-         judgment or discuss on social media.}
+         do). If with these it does not, reject it. In paritcular, even if you were 
+         successful, you had to use ingenuity, then the artifact should be regarded 
+         as failing.If in doubt, feel free to discuss on social media. }
 
    @para{When you are done with your review, commit the files and send a
          pull request to the original maintainer. We will review your request
