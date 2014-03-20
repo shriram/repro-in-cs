@@ -1,0 +1,9 @@
+The error recorded here:
+
+    Compiling with raco make command obtains error:
+    membrane.rkt:32:8: compile: unbound identifier in module in: ÃŽÂ»
+    
+is the result of whoever did the testing mishandling Unicode in this file: 
+    http://www.cs.umd.edu/~sstrickl/chaperones/membrane.rkt
+    
+Downloading the file correctly and running it with Racket will demonstrate that it works.
