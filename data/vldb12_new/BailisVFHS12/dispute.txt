@@ -1,0 +1,27 @@
+Time [in minutes]: 1
+Platform [OS, libraries, etc.]: Google Chrome
+Skill level:
+
+I can build complex software like GCC and the Linux kernel
+(Skill required: none?)
+
+From the Arizona Technical Report (accessed 3/20/2014): "A small
+number of systemshad [sic] online implementations and thus did not
+need to be compiled. We marked these as 'builds.'"
+
+The online Javascript-based demo linked from our paper that the
+Arizona study authors accessed is accessible at
+http://pbs.cs.berkeley.edu/#demo and successfully runs.
+
+However, a full implementation in Cassandra shipped in Cassandra 1.2.0
+and is also available at: https://github.com/pbailis/cassandra-pbs
+(We were not contacted regarding the study.)
+
+The above code builds and requires Apache Ant:
+
+git clone https://github.com/pbailis/cassandra-pbs.git
+cd cassandra-pbs; ant
+
+Additional source code and build/run information can be found at:
+http://www.bailis.org/blog/using-pbs-in-cassandra-1.2.0/
+https://github.com/shivaram/pbs-paper-cassandra-historical
