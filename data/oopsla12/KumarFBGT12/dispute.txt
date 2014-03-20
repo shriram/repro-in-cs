@@ -1,0 +1,17 @@
+As documented in the Jikes RVM userguide, 
+  http://jikesrvm.org/Building+the+RVM
+on Debian based platforms, you have to install the ant-optional
+package to build Jikes RVM.  
+
+Quoting from the user guide at that URL
+
+  Jikes RVM requires a complete install of ant, including the optional
+  tasks. These are present if you download and install ant
+  manually. Some Linux distributions have decided to break ant into
+  multiple packages. So if you are installing on a platform such as
+  Debian you may need to install another package such as 'ant-optional'.
+
+This is a trivial install of standard software to get a sane build
+environment, not something specific to the research results of the
+OOPSLA'12 paper. It is a basic step for building Jikes RVM on the
+platform and well-documented in the Jikes RVM userguide. 
