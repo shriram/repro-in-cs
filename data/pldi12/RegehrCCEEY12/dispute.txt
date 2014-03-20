@@ -1,0 +1,13 @@
+The "build_notes.txt" file indicates that certain dependencies could not be
+installed:
+
+	> 1:NOTES[notes on attempted build]
+	> could not install: style, flex, GNU indent, LLVM/clang 3.2
+
+These are widely available software packages and they should be straightfoward
+for a person to install.  This paper's associated software, called C-Reduce,
+is distributed with documentation that provides pointers for installing these
+dependencies.
+
+Once the dependencies are installed, a person should have little or no
+difficulty compiling C-Reduce.
