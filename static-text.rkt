@@ -2,7 +2,7 @@
 
 (require scribble/base)
 
-(provide top-matter review-format threats-to-validity)
+(provide top-matter review-format review-protocol threats-to-validity)
 
 (define top-matter
   (list
@@ -20,6 +20,54 @@
          Even if we end up disagreeing with some of their findings,
          we remain deeply appreciative of their service to the
          community by highlighting these important issues.}))
+
+(define review-protocol
+  (list
+   @para{All responses will be done through the git repository:}
+   @para{https://github.com/shriram/repro-in-cs}
+   @para{To avoid language conflicts and complexity, our interface
+         will be simple text files.}
+   
+   @para{To @emph{dispute} a review, which anyone can do, please
+            find the directory corresponding to the paper and create
+            a file named @tt{dispute.txt}. In it, explain why
+            you are disputing the review. In principle you can also 
+            use this to simply communicate some fact about the artifact:
+            e.g., there was no artifact available then, but there is
+            one now. This puts the fact into the public record but
+            would not cause anyone to re-run the evaluation.}
+   
+   @para{Anyone @emph{other than the authors} is welcome to 
+                @emph{reproduce} (in the sense used by Collberg, et al.:
+                see section 3 of
+                @(hyperlink "http://reproducibility.cs.arizona.edu/tr.pdf"
+                            "their paper"))
+            the artifact. When they are done, they make a judgment call about
+            whether the artifact passed or failed. If it passed, they write
+            their findings in @tt{cleared.txt}. If it failed, they
+            write their findings in @tt{problem.txt}. Note that multiple
+            people may well check an artifact, so don't erase a previous
+            person's review---just append to it. These files should also go
+            into the directory corresponding to the paper. Needless to say,
+            use these exact names.}
+   
+   @para{We need a standard for judgment. We believe a useful standard is
+         @(hyperlink "http://en.wikipedia.org/wiki/Person_having_ordinary_skill_in_the_art"
+                     "PHOSITA"). 
+         That is, when an artifact doesn't build or run out of the box, you 
+         should make only reasonable (and minimal) changes. If with these it can 
+         pass muster, consider clearing it (but indicate precisely what you had to 
+         do). If with these it does not, reject it. If in doubt, either use your 
+         judgment or discuss on social media.}
+
+   @para{When you are done with your review, commit the files and send a
+         pull request to the original maintainer. We will review your request
+         and then add it to the repository (and the result will appear on this
+         Web page). Note that we are likely to reject a review that violates
+         standard norms of discourse, as well as one that appears to be removing
+         someone else's review, etc., unless it is actually cleaning up a
+         prior mistake.}
+   ))
 
 (define review-format
   (list

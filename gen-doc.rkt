@@ -32,6 +32,8 @@
     (section #:tag "what-doing" "What We Are Doing")
     top-matter
     threats-to-validity
+    (section #:tag "review-details" "How to Review")
+    review-protocol
     review-format
     (section #:tag "build-fails" "Reported as Not Building")
     (generate-paper-list bfs)
