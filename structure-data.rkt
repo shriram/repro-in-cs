@@ -20,10 +20,10 @@
        (regexp-split #rx"_" 
                      (second
                       (regexp-match
-                       (regexp (string-append "data/(.*)" prefix ".txt"))
+                       (regexp (string-append "data/(.*)_" prefix ".txt"))
                        s)))))
 ;; Note: the "." in ".txt" above should be quoted: we mean the literal dot,
-;; not the regexp for any ol' character.
+;; not the regexp for any ol' character. Maybe the "_" too. Regexps. Hunoz. WAT.
 
 (define (convert-to-struct l)
   (map (lambda (rp)
