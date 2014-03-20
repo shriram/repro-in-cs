@@ -20,7 +20,7 @@
        (regexp-split #rx"_" 
                      (second
                       (regexp-match
-                       (regexp (string-append "(.*)" prefix ".txt"))
+                       (regexp (string-append "data/(.*)" prefix ".txt"))
                        s)))))
 ;; Note: the "." in ".txt" above should be quoted: we mean the literal dot,
 ;; not the regexp for any ol' character.

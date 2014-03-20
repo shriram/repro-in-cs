@@ -9,7 +9,7 @@
    @para{We are evaluating the results presented by the
          @(hyperlink "http://reproducibility.cs.arizona.edu/"
                      "study at the University of Arizona").
-         Our goal is to allow authors (or any other interested party)
+         Our goal is to allow authors and any other interested parties
          to review that study's findings about an individual paper,
          and attempt to reconstruct their findings. We will summarize
          the results here.}
@@ -23,10 +23,18 @@
 
 (define review-protocol
   (list
-   @para{All responses will be done through the git repository:}
-   @para{https://github.com/shriram/repro-in-cs}
+
+   @para{To participate, clone this repository on GitHub:}
+   @centered{@(hyperlink"https://github.com/shriram/repro-in-cs" "https://github.com/shriram/repro-in-cs")}
+   @para{You
+         will need to do this so that you can edit or add files to your copy of the
+         repository and then share them with us.  (Although you can clone the
+         repository elsewhere, pull requests are easiest from GitHub;
+         please help us keep our workload reasonable.)}
+
    @para{To avoid language conflicts and complexity, our interface
-         will be simple text files.}
+         will be simple text files. All the files of interest to you
+         are in the @tt{data} sub-directory.}
    
    @para{To @emph{dispute} a review, which anyone can do, please
             find the directory corresponding to the paper and create
@@ -58,11 +66,11 @@
          should make only reasonable (and minimal) changes. If with these it can 
          pass muster, consider clearing it (but indicate precisely what you had to 
          do). If with these it does not, reject it. In particular, even if you were 
-         successful, you had to use ingenuity, then the artifact should be regarded 
+         successful, if you had to use ingenuity, then the artifact should be regarded 
          as failing. If in doubt, feel free to discuss on social media. }
 
-   @para{When you are done with your review, commit the files and send a
-         pull request to the original maintainer. We will review your request
+   @para{When you are done with your review, commit the files and send us a
+         pull request. We will review your request
          and then add it to the repository (and the result will appear on this
          Web page). Note that we are likely to reject a review that violates
          standard norms of discourse, as well as one that appears to be removing

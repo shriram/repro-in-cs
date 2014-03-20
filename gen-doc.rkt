@@ -21,7 +21,7 @@
                 (paper-authors p)
                 (paper-title p)
                 (hyperlink 
-                 (make-link (cons ".." (paper-path p)) "build_notes.txt")
+                 (make-link (paper-path p) "build_notes.txt")
                  "notes")))
         ps)))
 
