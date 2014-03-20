@@ -19,7 +19,17 @@
          valuable service based on an enormous amount of manual labor.
          Even if we end up disagreeing with some of their findings,
          we remain deeply appreciative of their service to the
-         community by highlighting these important issues.}))
+         community by highlighting these important issues.}
+   
+   @para{We do wish disagree with the use of the
+         term ``reproducibility'', which many people associate with an
+         independent reconstruction of the work. For instance,
+         @(hyperlink "https://www.cs.purdue.edu/homes/jv/pubs/r3.pdf"
+                     "this paper")
+         spells out the difference between repeatability and
+         reproducibility and provides an interesting case study.}
+
+   ))
 
 (define review-protocol
   (list
