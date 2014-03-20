@@ -1,0 +1,26 @@
+Time [in minutes]: 20
+Platform [OS, libraries, etc.]: Ubuntu 13.10
+Skill level:
+
+I can build complex software like GCC and the Linux kernel
+
+Detailed evaluation:
+
+I largely followed the instructions at:
+http://hazy.cs.wisc.edu/hazy/victor/doc/install_bismarck.php
+
+I didn't use the paper authors' provided VM image, but apparently the
+study authors didn't either.
+
+It took me a bit of path munging to include the postgres headers in
+the Bismarck (paper source) build, but otherwise was pretty straightforward:
+
+wget ftp://ftp.postgresql.org/pub/source/v9.2.7/postgresql-9.2.7.tar.gz
+tar -xzf postgresql*
+cd postgresql-9.2.7/; ./configure; make; make install
+# quick hack so gcc can access headers
+sudo chown -R ubuntu /usr/local/pgsql
+cd ..; wget http://hazy.cs.wisc.edu/hazy/victor/downloads/bismarck.tar.gz; tar -xvf bismarck.tar.gz; cd bismarck;
+# change path per http://hazy.cs.wisc.edu/hazy/victor/doc/install_bismarck.php
+sed -i 's,/home/bismarckvm/Desktop/dependencies/postgresql,/usr/local/pgsql,' bismarck.path;
+make

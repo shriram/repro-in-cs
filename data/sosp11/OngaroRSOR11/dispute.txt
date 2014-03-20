@@ -1,0 +1,19 @@
+Time [in minutes]: < 20
+Platform [OS, libraries, etc.]: Ubuntu 13.10, libraries from https://ramcloud.stanford.edu/wiki/display/ramcloud/General+Information+for+Developers, plus libzookeeper-mt-dev
+Skill level:
+
+- I can build complex software like GCC and the Linux kernel
+
+Detailed evaluation:
+
+I removed -Werr from their makefile since gcc was complaining. I also
+had some path issues with ubuntu not being able to find
+libzookeeper_mt.a, so I simply symlinked it in /usr/local/lib.
+
+git clone git://fiz.stanford.edu/git/ramcloud.git
+# dropped libboost version, added libzookeeper-mt-dev
+sudo aptitude install build-essential git-core doxygen libboost-all-dev libpcre3-dev protobuf-compiler libprotobuf-dev libcrypto++-dev libevent-dev libzookeeper-mt-dev
+# hack for zk path on ubuntu
+sudo ln -s /usr/lib/x86_64-linux-gnu/libzookeeper_mt.a  /usr/local/lib/libzookeeper_mt.a
+cd ramcloud; make
+# if compiler warnings cause compilation to halt, remove any references to -Werr from Makefile
