@@ -48,8 +48,8 @@
    @para{Anyone @emph{other than the authors} is welcome to 
                 @emph{reproduce} (in the sense used by Collberg, et al.:
                 see section 3 of
-                @(hyperlink "http://reproducibility.cs.arizona.edu/tr.pdf"
-                            "their paper"))
+                @(hyperlink "measuring-tr.pdf"
+                            "their paper (cached copy)"))
             the artifact. When they are done, they make a judgment call about
             whether the artifact passed or failed. If it passed, they write
             their findings in @tt{cleared.txt}. If it failed, they
