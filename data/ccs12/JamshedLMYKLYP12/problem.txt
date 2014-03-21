@@ -1,0 +1,15 @@
+The authors wrote to say that a student on the paper
+
+"set up a temporary github account for potential public source code
+release a long time ago, but later we decided not to release the code
+since it's being tech transferred to industry. The code at github is
+thus very incomplete (and no wonder it does not build) and we have
+never publicly advertised the link. I assume you've found the link
+using an automatic crawler or something?
+
+Could you please remove our project (Kargus) from your project? I don't
+think it's fair to publicly say "reported as not building" with the
+incomplete source code."
+
+It is true that it is not fair to say it does not build. However, it
+is clear that the results of the paper cannot be verified either.
