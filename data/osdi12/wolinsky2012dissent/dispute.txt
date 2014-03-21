@@ -1,0 +1,9 @@
+We saw this study and noticed that our OSDI ’12 paper on Dissent was in it,
+marked “Build fails”.  Upon very quick inspection of the Build notes for that
+line, it appears clear that whoever tried to do this build simply did not
+install the required dependencies, namely Qt and CryptoPP. It looks like they
+installed one qt3 package, but that's an old version of Qt, perhaps before
+Qt had header files named simply "QObject" rather than "QObject.h" for example.
+Try simply using a recent version of Qt (version 4), and a complete install.
+
+- Bryan Ford, bryan.ford@yale.edu
