@@ -47,29 +47,32 @@
 
 (define (generate-document papers)
   (define (gen-filtered f color) (generate-paper-list (filter f papers) color))
+  (define (make-section title f color)
+    (list (section title)
+          (generate-paper-list (filter f papers) color)))
   (decode
    (list
-    (title #:tag "how-to" "Examining ``Reproducibility in Computer Science''")
-    (section #:tag "what-doing" "What We Are Doing")
+    (title "Examining ``Reproducibility in Computer Science''")
+    (section "What We Are Doing")
     top-matter
     threats-to-validity
-    (section #:tag "review-details" "How to Review")
+    (section "How to Review")
     review-protocol
     review-format
-    (section "Purported Not Building; Disputed; Not Checked")
-    (gen-filtered (and-filters not-building? disputed? not-checked?) neutral-color)
-    (section "Purported Building; Disputed; Not Checked")
-    (gen-filtered (and-filters building? disputed? not-checked?) neutral-color)
-    (section "Conflicting Checks!")
-    (gen-filtered (and-filters cleared? problem?) bad-color)
-    (section "Purported Not Building; Disputed; Found Building")
-    (gen-filtered (and-filters not-building? disputed? cleared?) bad-color)
-    (section "Purported Building; Disputed; Found Not Building")
-    (gen-filtered (and-filters building? disputed? problem?) bad-color)
-    (section "Purported Not Building; Confirmed")
-    (gen-filtered (and-filters not-building? problem?) good-color)
-    (section "Purported Building; Confirmed")
-    (gen-filtered (and-filters building? cleared?) good-color)
+    (make-section "Purported Not Building; Disputed; Not Checked"
+                  (and-filters not-building? disputed? not-checked?) neutral-color)
+    (make-section "Purported Building; Disputed; Not Checked"
+                  (and-filters building? disputed? not-checked?) neutral-color)
+    (make-section "Conflicting Checks!"
+                  (and-filters cleared? problem?) bad-color)
+    (make-section "Purported Not Building; Disputed; Found Building"
+                  (and-filters not-building? disputed? cleared?) bad-color)
+    (make-section "Purported Building; Disputed; Found Not Building"
+                  (and-filters building? disputed? problem?) bad-color)
+    (make-section "Purported Not Building; Confirmed"
+                  (and-filters not-building? problem?) good-color)
+    (make-section "Purported Building; Confirmed"
+                  (and-filters building? cleared?) good-color)
     
     (section (emph "All") " Reported as Not Building")
     (gen-filtered not-building? bad-color)
