@@ -1,0 +1,7 @@
+Authors did not follow the original README instructions that directed
+them to install Apache's buildr, which also depends on Ruby.
+
+https://github.com/dbarowy/AutoMan/tree/3ef7309130d62245036150a6876632c73be5823e
+
+As of December 2013, AutoMan incorporates a Makefile that downloads any
+missing dependencies.
