@@ -5,6 +5,7 @@
 (require scribble/core)
 (require scribble/base)
 (require scribble/decode)
+(require file/sha1)
 
 (provide generate-document output-dir)
 
@@ -29,7 +30,7 @@
 (define (generate-paper-list ps color)
   (tabular 
    #:style (style #f
-                  (list (color-property color)))
+                  (list (background-color-property color)))
    #:sep (hspace 1)
    (map (lambda (p)
           (list (paper-group p)
@@ -55,6 +56,10 @@
                        " ")))))
         ps)))
 
+(define (color-string->color-list s)
+  (bytes->list (hex-string->bytes s)))
+
+#| Colors from http://www.colourlovers.com/palette/3289630/Easter_Glory |#
 (define (generate-document bs bfs)
   (decode
    (list
@@ -66,7 +71,7 @@
     review-protocol
     review-format
     (section #:tag "build-fails" "Reported as Not Building")
-    (generate-paper-list bfs "red")
+    (generate-paper-list bfs (color-string->color-list "FB755F"))
     (section #:tag "builds" "Reported as Building")
-    (generate-paper-list bs "green"))))
+    (generate-paper-list bs (color-string->color-list "6BEEE2")))))
 
