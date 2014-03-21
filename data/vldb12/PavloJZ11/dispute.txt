@@ -1,0 +1,11 @@
+According to build_notes.txt, the software artifact associated with this paper
+was "Given benefit of doubt since the code is a part of a larger, widely-used
+system."
+
+It does not seem to be known if the software artifact can actually be acquired
+and built.
+
+Regarding this review, I received the following URL from Andy Pavlo, where he
+says that the software is available:
+
+http://hstore.cs.brown.edu/documentation/deployment/automatic-database-designer
