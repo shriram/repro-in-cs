@@ -17,11 +17,9 @@ As the claims multiplied, it became clear that the evaluation done
 here warranted further investigation. This repository is meant to
 enable and publicize the findings of that investigation.
 
-The files are as follows:
+You can focus on the data/ subdirectory and ignore everything else.
 
-data/.csv is from those authors.
-
-To generate the output:
+If you really want to build the Web site:
 
 - install DrRacket 6.0 (http://download.racket-lang.org/)
 
@@ -36,3 +34,4 @@ or (assuming your path includes the Racket binary):
 
 This should generate data/index.html.
 
+Note: metadata/summary.csv is from Collberg, et al.
