@@ -6,13 +6,19 @@
 
 (define top-matter
   (list
-   @para{We are evaluating the results presented by 
+   @para{A group lead by Christian Collberg
          @(hyperlink "http://reproducibility.cs.arizona.edu/"
-                     "Collberg, et al").
-         Our goal is to allow authors and any other interested parties
+                     "evaluated the buildability of artifacts")
+         from research papers.}
+   
+   @para{Our goal is to allow authors and any other interested parties
          to review that study's findings about an individual paper,
          and attempt to reconstruct their findings. We will summarize
-         the results here.}
+         the results here. @bold{Note}: @emph{We are not the original
+                                              authors! If you have
+                                              questions about the
+                                              original study, please
+                                              contact them, not us!}}
    
    @para{We are grateful to Collberg, et al. for initiating this
          discussion and making all their data available. This is a
