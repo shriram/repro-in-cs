@@ -102,7 +102,7 @@
      @verbatim{
        Time [in minutes]:
        Platform [OS, libraries, etc.]: 
-       Skill level (at least the following; tell us if you have some area-specific skill):
+       Skill level (at least the following; tell us if you have a paper-specific skill):
        - make, but that's about it
        - I can work around issues like failed dependencies and unset environment variables
        - I can build complex software like GCC and the Linux kernel
