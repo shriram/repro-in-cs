@@ -1,0 +1,30 @@
+Time [in minutes]: <= 30 minutes
+Platform [OS, libraries, etc.]:
+Ubuntu Linux 13.10 32bit
+
+Skill level:
+
+- I can build complex software like GCC and the Linux kernel
+
+Detailed evaluation:
+
+The tool passed and seems impressively usable.
+
+I could build and run succesfully aprof 0.2.0 (released on Dec 10, 2013), run on the first example of the tutorial:
+
+https://code.google.com/p/aprof/wiki/Tutorial1#Profiling_a_simple_program
+
+I also run the (precompiled) Java GUI aprof-plot 0.2.0 (on my Mac).
+
+[1] https://code.google.com/p/aprof/downloads/detail?name=aprof-0.2.0.tar.gz&can=2&q=
+
+I only had some trouble with zooming in some graphs.
+As documented, this required autotools. apt-get install autoconf was sufficient.
+
+==
+
+The original build failed because a.out.h is not found, but that is a Linux
+system header. Also, the website recommends not following the README, unlike the
+tester did: https://code.google.com/p/aprof/wiki/Install
+
+No older release is available, so it's hard to understand whether I tested the same version as them.
