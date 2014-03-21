@@ -58,15 +58,16 @@
             dispute a review, please consider reviewing one or two other
             disputed artifacts, so the work evens out.)}
    
-   @para{Anyone @emph{other than the authors} is welcome to 
-                @emph{reproduce} (in the sense used by Collberg, et al.:
+   @para{We welcome 
+                @emph{reproduction} (in the sense used by Collberg, et al.:
                 see section 3 of
                 @(hyperlink "measuring-tr.pdf"
                             "their paper (cached copy)"))
-            the artifact. When they are done, they make a judgment call about
-            whether the artifact passed or failed. If it passed, they write
-            their findings in @tt{cleared.txt}. If it failed, they
-            write their findings in @tt{problem.txt}. Note that multiple
+            by anyone meeting standard conflict-of-interest rules.
+            When you are done, make a judgment call about
+            whether the artifact passed or failed. If it passed, write
+            your findings in @tt{cleared.txt}. If it failed,
+            write your findings in @tt{problem.txt}. Note that multiple
             people may well check an artifact, so don't erase a previous
             person's review---just append to it. These files should also go
             into the directory corresponding to the paper. Needless to say,
