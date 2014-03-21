@@ -1,0 +1,26 @@
+Time [in minutes]: <= 15 minutes
+
+Platform [OS, libraries, etc.]: Linux (Gentoo)
+
+Skill level:
+- I can build complex software like GCC and the Linux kernel
+
+Detailed evaluation:
+
+I used the tarball release dated July 2013 available at:
+    http://embed.cs.utah.edu/creduce/creduce-2.1.0.tar.gz
+
+As this was a PLDI paper dated June 2012, I may have not used the same version
+of the code that was used to produce the paper itself.  Nevertheless, I had no
+difficulty building and running the tool.
+
+I appreciated the warning messages when I first tried to run configure.
+    configure: WARNING: You must install Perl modules required by C-Reduce
+    configure: WARNING: You must install Artistic Style before running C-Reduce
+    configure: WARNING: You must install GNU Indent before running C-Reduce
+    configure: WARNING: You must install Berkeley Delta before running C-Reduce
+
+I spent most of my time waiting for portage to install a few needed packages for me.  I already had Clang and Flex:
+    emerge -v indent astyle delta Benchmark-Timer Exporter-Lite File-Which Getopt-Tabular regexp-common Sys-CPU
+
+I was then able to compile and run the test suite (under tests/).
