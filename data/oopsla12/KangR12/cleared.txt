@@ -1,0 +1,73 @@
+Time [in minutes]: <= 15 minutes
+
+Platform [OS, libraries, etc.]: Vagrant 1.5 and VirtualBox on a Ubuntu 13.10
+
+Skill level:
+- I know how to write programs in Haskell, which is the programming language 
+  that this paper uses.
+
+Detailed evaluation:
+
+The following Vagrantfile does the build. A trivial edit
+the configuration file (the .cabal file)  was required because the software was written
+for a version of GHC that is older than the version of GHC that ships with
+Ubuntu 12.04.
+
+If you run "vagrant up" in a directory with the following Vagrantfile, it will
+download, patch, and build the software successfully.
+
+
+    Vagrant.require_version ">= 1.5.0", "< 1.6.0"
+
+    $script = <<SCRIPT
+
+    # Pre-flight
+    sudo apt-get update
+
+    sudo apt-get install -y curl haskell-platform
+
+    cabal update
+
+    mkdir webbits
+    pushd webbits
+    curl http://plrg.kaist.ac.kr/_media/research/software/webbits-modules-20120103.tar.gz | tar xz
+
+    # cabal configure reports that "Generics" is no longer supported in GHC.
+    # This edit removed the word "Generics" from the .cabal file.
+    sed -i "s/Generics//g" WebBits.cabal 
+    cabal configure
+    cabal build
+    cabal install
+    popd
+
+    mkdir lambdajs
+    pushd lambdajs
+    curl http://plrg.kaist.ac.kr/_media/research/software/lambdajs-modules-20120126.tar.gz | tar xz
+    cd LambdaJS
+
+    # cabal configure reports that "Generics" is no longer supported in GHC.
+    # This edit removed the word "Generics" from the .cabal file.
+    sed -i "s/Generics//g" LambdaJS.cabal 
+    cabal configure
+    cabal build
+    cabal install
+
+    echo "Build reproduced."
+
+    SCRIPT
+
+    Vagrant.configure("2") do |config|
+
+      # Every Vagrant virtual environment requires a box to build off of.
+      config.vm.box = "hashicorp/precise32"
+
+      config.ssh.forward_x11 = true
+
+      config.vm.provider :virtualbox do |vb|
+        vb.gui = false
+        vb.customize ["modifyvm", :id, "--memory", "2048"]
+      end
+
+      config.vm.provision "shell",  inline: $script, :privileged => false
+      config.vm.synced_folder ".", "/vagrant"
+    end
