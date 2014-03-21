@@ -1,0 +1,40 @@
+First, let me echo Shriram's sentiment about the value of this
+discussion for our community. Thanks!
+
+The README that was reviewed listed only two dependencies,
+Z3 and ocamlbuild, with no instructions on how to install ocamlbuild.
+Omitted from this list of dependencies was the OCaml language
+(ocaml, ocamlc, etc.) and the Menhir parser (menhir). In preparation
+to be used and reviewed by others, I agree that the README should
+be updated with a more complete list of dependencies and links to
+installation sources, as well as instructions for running on Windows
+or Mac OS X.
+
+However, I believe that it's relatively easy to see from the failed
+build attempt (quoted below) that the menhir executable is missing,
+and it's not some more complicated issue that involves knowing how
+to run the theorem prover:
+
+  "
+  ...
+  ocamlbuild ...
+  ...
+  /bin/sh: 1: menhir: not found
+  ...
+  "
+
+The reviewer did not mention whether or not he/she had to install
+ocaml and ocamlbuild or if they were already installed on the test
+machine. Regardless, I believe a simple search for "ocaml menhir"
+would quickly lead the tester to the missing dependency that was
+required.
+
+For what it's worth, the README on a different branch than master/
+was updated on Jan 10 2013 to include menhir in the list of
+dependencies (without any links to the Menhir webpage):
+
+- github.com/ravichugh/djs/blob/bx/README
+- github.com/ravichugh/djs/commit/767f08038956e3d1a0718f7cd4289bd0c571f043
+
+Granted, there's nothing in master/README to suggest that the bx/ branch
+had more recent updates.
