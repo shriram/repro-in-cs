@@ -1,0 +1,7 @@
+From Peter Sewell:
+
+It looks as if the Collberg study declared our paper as "green" after
+successfully downloading and building the Lem tool which we used to
+write the specifications and lemmas that were the actual subject of
+the paper; Lem itself was not a contribution of the paper, and it's unclear
+whether they tried to typecheck those specifications using Lem.
