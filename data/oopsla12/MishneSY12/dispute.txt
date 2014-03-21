@@ -1,0 +1,4 @@
+The original data.txt says:
+
+
+"BUILD:COMMENT[string] Assumed running on merit, since compiling would take half to an hour to complete, and testing would require even more time."
