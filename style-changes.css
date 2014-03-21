@@ -14,7 +14,7 @@ body { background-color: #FFFCF2; }
 .navsettop { background-color: #B5DAD2; }
 .navsetbottom { background-color: #B5DAD2; }
 
-a:link, a:hover, a:active { color: grey; }
+a:link, a:hover, a:active { color: black; }
 a:visited { color: black; }
 
 table {border-spacing: 0 1em; padding: 1em}
