@@ -15,6 +15,17 @@ an hour). As pointed out by the original reviewer, the code probably would have 
 older GHCs (older than 7.2.1, judging from
 https://ghc.haskell.org/trac/ghc/ticket/4958#comment:1).
 
+After the patch, I built the program with:
+  cabal build
+and tested it with:
+  ./dist/build/interpreter/interpreter testsuite/test20.hr
+(suggested in the README) which seems to terminate successfully.
+
+Running it on all examples confirms the presence of a few unsuccessful results, possibly the bugs acknowledged in the README. But I didn't investigate much into it:
+
+for i in testsuite/*.hr; do echo $i; ./dist/build/interpreter/interpreter $i > /dev/null; done
+
+==
 Anecdotically, last time I tried running this code (I had looked at the paper
 before) I did give up before they did (because of lack of time). So they can't
 be blamed.
