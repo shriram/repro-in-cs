@@ -1,0 +1,67 @@
+Time [in minutes]:
+
+100
+
+(not, that's not a typo, it took an hour and 40 minutes)
+
+Platform [OS, libraries, etc.]:
+
+Used a bare metal 'dl360' PC (Dell PowerEdge 360) from aptlab.net running
+Ubuntu 12.04 LTS and kernel 3.2.0 .
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+
+- I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+
+There were perhaps more than a hundred steps involved in the building of this
+software, so I'm not documenting all of them here. I followed the instructions
+provided at:
+    http://research.cs.wisc.edu/sonar/projects/symdrive/downloads.shtml
+
+I have a typescript file for the process, but it is over 600K
+
+I did all steps up through and including the "Getting the Disk Image" section;
+I did not attempt to actually test any drivers, as the scope of this study
+is simply to build the software.
+
+Detailed evaluation:
+
+tl;dr: Compiling this software is possible, but difficult and time consuming.
+
+Compiling and running this software is definitely not for the faint of heart,
+however, in the end, it seemed to work for me. (Though, I did not attempt to
+actually test the software itself once all of the build and setup were
+completed.) It took 21 GB of disk space.
+
+This software has a number of gigantic dependencies (including s2e, qemu, a
+specific version of Linux kernel, cil, and the entire Debian base system) that
+are complicated to compile, and take a very long time and require a very large
+amount of disk space. However, the process is documented in detail on the paper
+website, so someone with sufficient motivation and experience building large,
+complicated codebases should be able to do so. The process could probably be
+improved by some scripting and packaging on the part of the software's authors.
+There are also places in the documentation where there is ambiguity about what
+directory commands should be run in, whether one should be in the chroot
+environment that the software creates, etc. However, I did not have great
+difficulty in figuring these steps out.
+
+There were a few places where peculiarities of my environment (eg. the location
+of my home directory) didn't match assumptions in the instructions or code.
+These were pretty easy to fix with minimal sleuthing. I did find myself having
+to go back in the process a couple of times and repeating an earlier step when
+it turned out I had missed something or made a mistake.
+
+The large number of dependencies do make the process seem somewhat fragile,
+and vulnerable to the dependencies disappearing from the net. In order to make
+this software more likely to still be runnable in the future, it would be highly
+desirable to package it all up and provide archives of all the dependencies.
+
+I can definitely understand why Collberg et al. marked this package as
+unbuildable given their methodology of strictly limiting build time. A package
+this complex cannot be built within half an hour. It also takes someone who is
+quite determined, at least somewhat familiar with building large systems, and
+willing to troubleshoot numerous small oddities in the build system(s). It's
+definitely not something that someone without a real interest in repeating /
+building on this research should undertake.
