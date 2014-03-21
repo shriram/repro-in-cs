@@ -1,0 +1,31 @@
+While it is not explicitly noted in the paper itself, LambdaJS (and thus
+a module-enabled version of it) explicitly notes that it can be built with
+a specific version of GHC and PLT Scheme. As the paper also used a modified
+version of Webbits, the website also publishes it along with the explanation
+that the modified version should be built and installed before LambdaJS.
+Webbits does not contain the build instruction, but it is obvious if one have
+already used `cabal`.
+
+Unfortunately, the student here did not know Haskell and failed to find,
+for example, Haskell platform. Given his/her notes, he/she downloaded
+only Webbits (did not contain README) but LambdaJS (did contain README) and
+complained about the lack of README. While the modified version of LambdaJS is
+a tricky software to build (mostly due to incompatible dependencies), this
+build attempt should not be used as an indicator of repeatability nor
+reproducibility.
+
+The situation is also complicated by the recent (post-2012) updates to GHC,
+including a removal of the `-XGenerics` extension and an unexpected stack
+overflow due to the changes on the GHC runtime system (RTS). The following
+tweaks are known to work in GHC 7.4.1, and the later versions of LambdaJS
+already include them:
+
+- Substitute all occurrences of `Generics` in the `*.cabal` files to
+  `DeriveGeneric`. (Suggested by [1])
+- Add `-rtsopts` option to the second `ghc-options` section of
+  `LambdaJS.cabal`, and change all `lambdaJS` invocations in `LambdaJS/*.sh`
+  to include `+RTS -K100m -RTS` options. (Suggested by [2])
+
+[1] https://github.com/brownplt/LambdaJS/commit/ea5d4914affb492d4785eec54c53d37fa51fdd22
+[2] https://github.com/brownplt/LambdaJS/commit/70f65c334e3c437413767b588a70f3a89f180906
+
