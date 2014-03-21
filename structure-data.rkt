@@ -26,9 +26,10 @@
 
 (define (convert-to-struct l)
   (map (lambda (rp)
-         (paper (raw-paper-group rp) (raw-paper-authors rp) (raw-paper-title rp)
-                (raw-paper-build-results rp)
-                (split-into-sub-paths-strip.txt "build" (raw-paper-build-notes rp))))
+         (let ([path (split-into-sub-paths-strip.txt "build" (raw-paper-build-notes rp))])
+           (paper (raw-paper-group rp) (raw-paper-authors rp) (raw-paper-title rp)
+                  (raw-paper-build-results rp)
+                  path)))
        (map (lambda (p)
               (apply raw-paper
                      (map (lambda (s)

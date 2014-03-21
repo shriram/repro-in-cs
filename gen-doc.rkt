@@ -20,22 +20,22 @@
                 (paper-authors p)
                 (paper-title p)
                 (hyperlink 
-                 (make-link (paper-path p) "build_notes.txt")
+                 (build-notes-link (paper-path p))
                  "notes")
-                (let ([dispute-file (make-file-name (paper-path p) "dispute.txt")]
-                      [cleared-file (make-file-name (paper-path p) "cleared.txt")]
-                      [problem-file (make-file-name (paper-path p) "problem.txt")])
+                (let ([dispute-file (dispute-file-name (paper-path p))]
+                      [cleared-file (cleared-file-name (paper-path p))]
+                      [problem-file (problem-file-name (paper-path p))])
                   (list
                    (if (file-exists? dispute-file)
-                       (hyperlink (make-link (paper-path p) "dispute.txt") "dispute!")
+                       (hyperlink (dispute-link (paper-path p)) "dispute!")
                        " ")
                    (linebreak)
                    (if (file-exists? cleared-file)
-                       (hyperlink (make-link (paper-path p) "cleared.txt") "cleared?")
+                       (hyperlink (cleared-link (paper-path p)) "cleared?")
                        " ")
                    (linebreak)
                    (if (file-exists? problem-file)
-                       (hyperlink (make-link (paper-path p) "problem.txt") "problem?")
+                       (hyperlink (problem-link (paper-path p)) "problem?")
                        " ")))))
         ps)))
 
