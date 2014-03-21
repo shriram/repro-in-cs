@@ -48,8 +48,9 @@
 (define (generate-document papers)
   (define (gen-filtered f color) (generate-paper-list (filter f papers) color))
   (define (make-section title f color)
-    (list (section title)
-          (generate-paper-list (filter f papers) color)))
+    (let ([relevant-papers (filter f papers)])
+      (list (section title " (" (number->string (length relevant-papers)) ")")
+            (generate-paper-list relevant-papers color))))
   (decode
    (list
     (title "Examining ``Reproducibility in Computer Science''")
