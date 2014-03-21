@@ -1,0 +1,55 @@
+Time [in minutes]:
+
+35
+
+I spent 25 minutes trying to build on Ubuntu 12.04 because I missed the
+bit in the documentation that said 12.10 or higher was required. Once I
+tracked down an Ubuntu 12.10 machine, I spent 5 minutes figuring out that
+I needed libtool installed (not mentioned in the documentation, though it's
+commonly installed), and 5 minutes doing the actual build.
+
+Platform [OS, libraries, etc.]:
+
+Used an 64-bit Ubuntu 12.10 machine in EC2 on an 'm1.small' instance
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+
+- I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+
+* `git clone git://g.csail.mit.edu/kint`, got revision c3402fa dated
+    January 30, 2013
+
+* `sudo apt-get update` (the machine I was using needed updating to get all
+    necessary packages)
+
+* `sudo apt-get install llvm-dev clang autoconf libtool make` (in addition
+    to the two documented dependencies, my machine was missing some common
+    development tools like make, libtool, and autoconf. libtool was the
+    hardest thing to figure out that I was missing.)
+
+* `autoreconf -fvi` (documented in INSTALL file)
+
+* `mkdir build && cd build`
+
+* `../configure`
+
+* 'make'
+
+Detailed evaluation:
+
+I wasted a bunch of time trying to build on Ubuntu 12.04 because I missed
+the note at the top of INSTALL stating that Ubuntu 12.10 or later was required.
+From the error message from the Collberg et al. dataset, I'm guessing the builder
+in that case made the same mistake. Apparently, building llvm from source is
+an option if one is stuck on Ubuntu 12.04, but I didn't try that.
+
+Once I got an Unbuntu 12.10 machine, the autoconf tools failed because I needed
+libtool, which was not a documented dependency. The error message from autoconf
+(not the authors' fault) was unhelpful, and it took some googling to find the
+solution. In many cases, this package will already be installed and many users
+will not encounter this problem.
+
+Once I had the right dependencies, the build was completely smooth. Someone who
+works in this area ought to be able to get this tool built.
