@@ -1,0 +1,44 @@
+Time [in minutes]:
+
+40
+
+Platform [OS, libraries, etc.]:
+
+Used a 64-bit Ubuntu 13.10 machine in EC2 on an 'm1.small' instance
+
+g++ version 4.8.1
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+
+- I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+
+* `git clone git@github.com:DeDiS/Dissent.git`, got revision f85c280 dated
+    February 10, 2013
+
+* `sudo apt-get update` (the machine I was using needed updating to get all
+    necessary packages)
+
+* `sudo apt-get qt-sdk crypto++` (dependencies not explicitly documented)
+
+* `qmake application.pro` (documented in README)
+
+* `make` (documted in README)
+
+Detailed evaluation:
+
+The main difficulty with building this artifact was lack of documentation of
+its dependencies: it was pretty clear from the README that it needed qt, since
+qmake is one of the commands you must run, but I didn't find out about the 
+crypto++ dependency until I got much of the way through the build. Additionally,
+it requires gcc/g++ version 4.7 or newer (also not documented) because it
+uses the c++11 standard; this derailed my original attempt to compile it on
+Ubuntu 12.04 LTS.
+
+The dependencies for this software are gigantic, but are all available through
+apt-get on Ubuntu, so while installing them takes a long time, it's easy and
+foolproof. Dissent itself also takes quite a while to compile.
+
+I suspect the build failure in the Collberg et al. dataset was due to missing
+qt development packages on the build machine.
