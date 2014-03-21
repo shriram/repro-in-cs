@@ -1,0 +1,5 @@
+From the original data:
+
+BUILD:COMMENT[string] assumed runs, since running requires writing a source file in a new langueage.
+
+Source code seems to be here: https://github.com/sadboy/DistAlgo
