@@ -1,0 +1,30 @@
+Time [in minutes]: <= 20 minutes
+
+Platform [OS, libraries, etc.]:
+OS X 10.9
+GHC 7.6.3 / Haskell 2013.2.0.0
+
+Skill level:
+- I can build complex software like GCC and the Linux kernel
+
+Detailed evaluation:
+
+The package doesn't build as-is, but the needed changes are minimal in size (see
+fixes.patch) and easy to do *for a competent Haskell programmer* (less than half
+an hour). As pointed out by the original reviewer, the code probably would have worked on
+older GHCs (older than 7.2.1, judging from
+https://ghc.haskell.org/trac/ghc/ticket/4958#comment:1).
+
+Anecdotically, last time I tried running this code (I had looked at the paper
+before) I did give up before they did (because of lack of time). So they can't
+be blamed.
+
+General lesson: please write down which GHC version you tested with.
+
+Diffstat for patch for GHC 7.6.3:
+$ diffstat -p1 implicit.patch
+ Main.hs         |    2 +-
+ Syntax.hs       |    2 +-
+ SyntaxSource.hs |    2 +-
+ rho_poly.cabal  |    1 -
+ 4 files changed, 3 insertions(+), 4 deletions(-)

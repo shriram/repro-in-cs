@@ -1,0 +1,41 @@
+diff -x '*~' -u implicit-old/Main.hs implicit/Main.hs
+--- implicit-old/Main.hs	2013-11-29 22:30:15.000000000 +0100
++++ implicit/Main.hs	2014-03-21 04:32:08.000000000 +0100
+@@ -3,7 +3,7 @@
+ import Control.Monad
+ 
+ import Data.Maybe
+-import System
++import System.Environment
+ import System.Exit
+ 
+ import ExpParser
+diff -x '*~' -u implicit-old/Syntax.hs implicit/Syntax.hs
+--- implicit-old/Syntax.hs	2013-11-29 22:30:15.000000000 +0100
++++ implicit/Syntax.hs	2014-03-21 04:31:17.000000000 +0100
+@@ -1,4 +1,4 @@
+-{-# LANGUAGE DeriveDataTypeable, StandaloneDeriving, TypeSynonymInstances #-}
++{-# LANGUAGE DeriveDataTypeable, StandaloneDeriving, TypeSynonymInstances, FlexibleInstances #-}
+ 
+ module Syntax where
+ 
+diff -x '*~' -u implicit-old/SyntaxSource.hs implicit/SyntaxSource.hs
+--- implicit-old/SyntaxSource.hs	2013-11-29 22:30:15.000000000 +0100
++++ implicit/SyntaxSource.hs	2014-03-21 04:31:38.000000000 +0100
+@@ -1,4 +1,4 @@
+-{-# LANGUAGE PatternGuards, TypeSynonymInstances #-}
++{-# LANGUAGE PatternGuards, TypeSynonymInstances, FlexibleInstances #-}
+ 
+ module SyntaxSource where
+ 
+diff -x '*~' -u implicit-old/rho_poly.cabal implicit/rho_poly.cabal
+--- implicit-old/rho_poly.cabal	2013-11-29 22:26:26.000000000 +0100
++++ implicit/rho_poly.cabal	2014-03-21 04:30:01.000000000 +0100
+@@ -24,7 +24,6 @@
+   Build-Depends:    base >= 4,
+                     array,
+                     containers,
+-                    haskell98,
+                     mtl,
+                     parsec,
+                     syb
