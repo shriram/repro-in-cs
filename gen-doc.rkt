@@ -3,6 +3,7 @@
 (require "structure-data.rkt")
 (require "static-text.rkt")
 (require "paths.rkt")
+(require "filters.rkt")
 (require scribble/core)
 (require scribble/base)
 (require scribble/decode)
@@ -40,7 +41,12 @@
   (bytes->list (hex-string->bytes s)))
 
 #| Colors from http://www.colourlovers.com/palette/3289630/Easter_Glory |#
-(define (generate-document bs bfs)
+(define bad-color (color-string->color-list "FB755F"))
+(define good-color (color-string->color-list "6BEEE2"))
+(define neutral-color (color-string->color-list "B297F4"))
+
+(define (generate-document papers)
+  (define (gen-filtered f color) (generate-paper-list (filter f papers) color))
   (decode
    (list
     (title #:tag "how-to" "Examining ``Reproducibility in Computer Science''")
@@ -50,8 +56,24 @@
     (section #:tag "review-details" "How to Review")
     review-protocol
     review-format
-    (section #:tag "build-fails" "Reported as Not Building")
-    (generate-paper-list bfs (color-string->color-list "FB755F"))
-    (section #:tag "builds" "Reported as Building")
-    (generate-paper-list bs (color-string->color-list "6BEEE2")))))
+    (section "Reported Not Building; Disputed; Not Checked")
+    (gen-filtered (and-filters not-building? disputed? not-checked?) neutral-color)
+    (section "Reported Building; Disputed; Not Checked")
+    (gen-filtered (and-filters building? disputed? not-checked?) neutral-color)
+    (section "Conflicting Checks!")
+    (gen-filtered (and-filters cleared? problem?) bad-color)
+    (section "Reported Not Building; Disputed; Claimed Building")
+    (gen-filtered (and-filters not-building? disputed? cleared?) bad-color)
+    (section "Reported Building; Disputed; Claimed Not Building")
+    (gen-filtered (and-filters building? disputed? problem?) bad-color)
+    (section "Reported Not Building; Confirmed")
+    (gen-filtered (and-filters not-building? problem?) good-color)
+    (section "Reported Building; Confirmed")
+    (gen-filtered (and-filters building? cleared?) good-color)
+    
+    (section (emph "All") " Reported as Not Building")
+    (gen-filtered not-building? bad-color)
+    (section (emph "All") " Reported as Building")
+    (gen-filtered building? good-color)
+    )))
 
