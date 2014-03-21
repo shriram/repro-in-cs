@@ -1,3 +1,10 @@
 Andrew Myers says:
 
-We figured out why they couldn't build our code. When they gave options to "configure", they used single dashes instead of double dashes as the instructions said. E.g., "configure -prefix=foo" instead of "configure --prefix=foo". 
+It looks like when they gave options to "configure", they used single
+dashes instead of the standard double dashes. E.g., "configure
+-prefix=foo" instead of "configure --prefix=foo".  The double dashes
+we typed in the README got turned into (Unicode) en dashes by some
+tool. So our instructions had a small glitch, but we think most
+developers ought to be able to recover from this -- the build notes
+themselves reveal that there is some Unicode crud appearing in the
+configuration command.
