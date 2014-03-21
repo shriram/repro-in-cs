@@ -22,21 +22,18 @@
                 (hyperlink 
                  (build-notes-link (paper-path p))
                  "notes")
-                (let ([dispute-file (dispute-file-name (paper-path p))]
-                      [cleared-file (cleared-file-name (paper-path p))]
-                      [problem-file (problem-file-name (paper-path p))])
-                  (list
-                   (if (file-exists? dispute-file)
-                       (hyperlink (dispute-link (paper-path p)) "dispute!")
-                       " ")
-                   (linebreak)
-                   (if (file-exists? cleared-file)
-                       (hyperlink (cleared-link (paper-path p)) "cleared?")
-                       " ")
-                   (linebreak)
-                   (if (file-exists? problem-file)
-                       (hyperlink (problem-link (paper-path p)) "problem?")
-                       " ")))))
+                (list
+                 (if (paper-dispute? p)
+                     (hyperlink (dispute-link (paper-path p)) "dispute!")
+                     " ")
+                 (linebreak)
+                 (if (paper-cleared? p)
+                     (hyperlink (cleared-link (paper-path p)) "cleared?")
+                     " ")
+                 (linebreak)
+                 (if (paper-problem? p)
+                     (hyperlink (problem-link (paper-path p)) "problem?")
+                     " "))))
         ps)))
 
 (define (color-string->color-list s)

@@ -1,5 +1,7 @@
 #lang racket
 
+(require "paths.rkt")
+
 (provide convert-to-struct strip-header)
 (provide (struct-out paper))
 
@@ -8,7 +10,7 @@
                          build-results database-entry build-notes)
   #:transparent)
 
-(struct paper (group authors title build-results path)
+(struct paper (group authors title path builds? dispute? cleared? problem?)
   #:transparent)
 
 (define (strip-header l)
@@ -28,8 +30,14 @@
   (map (lambda (rp)
          (let ([path (split-into-sub-paths-strip.txt "build" (raw-paper-build-notes rp))])
            (paper (raw-paper-group rp) (raw-paper-authors rp) (raw-paper-title rp)
-                  (raw-paper-build-results rp)
-                  path)))
+                  path
+                  (let ([rpbr (raw-paper-build-results rp)])
+                    (cond [(string=? rpbr "Builds") true]
+                          [(string=? rpbr "Build fails") false]
+                          [else (error 'wrong-build-entry "~a" path)]))
+                  (file-exists? (dispute-file-name path))
+                  (file-exists? (cleared-file-name path))
+                  (file-exists? (problem-file-name path)))))
        (map (lambda (p)
               (apply raw-paper
                      (map (lambda (s)
