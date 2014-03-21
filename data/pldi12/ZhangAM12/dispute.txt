@@ -1,0 +1,3 @@
+Andrew Myers says:
+
+We figured out why they couldn't build our code. When they gave options to "configure", they used single dashes instead of double dashes as the instructions said. E.g., "configure -prefix=foo" instead of "configure --prefix=foo". 
