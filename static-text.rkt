@@ -41,7 +41,7 @@
 (define review-protocol
   (list
 
-   @para{To participate, clone this repository on GitHub:}
+   @para{To participate, fork this repository on GitHub:}
    @centered{@(hyperlink"https://github.com/shriram/repro-in-cs" "https://github.com/shriram/repro-in-cs")}
    @para{You
          will need to do this so that you can edit or add files to your copy of the
