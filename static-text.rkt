@@ -12,9 +12,9 @@
          from research papers.}
    
    @para{Our goal is to allow the community
-         to review that study's findings about an individual paper,
-         and attempt to reconstruct their findings. We will summarize
-         the results here. @bold{Note}: @emph{We are not the original
+         to review and
+         reconstruct their findings.
+       	 @bold{Note}: @emph{We are not the original
                                               authors! If you have
                                               questions about the
                                               original study, please
