@@ -1,0 +1,57 @@
+Time [in minutes]: <= 30 minutes
+
+Platform [OS, libraries, etc.]:
+
+Vagrant 1.5, VirtualBox, and an X11 Server, running on a Mac
+
+Skill level:
+
+I know how to install software using "apt-get". I also know that GTK is
+required to run many Linux GUI programs.
+
+Detailed evaluation:
+
+Running racket didn't work because some libraries were missing (libcairo, 
+libjpeg, etc.) I realized that GTK is not installed on the VM. After that,
+the README is just fine and dispute.txt shows how to run a little example.
+
+If you run "vagrant up" in a directory with the following Vagrantfile, it will
+download and build the software successfully. To run the example, as described
+in dispute.txt, you need to follow the instructions printed by the provisioning
+script because X11 forwarding doesn't work during provisioning.
+
+    Vagrant.require_version ">= 1.5.0", "< 1.6.0"
+
+    $script = <<SCRIPT
+
+    sudo apt-get update
+    sudo apt-get install -y git libgtk2.0-0
+
+    wget http://mirror.racket-lang.org/installers/5.3.1/racket/racket-5.3.1-bin-i386-linux-ubuntu-karmic.sh
+
+    (echo -en "\n\n") | sudo bash racket-5.3.1-bin-i386-linux-ubuntu-karmic.sh  
+
+    # Needed to add racket to my PATH.
+    echo "export PATH=/usr/racket/bin:$PATH" >> ~/.profile
+
+    # I used exactly this revision of this software.
+    git clone http://github.com/samth/var
+    cd var
+    git checkout 6817f7d688bdd3ee4ae8314083e78ca72eba23da
+    cd ..
+
+    # This is from the README. It prints some error, but dispute.txt says that it 
+    # is ok and to run the test below. X11 doesn't work during provisioning. :(
+    echo "Now run: "
+    echo "  vagrant ssh"
+    echo "  raco link var"
+    echo "  raco setup var"
+    echo "  racket var/examples/five.rkt"
+
+    SCRIPT
+
+    Vagrant.configure("2") do |config|
+    config.vm.box = "hashicorp/precise32"
+    config.vm.provision "shell",  inline: $script, :privileged => false
+    config.ssh.forward_x11 = true
+    end
