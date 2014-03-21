@@ -6,9 +6,9 @@
 
 (define top-matter
   (list
-   @para{We are evaluating the results presented by the
+   @para{We are evaluating the results presented by 
          @(hyperlink "http://reproducibility.cs.arizona.edu/"
-                     "study at the University of Arizona").
+                     "Collberg, et al").
          Our goal is to allow authors and any other interested parties
          to review that study's findings about an individual paper,
          and attempt to reconstruct their findings. We will summarize
@@ -17,17 +17,18 @@
    @para{We are grateful to Collberg, et al. for initiating this
          discussion and making all their data available. This is a
          valuable service based on an enormous amount of manual labor.
-         Even if we end up disagreeing with some of their findings,
+         Even if we end up disagreeing with their findings,
          we remain deeply appreciative of their service to the
          community by highlighting these important issues.}
    
-   @para{We do wish disagree with the use of the
-         term ``reproducibility'', which many people associate with an
-         independent reconstruction of the work. For instance,
+   @para{We do disagree with Collberg, et al.'s use of the
+         term ``reproducibility''.
+         Many people, including ourselves, associate it with an
+         independent reconstruction of a work.
          @(hyperlink "https://www.cs.purdue.edu/homes/jv/pubs/r3.pdf"
-                     "this paper")
+                     "This paper"), for instance,
          spells out the difference between repeatability and
-         reproducibility and provides an interesting case study.}
+         reproducibility and provides interesting examples.}
 
    ))
 
@@ -113,7 +114,7 @@
 (define threats-to-validity
   (list
    @para{Some threats to the validity of our 
-         attempt to validate these results include:}
+         attempt to validate their results include:}
    
    @itemlist[
      @item{Some artifacts may have changed since the time they were tested by
