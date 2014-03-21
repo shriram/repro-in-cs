@@ -22,16 +22,9 @@ You can focus on the data/ subdirectory and ignore everything else.
 If you really want to build the Web site:
 
 - install DrRacket 6.0 (http://download.racket-lang.org/)
+- make sure racket is in your path
+- run "make"
 
-Then either:
-
-- load emit.rkt in DrRacket
-- click "Run"
-
-or (assuming your path includes the Racket binary):
-
-- run this command: racket emit.rkt
-
-This should generate data/index.html.
+This will generate data/index.html.
 
 Note: metadata/summary.csv is from Collberg, et al.
