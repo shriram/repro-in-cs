@@ -53,7 +53,9 @@
             use this to simply communicate some fact about the artifact:
             e.g., there was no artifact available then, but there is
             one now. This puts the fact into the public record but
-            would not cause anyone to re-run the evaluation.}
+            would not cause anyone to re-run the evaluation. (If you do
+            dispute a review, please consider reviewing one or two other
+            disputed artifacts, so the work evens out.)}
    
    @para{Anyone @emph{other than the authors} is welcome to 
                 @emph{reproduce} (in the sense used by Collberg, et al.:
@@ -81,7 +83,9 @@
          do). If with these it does not, reject it. In particular, even if you were 
          successful, if you had to use ingenuity, then the artifact should be regarded 
          as failing. If in doubt, feel free to discuss on social media. }
-
+   
+   @para{Please feel free to not only build but also run the artifacts!}
+   
    @para{When you are done with your review, commit the files and send us a
          pull request. We will review your request
          and then add it to the repository (and the result will appear on this
