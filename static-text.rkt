@@ -6,9 +6,9 @@
 
 (define top-matter
   (list
-   @para{A group led by Christian Collberg
+   @para{A group led by Christian Collberg attempted to
          @(hyperlink "http://reproducibility.cs.arizona.edu/"
-                     "evaluated the buildability of artifacts")
+                     "evaluate the buildability of artifacts")
          from research papers.}
    
    @para{Our goal is to allow the community
