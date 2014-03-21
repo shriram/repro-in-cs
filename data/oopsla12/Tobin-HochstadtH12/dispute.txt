@@ -1,0 +1,1 @@
+Following the instructions provided with Racket v5.3.1 (the version current as of OOPSLA 2012) produces some error output but a successfully running program at the end. To see this, follow the instructions and then run one of the examples, such as `var/examples/five.rkt`.
