@@ -1,0 +1,4 @@
+Original build notes state:
+
+"The team provided me with credentials after about a month. 
+Their online system implementation works and generates results."
