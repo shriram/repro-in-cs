@@ -1,0 +1,16 @@
+For our CCS'12 paper "FlowFox: a web browser with flexible and precise information flow control", it was marked as "Build fails" by the team of Collberg et al. at the University of Arizona on http://reproducibility.cs.arizona.edu/.
+
+From the build notes, it shows that Collberg et al. simply forgot to add a required argument in order to load the virtual image into VirtualBox, although the error message clearly indicates so:
+
+    Syntax error: Option "--vmname" requires preceding --vsys argument.
+
+
+In order to import the FlowFox virtual image into VirtualBox, via the command line, run this command:
+
+# VBoxManage import --vsys 0 --vmname "FlowFox" flowfox.ova
+
+For a full user guide on how to download, install and test our software artifact, we point to https://distrinet.cs.kuleuven.be/software/FlowFox/  , the same URL that is included within the paper.
+
+At last, we want to make clear that this "build failure" status  is not something specific to the research results of our CCS'12 paper.
+
+-- Willem De Groef
