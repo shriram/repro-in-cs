@@ -1,0 +1,71 @@
+For our SIGMOD'12 paper "Locality-Sensitive Hashing Scheme Based on Dynamic Collision Counting", it was marked as "Build fails" by the team of Collberg et al. at the University of Arizona on http://reproducibility.cs.arizona.edu/.
+
+From the notes, it shows that Collberg et al. compiled the code on "Windows7 64-bit" OS with "MS Visual Studio 2008". However, our code is implemented on "Ubuntu 10.04 32-bit" OS and can only be complied by g++.
+
+Follow these steps to compile and run the C2LSH code.
+
+(1) Get a Ubuntu 10.04 32-bit OS and g++ compilor
+
+(2) Get and extract our C2LSH code 
+
+(3) Change Directory to the source code folder
+
+(4) Complile our code simply by:
+
+# g++ -o C2LSH *.cpp
+
+(5) Run our code by:
+# ./C2LSH 
+
+(6) Follow the parameter instruction and usage to run C2LSH correctly
+
+(7) If you still have any problem when building our code, please feel free to let me know.
+
+The compilation log should be similar to the following:
+
+g++ -o c2lsh *.cpp
+In file included from /usr/include/c++/4.7/ext/hash_map:61:0,
+                 from C2LSH_Initializor.h:18,
+                 from headers.h:24,
+                 from C2LSHMain.cpp:10:
+/usr/include/c++/4.7/backward/backward_warning.h:33:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+In file included from /usr/include/c++/4.7/ext/hash_map:61:0,
+                 from C2LSH_Initializor.h:18,
+                 from headers.h:24,
+                 from C2LSH_External.cpp:9:
+/usr/include/c++/4.7/backward/backward_warning.h:33:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+In file included from /usr/include/c++/4.7/ext/hash_map:61:0,
+                 from C2LSH_Initializor.h:18,
+                 from headers.h:24,
+                 from C2LSH_Initializor.cpp:9:
+/usr/include/c++/4.7/backward/backward_warning.h:33:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+In file included from /usr/include/c++/4.7/ext/hash_map:61:0,
+                 from C2LSH_Initializor.h:18,
+                 from headers.h:24,
+                 from C2LSH_RAM.cpp:8:
+/usr/include/c++/4.7/backward/backward_warning.h:33:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+In file included from /usr/include/c++/4.7/ext/hash_map:61:0,
+                 from C2LSH_Initializor.h:18,
+                 from headers.h:24,
+                 from CollisionCountLSH.cpp:8:
+/usr/include/c++/4.7/backward/backward_warning.h:33:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+In file included from /usr/include/c++/4.7/ext/hash_map:61:0,
+                 from C2LSH_Initializor.h:18,
+                 from headers.h:24,
+                 from DataProcessor.cpp:8:
+/usr/include/c++/4.7/backward/backward_warning.h:33:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+In file included from /usr/include/c++/4.7/ext/hash_map:61:0,
+                 from C2LSH_Initializor.h:18,
+                 from headers.h:24,
+                 from Geometry.cpp:8:
+/usr/include/c++/4.7/backward/backward_warning.h:33:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+In file included from /usr/include/c++/4.7/ext/hash_map:61:0,
+                 from C2LSH_Initializor.h:18,
+                 from headers.h:24,
+                 from GlobalVars.cpp:19:
+/usr/include/c++/4.7/backward/backward_warning.h:33:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+In file included from /usr/include/c++/4.7/ext/hash_map:61:0,
+                 from C2LSH_Initializor.h:18,
+                 from headers.h:24,
+                 from Random.cpp:18:
+/usr/include/c++/4.7/backward/backward_warning.h:33:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
