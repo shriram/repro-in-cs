@@ -1,0 +1,10 @@
+Unclear why the reviewer wrote "Unable to download the Bigloo compiler for Ubuntu".
+The Bigloo page makes clear what to do:
+
+  Ubuntu package:
+
+  To access the Ubuntu Bigloo packages, add the following the /etc/apt/sources.list file:
+  deb ftp://ftp-sop.inria.fr/indes/fp/Hop/ubuntu precise hop
+
+As the reviewer notes, there is also a Windows version. Unclear why this wasn't tried
+within the 30 minute window.
