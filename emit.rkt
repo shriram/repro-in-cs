@@ -4,6 +4,7 @@
 (require "structure-data.rkt")
 (require "filters.rkt")
 (require "gen-doc.rkt")
+(require "paths.rkt")
 (require scribble/render)
 
 (define f (parse-tsv/file (build-path "metadata" "summary.tsv")))

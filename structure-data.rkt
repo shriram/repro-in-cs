@@ -1,6 +1,5 @@
 #lang racket
 
-(require "parse-tsv.rkt")
 (provide convert-to-struct strip-header)
 (provide (struct-out paper))
 
