@@ -2,10 +2,13 @@
 
 (require "structure-data.rkt")
 (require "static-text.rkt")
+(require scribble/core)
 (require scribble/base)
 (require scribble/decode)
 
 (provide generate-document output-dir)
+
+
 
 (define output-dir "data")
 
@@ -23,8 +26,11 @@
 (define (make-file-name path file)
   (apply build-path (cons output-dir (append path (list file)))))
 
-(define (generate-paper-list ps)
-  (tabular #:style 'boxed #:sep (hspace 1)
+(define (generate-paper-list ps color)
+  (tabular 
+   #:style (style #f
+                  (list (color-property color)))
+   #:sep (hspace 1)
    (map (lambda (p)
           (list (paper-group p)
                 (paper-authors p)
@@ -60,7 +66,7 @@
     review-protocol
     review-format
     (section #:tag "build-fails" "Reported as Not Building")
-    (generate-paper-list bfs)
+    (generate-paper-list bfs "red")
     (section #:tag "builds" "Reported as Building")
-    (generate-paper-list bs))))
+    (generate-paper-list bs "green"))))
 
