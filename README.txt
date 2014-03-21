@@ -17,6 +17,10 @@ As the claims multiplied, it became clear that the evaluation done
 here warranted further investigation. This repository is meant to
 enable and publicize the findings of that investigation.
 
+The data from this repository is visualized here: 
+
+http://cs.brown.edu/~sk/Memos/Examining-Reproducibility/
+
 You can focus on the data/ subdirectory and ignore everything else.
 
 If you really want to build the Web site:
