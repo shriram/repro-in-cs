@@ -102,10 +102,12 @@
      @verbatim{
        Time [in minutes]:
        Platform [OS, libraries, etc.]: 
-       Skill level:
+       Skill level (at least the following; tell us if you have some area-specific skill):
        - make, but that's about it
        - I can work around issues like failed dependencies and unset environment variables
        - I can build complex software like GCC and the Linux kernel
+       Sequence of steps to build:
+       SHA-1 of the downloaded files, dates of download, and URLs:
        Detailed evaluation:}))
 
 (define threats-to-validity
