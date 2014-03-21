@@ -9,9 +9,8 @@
    @para{A group led by Christian Collberg attempted to
          @(hyperlink "http://reproducibility.cs.arizona.edu/"
                      "evaluate the buildability of artifacts")
-         from research papers.}
-   
-   @para{Our goal is to allow the community
+         from research papers.
+	 Our goal is to allow the community
          to review and
          reconstruct their findings.
        	 @bold{Note}: @emph{We are not the original
