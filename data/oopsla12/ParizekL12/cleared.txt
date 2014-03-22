@@ -1,0 +1,76 @@
+Time [in minutes]: 20 min
+
+Platform [OS, libraries, etc.]:
+
+    Linux  3.2.0-60-generic #91-Ubuntu SMP <...>  x86_64 x86_64 x86_64 GNU/Linux
+    
+    java version "1.6.0_30"
+    OpenJDK Runtime Environment (IcedTea6 1.13.1) (6b30-1.13.1-1ubuntu2~0.12.04.1)
+    OpenJDK 64-Bit Server VM (build 23.25-b01, mixed mode)
+    
+    Scala code runner version 2.11.0-RC3 -- Copyright 2002-2013, LAMP/EPFL
+
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+    I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+
+    SHA-1 of the downloaded files, dates of download, and URLs:
+    
+    http://plg.uwaterloo.ca/~pparizek/j2bp/: 
+    548c878927565ad848a4f82b2015a086d653519f  examples.tgz
+    8a119c4cafbdb1ba149aa589eeab73b4cb75e074  j2bp-2012-07-26-bin.tgz
+    29fc8a7c85b5381fe1d060a581c0351ec1594b05  j2bp-2012-07-26-src.tgz
+    
+    http://www.scala-lang.org:
+    cd1b8fb5b6896c9e3b9f2c6b3eb52556fd25bd3a  scala-2.11.0-RC3.tgz
+
+Detailed evaluation:
+
+    Setup the SCALA_HOME variable, and add scala and scalac to the PATH variable
+    untar the -src directory; cd into it, and run the make.sh.  Program
+    successfully builds. 
+
+Running: 
+
+    I was however, unable to get this to build. Using the examples and the run.sh 
+    provided in the -bin tarball. The first bug I encountered could be fixed by 
+    correctly specifying the java_runtime_dir in the wala.properties:  
+    
+        lib/wala/dat/wala.properties 
+    
+    
+    bash run.sh ArrayList examples/ArrayList_classes examples/myjava/ examples/ArrayList_{predicates,properties} output
+    [J2BP] start at 2014-03-22 14:34:22
+    [INFO] main class of the program: ArrayList
+    [INFO] all classes: ArrayList, myjava.ArrayList
+    [INFO] program directory: examples/myjava/
+    [INFO] wala exclusion file: config/Default_Exclusions.txt
+    java.lang.NullPointerException
+        at com.ibm.wala.ipa.callgraph.propagation.PropagationCallGraphBuilder.makeCallGraph(PropagationCallGraphBuilder.java:242)
+        at j2bp.WALAUtils.createCallGraph(WALAUtils.java:145)
+        at j2bp.WALAUtils.j2bpinitLibrary(WALAUtils.java:113)
+        at j2bp.Main$.main(Main.scala:121)
+        at j2bp.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpltiveMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflectt.Method.invoke(Method.java:622)
+        at scala.reflect.internal.util.ScalaClassLoader$$anonfun$run$1.apply(ScalaClassLoader.scala:68)
+        at scala.reflect.internal.internalutil.ScalaClassLoader$class.asContext(ScalaClassLoader.scala:31)
+        at scalaala.reflect.internal.util.ScalaClassLoader$URLClassLoader.asContext(ScalaClassLoader.scala:99)
+        at scala.reflect.internal.util.ScalaClassLoader$class.run(ScalaClassLoader.scala:68)
+        at scala.reflect.internal.util.ScalaClassLoadercalaClassLoader$URLClassLoader.run(ScalaClassLoader.scala:99)
+        at scala.tools.nsc.CommonRunner$class.run(ObjectRunner.scala:22)
+        at scala.toolss.nsc.ObjectRunner$.run(ObjectRunner.scala:39)
+        at scala.tools.nsc.CommonRunneronRunner$class.runAndCatch(ObjectRunner.scala:29)
+        at scala.tools.nsc.ObjectRunnerbjectRunner$.runAndCatch(ObjectRunner.scala:39)
+        at scala.tools.nsc.MainnGenericRunner.runTarget$1(MainGenericRunner.scala:72)
+        at scala.tools.toolsnsc.MainGenericRunner.process(MainGenericRunner.scala:94)
+        at scala.toolsnscls.nsc.MainGenericRunner$.main(MainGenericRunner.scala:103)
+        at scala.toolsnsclsools.nsc.MainGenericRunner.main(MainGenericRunner.scala)
+   
+   I stopped pursuit at this point however. 
+    
+    
