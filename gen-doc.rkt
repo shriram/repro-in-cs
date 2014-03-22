@@ -66,18 +66,24 @@
                   (and-filters building? disputed? not-checked?) neutral-color)
     (make-section "Conflicting Checks!"
                   (and-filters cleared? problem?) bad-color)
-    (make-section "Purported Not Building; Disputed; Found Building"
-                  (and-filters not-building? disputed? cleared?) bad-color)
-    (make-section "Purported Building; Disputed; Found Not Building"
-                  (and-filters building? disputed? problem?) bad-color)
+    ;; don't use disputed? for the next two, because people may have checked
+    ;; without a formal dispute filed!
+    (make-section "Purported Not Building But Found Building"
+                  (and-filters not-building? cleared? not-problem?) bad-color)
+    (make-section "Purported Building But Found Not Building"
+                  (and-filters building? not-cleared? problem?) bad-color)
     (make-section "Purported Not Building; Confirmed"
-                  (and-filters not-building? problem?) good-color)
+                  (and-filters not-building? not-cleared? problem?) good-color)
     (make-section "Purported Building; Confirmed"
-                  (and-filters building? cleared?) good-color)
-    
-    (section (emph "All") " Reported as Not Building")
-    (gen-filtered not-building? bad-color)
-    (section (emph "All") " Reported as Building")
-    (gen-filtered building? good-color)
+                  (and-filters building? cleared? not-problem?) good-color)
+    (make-section "All Others Purported Not Building"
+                  (and-filters not-building? not-disputed? not-checked? not-problem?) bad-color)
+    (make-section "All Other Purported Building"
+                  (and-filters building? not-disputed? not-checked? not-problem?) good-color)
+
+;    (section (emph "All") " Reported as Not Building")
+;    (gen-filtered not-building? bad-color)
+;    (section (emph "All") " Reported as Building")
+;    (gen-filtered building? good-color)
     )))
 
