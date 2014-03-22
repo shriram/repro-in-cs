@@ -1,0 +1,48 @@
+Time [in minutes]: <= 15 minutes
+
+Platform [OS, libraries, etc.]: Vagrant 1.5 and VirtualBox on a Mac
+
+Skill level:
+
+I know how to install software on Linux using "apt-get" and "make". I also
+know how to build Scala code using SBT.
+
+Detailed evaluation:
+
+The software builds flawlessly out of the box. Absolutely no tinkering or
+thinking is needed.
+
+The code is in Scala and thus uses the Scala Build Tool (SBT). You have to know
+to type "sbt compile". If you just type "sbt", as Collberg et al did, you are
+placed into the SBT shell. This confused Collberg et al, who then tried to run
+the "run" shell script before compiling, which caused errors.
+
+If you run "vagrant up" in a directory with the following Vagrantfile, it will
+download and build the software successfully.
+
+        Vagrant.require_version ">= 1.5.0", "< 1.6.0"
+
+        $script = <<SCRIPT
+        # Copied and pasted script for installing Oracle JDK and SBT
+        sudo apt-get update
+        sudo apt-get install -y git 
+        sudo apt-get install -y python-software-properties
+        sudo add-apt-repository -y ppa:webupd8team/java
+        sudo apt-get update
+        sudo echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+        sudo apt-get install -y oracle-java7-installer libjansi-java curl
+        wget http://repo.scala-sbt.org/scalasbt/sbt-native-packages/org/scala-sbt/sbt/0.13.1/sbt.deb
+        sudo dpkg -i sbt.deb
+
+        git clone https://github.com/aturon/ChemistrySet.git
+        cd ChemistrySet
+        git checkout 30b19a2a169e1fa1d266aa01afec158166720e61
+
+        sbt compile && echo "*** Build reproduced ***"
+
+        SCRIPT
+
+        Vagrant.configure("2") do |config|
+        config.vm.box = "hashicorp/precise32"
+        config.vm.provision "shell",  inline: $script, :privileged => false
+        end
