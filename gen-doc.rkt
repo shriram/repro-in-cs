@@ -74,11 +74,24 @@
   (define (make-section title relevant-papers color)
     (list (section title " (" (number->string (length relevant-papers)) ")")
           (generate-paper-list (shuffle relevant-papers) color)))
+  (define paper-count (length papers))
   (decode
    (list
     (title "Examining ``Reproducibility in Computer Science''")
     (section "What We Are Doing")
     top-matter
+    (section "Progress")
+    (tabular #:sep (hspace 1)
+             #:style (style #f
+                            (list (background-color-property neutral-color)))
+             (map
+              (lambda (s)
+                (define these-papers-count (length (filter (sec-filter s) papers)))
+                (define ratio (floor (* 100 (/ these-papers-count paper-count))))
+                (list (sec-title s)
+                      (string-append (number->string ratio) "%")
+                      (make-string ratio #\•)))
+              report-sections))
     (section "How to Review")
     review-protocol
     review-format
