@@ -50,7 +50,7 @@
   (define (make-section title f color)
     (let ([relevant-papers (filter f papers)])
       (list (section title " (" (number->string (length relevant-papers)) ")")
-            (generate-paper-list relevant-papers color))))
+            (generate-paper-list (shuffle relevant-papers) color))))
   (decode
    (list
     (title "Examining ``Reproducibility in Computer Science''")
