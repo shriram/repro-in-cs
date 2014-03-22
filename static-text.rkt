@@ -120,6 +120,8 @@
          attempt to validate their results include:}
    
    @itemlist[
+     @item{We are using a slightly different standard of evaluation.}
+
      @item{Some artifacts may have changed since the time they were tested by
            Collberg's team.}
 
