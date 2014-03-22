@@ -1,0 +1,46 @@
+Time [in minutes]: 
+
+    Less than 15 minutes
+
+Platform [OS, libraries, etc.]: 
+
+    Ubuntu 13.10 64bit
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+
+    I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+
+    cd DataProcessor_Source_Code
+    g++ -o processor *.cpp
+    
+    cd C2LSH_Source_Code
+    g++ -o C2LSH *.cpp
+
+SHA-1 of the downloaded files, dates of download, and URLs:
+
+    Downloaded on 22 March 2014
+    From the author webpage: http://ss.sysu.edu.cn/~fjl/
+    f356a5d1bd6dc4cfd45327943111f4084252d480  DataProcessor_Source_Code.tar.gz
+    91d3e2fbd85fb9e0c1e412aee728f87361e61ac8  C2LSH_Source_Code.tar.gz
+
+Detailed evaluation:
+
+The DataProcessor and C2LSH tools build correctly. I have performed very basic tests with the C2LSH tool and it seems to work (I should read the paper more carefully in order to play with it more seriously).
+
+Some small issues:
+
+- some warnings are printout during the compilation, e.g.,:
+
+   > warning: #warning This file includes at least one deprecated or antiquated 
+   > header which may be removed without further notice at a future date. Please 
+   > use a non-deprecated interface with equivalent functionality instead. For a 
+   > listing of replacement headers and interfaces, consult the file 
+   > backward_warning.h. To disable this warning use -Wno-deprecated.
+
+  This may be an issue in the future if the code is not maintained.
+  
+- There is no documentation on how to build the code. However, the building steps are straightforward for a C++ programmer who knows how to compile some C++ files.
+
+- There is no documentation on how to use the tool (e.g., a simple tutorial).  However, by invoking the binary, you get a good description of the tool's options/parameters.
