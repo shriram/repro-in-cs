@@ -45,29 +45,35 @@
 (define good-color (color-string->color-list "6BEEE2"))
 (define neutral-color (color-string->color-list "B297F4"))
 
+(struct sec (title filter color))
+
+(define report-sections
+  (list (sec "Purported Not Building; Disputed; Not Checked"
+                   (and-filters not-building? disputed? not-checked?) neutral-color)
+    (sec "Purported Building; Disputed; Not Checked"
+                   (and-filters building? disputed? not-checked?) neutral-color)
+    (sec "Conflicting Checks!"
+                   (and-filters cleared? problem?) bad-color)
+    ;; don't use disputed? for the next two, because people may have checked
+    ;; without a formal dispute filed!
+    (sec "Purported Not Building But Found Building"
+                  (and-filters not-building? cleared? not-problem?) bad-color)
+    (sec "Purported Building But Found Not Building"
+                  (and-filters building? not-cleared? problem?) bad-color)
+    (sec "Purported Not Building; Confirmed"
+                  (and-filters not-building? not-cleared? problem?) good-color)
+    (sec "Purported Building; Confirmed"
+                  (and-filters building? cleared? not-problem?) good-color)
+    (sec "All Others Purported Not Building"
+                  (and-filters not-building? not-disputed? not-checked? not-problem?) bad-color)
+    (sec "All Other Purported Building"
+                  (and-filters building? not-disputed? not-checked? not-problem?) good-color)))
+
 (define (generate-document papers)
   (define (gen-filtered f color) (generate-paper-list (filter f papers) color))
   (define (make-section title relevant-papers color)
     (list (section title " (" (number->string (length relevant-papers)) ")")
           (generate-paper-list (shuffle relevant-papers) color)))
-  (define not-building/disputed/not-checked
-    (filter (and-filters not-building? disputed? not-checked?) papers))
-  (define building/disputed/not-checked
-    (filter (and-filters building? disputed? not-checked?) papers))
-  (define conflicting-checks
-    (filter (and-filters cleared? problem?) papers))
-  (define not-building/building
-    (filter (and-filters not-building? cleared? not-problem?) papers))
-  (define building/not-building
-    (filter (and-filters building? not-cleared? problem?) papers))
-  (define not-building/confirmed
-    (filter (and-filters not-building? not-cleared? problem?) papers))
-  (define building/confirmed
-    (filter (and-filters building? cleared? not-problem?) papers))
-  (define others-not-building
-    (filter (and-filters not-building? not-disputed? not-checked? not-problem?) papers))
-  (define others-building
-    (filter (and-filters building? not-disputed? not-checked? not-problem?) papers))
   (decode
    (list
     (title "Examining ``Reproducibility in Computer Science''")
@@ -76,32 +82,10 @@
     (section "How to Review")
     review-protocol
     review-format
-    (make-section "Purported Not Building; Disputed; Not Checked"
-                   not-building/disputed/not-checked neutral-color)
-    (make-section "Purported Building; Disputed; Not Checked"
-                   building/disputed/not-checked neutral-color)
-    (make-section "Conflicting Checks!"
-                   conflicting-checks bad-color)
-    ;; don't use disputed? for the next two, because people may have checked
-    ;; without a formal dispute filed!
-    (make-section "Purported Not Building But Found Building"
-                  not-building/building bad-color)
-    (make-section "Purported Building But Found Not Building"
-                  building/not-building bad-color)
-    (make-section "Purported Not Building; Confirmed"
-                  not-building/confirmed good-color)
-    (make-section "Purported Building; Confirmed"
-                  building/confirmed good-color)
-    (make-section "All Others Purported Not Building"
-                  others-not-building bad-color)
-    (make-section "All Other Purported Building"
-                  others-building good-color)
+    (map (lambda (s)
+           (make-section (sec-title s) (filter (sec-filter s) papers) (sec-color s)))
+         report-sections)
     (section "Threats to Validity")
     threats-to-validity
-
-;    (section (emph "All") " Reported as Not Building")
-;    (gen-filtered not-building? bad-color)
-;    (section (emph "All") " Reported as Building")
-;    (gen-filtered building? good-color)
     )))
 
