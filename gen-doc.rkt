@@ -47,10 +47,27 @@
 
 (define (generate-document papers)
   (define (gen-filtered f color) (generate-paper-list (filter f papers) color))
-  (define (make-section title f color)
-    (let ([relevant-papers (filter f papers)])
-      (list (section title " (" (number->string (length relevant-papers)) ")")
-            (generate-paper-list (shuffle relevant-papers) color))))
+  (define (make-section title relevant-papers color)
+    (list (section title " (" (number->string (length relevant-papers)) ")")
+          (generate-paper-list (shuffle relevant-papers) color)))
+  (define not-building/disputed/not-checked
+    (filter (and-filters not-building? disputed? not-checked?) papers))
+  (define building/disputed/not-checked
+    (filter (and-filters building? disputed? not-checked?) papers))
+  (define conflicting-checks
+    (filter (and-filters cleared? problem?) papers))
+  (define not-building/building
+    (filter (and-filters not-building? cleared? not-problem?) papers))
+  (define building/not-building
+    (filter (and-filters building? not-cleared? problem?) papers))
+  (define not-building/confirmed
+    (filter (and-filters not-building? not-cleared? problem?) papers))
+  (define building/confirmed
+    (filter (and-filters building? cleared? not-problem?) papers))
+  (define others-not-building
+    (filter (and-filters not-building? not-disputed? not-checked? not-problem?) papers))
+  (define others-building
+    (filter (and-filters building? not-disputed? not-checked? not-problem?) papers))
   (decode
    (list
     (title "Examining ``Reproducibility in Computer Science''")
@@ -60,25 +77,25 @@
     review-protocol
     review-format
     (make-section "Purported Not Building; Disputed; Not Checked"
-                  (and-filters not-building? disputed? not-checked?) neutral-color)
+                   not-building/disputed/not-checked neutral-color)
     (make-section "Purported Building; Disputed; Not Checked"
-                  (and-filters building? disputed? not-checked?) neutral-color)
+                   building/disputed/not-checked neutral-color)
     (make-section "Conflicting Checks!"
-                  (and-filters cleared? problem?) bad-color)
+                   conflicting-checks bad-color)
     ;; don't use disputed? for the next two, because people may have checked
     ;; without a formal dispute filed!
     (make-section "Purported Not Building But Found Building"
-                  (and-filters not-building? cleared? not-problem?) bad-color)
+                  not-building/building bad-color)
     (make-section "Purported Building But Found Not Building"
-                  (and-filters building? not-cleared? problem?) bad-color)
+                  building/not-building bad-color)
     (make-section "Purported Not Building; Confirmed"
-                  (and-filters not-building? not-cleared? problem?) good-color)
+                  not-building/confirmed good-color)
     (make-section "Purported Building; Confirmed"
-                  (and-filters building? cleared? not-problem?) good-color)
+                  building/confirmed good-color)
     (make-section "All Others Purported Not Building"
-                  (and-filters not-building? not-disputed? not-checked? not-problem?) bad-color)
+                  others-not-building bad-color)
     (make-section "All Other Purported Building"
-                  (and-filters building? not-disputed? not-checked? not-problem?) good-color)
+                  others-building good-color)
     (section "Threats to Validity")
     threats-to-validity
 
