@@ -1,0 +1,44 @@
+Time [in minutes]:
+
+5
+
+Platform [OS, libraries, etc.]:
+
+Used a bare metal 'dl360' PC (Dell PowerEdge 360) from aptlab.net running
+Ubuntu 12.04 LTS and kernel 3.2.0 .
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+
+- I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+
+* `sudo apt-get install ocaml menhir cloc` (ocaml is listed as a dependency 
+    in the README; menhir and cloc  are not)
+
+* `cd src && make` (documented in README)
+
+* `setenv DJS_DIR $HOME/djs` (documented in README)
+
+* `sudo ln -s $DJS_DIR/bin/z3-linux-v4.1 /usr/local/bin/z3` (documented in README)
+
+* `cd src && ../scripts/gen-benchmark-linecounts-sep2012.py` (tested out running
+    one of the script provided by the authors)
+
+SHA-1 of the downloaded files, dates of download, and URLs:
+
+Source obtained from:
+    git clone git@github.com:ravichugh/djs.git
+    Got revision c4a13e0 dated April 7, 2013
+
+Detailed evaluation:
+
+This software was quite easy to build and had a nice README that covered running
+some tests used for the paper.
+
+As mentioned in the dispute, menhir is not mentioned as a dependency, but this
+dependency is trivial to discover and install. When I ran the provided tests, I
+noticed that cloc was another undocumented dependency (also trivial to discover
+and install).
+
+The inclusion of binaries for z3 in the repository is convenient.
