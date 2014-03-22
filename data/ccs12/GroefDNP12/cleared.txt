@@ -1,0 +1,58 @@
+Time [in minutes]:
+
+45 minutes, nearly all of it spent downloading the authors' provided VM image
+on a slow home DSL connection. Once downloaded, took less than 5 minutes to
+get it running.
+
+Platform [OS, libraries, etc.]:
+
+OS X 10.9.2, VirtualBox 4.3.8
+
+This is not the environment suggested by the authors, who provide instructions
+for Ubuntu, but it's clear that it ought to work so long as one can run
+VirtualBox.
+
+> uname -a
+Darwin pralite 13.1.0 Darwin Kernel Version 13.1.0: Thu Jan 16 19:40:37 PST 2014; root:xnu-2422.90.20~2/RELEASE_X86_64 x86_64
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+
+- I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+
+* Download virtual machine image from http://cqrit.be/flowfox/code/flowfox.ova
+
+* Open VirtualBox 
+
+* File -> Import Appliance ; open flowfox.ova
+
+* Took all default options for VM import
+
+* Started up VM in Virtualbox, log in as 'demo' user, password 'demo' (not
+  documented in instructions, but obvious from the context)
+
+* Use icon supplied on desktop to launch FlowFox
+
+SHA-1 of the downloaded files, dates of download, and URLs:
+
+http://cqrit.be/flowfox/code/flowfox.ova  :
+    Downloaded March 22, 2014, SHA-1 db18635eb585f2d5a3c1d57db4244fa53efe37b5
+
+Detailed evaluation:
+
+The packaging provided by the authors is quite easy to get up and running.  The
+authors provided instructions for multiple methods of installing and trying
+their software, which is very nice.
+
+The artifacts provided by the authors are binaries for the application itself
+(FlowFox) and source for the policy files that it consumes. I did not find
+evidence that the source for FlowFox is available online; I did not contact the
+authors to ask whether FlowFox's source is available. The authors provide
+source ffor the mechanization of the formal model they use as well as a program
+for random testing.
+
+I did not attempt to install FlowFox directly (sans VM): the authors provide
+instructions, but it requires a 32-bit Ubuntu machine, which I don't have easy
+access to on a desktop (since the software is a web browser, running it locally
+is desirable, though not strictly required).
