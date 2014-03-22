@@ -1,0 +1,42 @@
+Time [in minutes]:
+
+    4
+
+Platform [OS, libraries, etc.]:
+
+    Ubuntu 12.04, x86-64
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+
+    - I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+
+    $ wget http://www.cse.ohio-state.edu/~satuluri/bayeslsh.tar.gz
+    $ tar xf bayeslsh.tar.gz
+    $ cd bayeslsh
+    $ sudo apt-get install libgsl0-dev
+    $ make
+
+SHA-1 of the downloaded files, dates of download, and URLs:
+
+    2d6911a12382c99d60d87d1f884a364a481b2913  bayeslsh.tar.gz
+    Downloaded 21st March, 2014 from:
+
+        http://www.cse.ohio-state.edu/~satuluri/bayeslsh.tar.gz
+
+    Served file was timestamped 14th December, 2011.
+
+Detailed evaluation:
+
+    Compiled successfully using GCC 4.6.3-1ubuntu5.
+
+    Note that the build failure reported by Collberg's "student1" appears to
+    be an error message obtained while building the GNU Scientific Library
+    dependency, _not_ an error while building Satuluri's code.  I did not
+    attempt to build GSL from scratch, as "sudo apt-get install libgsl0-dev"
+    suffices.  Otherwise, I attempted to match "student1"'s environment
+    (described in Collberg's database as "Ubuntu12.04 64").
+
+    The built code appears to execute sensibly; a couple of examples given
+    in the README return plausible output.
