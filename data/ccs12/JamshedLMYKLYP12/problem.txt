@@ -5,11 +5,22 @@ release a long time ago, but later we decided not to release the code
 since it's being tech transferred to industry. The code at github is
 thus very incomplete (and no wonder it does not build) and we have
 never publicly advertised the link. I assume you've found the link
-using an automatic crawler or something?
+using an automatic crawler or something?"
 
-Could you please remove our project (Kargus) from your project? I don't
-think it's fair to publicly say "reported as not building" with the
-incomplete source code."
+which we believe is correct. The authors assert that they were never
+contacted about whether this is the correct artifact, though this is
+consistent with the Collberg, et al. methodology.
 
-It is true that it is not fair to say it does not build. However, it
-is clear that the results of the paper cannot be verified either.
+Furthermore, they ask:
+
+"Could you please remove our project (Kargus) from your project? I
+don't think it's fair to publicly say "reported as not building" with
+the incomplete source code."
+
+It is indeed not fair to say it does not build. 
+
+The authors assert that they cannot release the source for this
+project due to restrictions put on them by their industrial
+sponsors. Other projects by the lead author do indeed publish source.
+Of course, the unavailability of the source means that the results of
+this paper cannot be verified.
