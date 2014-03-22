@@ -56,7 +56,6 @@
     (title "Examining ``Reproducibility in Computer Science''")
     (section "What We Are Doing")
     top-matter
-    threats-to-validity
     (section "How to Review")
     review-protocol
     review-format
@@ -80,6 +79,8 @@
                   (and-filters not-building? not-disputed? not-checked? not-problem?) bad-color)
     (make-section "All Other Purported Building"
                   (and-filters building? not-disputed? not-checked? not-problem?) good-color)
+    (section "Threats to Validity")
+    threats-to-validity
 
 ;    (section (emph "All") " Reported as Not Building")
 ;    (gen-filtered not-building? bad-color)
