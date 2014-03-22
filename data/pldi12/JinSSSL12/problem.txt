@@ -1,0 +1,22 @@
+The link provided in the paper:
+
+    https://www.cs.wisc.edu/users/shanlu/performance-bugs
+
+... does not work (as of March 22, 2014). The error page claims:
+
+    Page not found / Changes to this website
+ 
+    Hello!
+
+     You've reached this page because the Department of Computer Sciences
+     launched an updated, redesigned website on March 10, 2014.  External links
+     pointing to URLs on the former site may no longer work. [...]
+
+Poking around with Google and looking at the author's home pages turned up this
+URL:
+    
+    http://pages.cs.wisc.edu/~songlh/perf-detect.html
+
+... which contains some information about the project, but no code.
+
+This problem is presumbably resolvable by contacting the authors.
