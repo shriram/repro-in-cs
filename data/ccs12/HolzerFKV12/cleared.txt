@@ -1,0 +1,36 @@
+Time [in minutes]: <= 20 minutes
+Platform [OS, libraries, etc.]: Ubuntu 13.10 64bit
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+- I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+
+sudo apt-get install bison flex
+make
+
+SHA-1 of the downloaded files, dates of download, and URLs:
+
+22 March 2014
+90e7c8d9a13d8a3d37afa9d34bf38b4f1f4b8f08  cbmc-gc-v0.8.tar.gz
+Project site: http://forsyte.at/software/cbmc-gc/ [the same URL in the paper]
+Code: http://forsyte.at/wp-content/uploads/cbmc-gc-v0.8.tar.gz
+Documentation: http://forsyte.at/wp-content/uploads/cbmc-gc-v0.8.pdf
+
+Detailed evaluation:
+
+The tool builds correctly and seems to work as expected. I followed instructions in the documentation and successfully executed the example based on a simple sum function.
+
+Some small issues:
+
+- a lot of warnings are printout during the compilation, e.g.,:
+
+   > warning: #warning This file includes at least one deprecated or antiquated 
+   > header which may be removed without further notice at a future date. Please 
+   > use a non-deprecated interface with equivalent functionality instead. For a 
+   > listing of replacement headers and interfaces, consult the file 
+   > backward_warning.h. To disable this warning use -Wno-deprecated.
+
+  This may be an issue in the future if the code is not maintained.
+  
+- The build dependencies are not documented (neither in the INSTALL file nor in the PDF documentation). I have to figure out from make errors that I need to install bison and flex.
