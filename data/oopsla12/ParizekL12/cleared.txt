@@ -34,7 +34,7 @@ Detailed evaluation:
 
 Running: 
 
-    I was however, unable to get this to build. Using the examples and the run.sh 
+    I was however, unable to get this to run. Using the examples and the run.sh 
     provided in the -bin tarball. The first bug I encountered could be fixed by 
     correctly specifying the java_runtime_dir in the wala.properties:  
     
