@@ -1,0 +1,11 @@
+Time [in minutes]: <= 5 minutes
+
+Platform [OS, libraries, etc.]: Mac OS X 10.7.5
+
+Skill level:
+- I know how to write programs in Racket, which is the programming language 
+  that this paper uses.
+
+Detailed evaluation:
+- Downloading the following file and running it with Racket just worked:
+    http://www.cs.umd.edu/~sstrickl/chaperones/membrane.rkt
