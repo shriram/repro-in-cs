@@ -6,8 +6,11 @@
 (provide build-fails)
 (provide papers-with-build-status)
 (provide and-filters or-filters not-filter
-         building? not-building? disputed? not-disputed?
-         cleared? not-cleared? problem? not-problem?
+         building? not-building?
+         disputed? not-disputed?
+         misclassified? not-misclassified?
+         cleared? not-cleared?
+         problem? not-problem?
          checked? not-checked?)
 
 (define (and-filters . fs)
@@ -29,6 +32,8 @@
 
 (define building? paper-builds?)
 (define not-building? (not-filter building?))
+(define misclassified? paper-misclassified?)
+(define not-misclassified? (not-filter misclassified?))
 (define disputed? paper-dispute?)
 (define not-disputed? (not-filter disputed?))
 (define cleared? paper-cleared?)

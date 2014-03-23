@@ -24,17 +24,21 @@
                  (build-notes-link (paper-path p))
                  "notes")
                 (list
-                 (if (paper-dispute? p)
+                 (if (disputed? p)
                      (hyperlink (dispute-link (paper-path p)) "dispute!")
                      " ")
                  (linebreak)
-                 (if (paper-cleared? p)
+                 (if (cleared? p)
                      (hyperlink (cleared-link (paper-path p)) "cleared?")
                      " ")
                  (linebreak)
-                 (if (paper-problem? p)
+                 (if (problem? p)
                      (hyperlink (problem-link (paper-path p)) "problem?")
-                     " "))))
+                     " ")
+                 (if (misclassified? p)
+                     (hyperlink (misclass-link (paper-path p)) "misclassified")
+                     " ")
+                 )))
         ps)))
 
 (define (color-string->color-list s)
@@ -49,25 +53,27 @@
 
 (define report-sections
   (list (sec "Purported Not Building; Disputed; Not Checked"
-                   (and-filters not-building? disputed? not-checked?) neutral-color)
+             (and-filters not-building? disputed? not-checked?) neutral-color)
     (sec "Purported Building; Disputed; Not Checked"
-                   (and-filters building? disputed? not-checked?) neutral-color)
+         (and-filters building? disputed? not-checked?) neutral-color)
     (sec "Conflicting Checks!"
-                   (and-filters cleared? problem?) bad-color)
+         (and-filters cleared? problem?) bad-color)
+    (sec "Misclassified"
+         misclassified? neutral-color)
     ;; don't use disputed? for the next two, because people may have checked
     ;; without a formal dispute filed!
     (sec "Purported Not Building But Found Building"
-                  (and-filters not-building? cleared? not-problem?) bad-color)
+         (and-filters not-building? cleared? not-problem?) bad-color)
     (sec "Purported Building But Found Not Building"
-                  (and-filters building? not-cleared? problem?) bad-color)
+         (and-filters building? not-cleared? problem?) bad-color)
     (sec "Purported Not Building; Confirmed"
-                  (and-filters not-building? not-cleared? problem?) good-color)
+         (and-filters not-building? not-cleared? problem?) good-color)
     (sec "Purported Building; Confirmed"
-                  (and-filters building? cleared? not-problem?) good-color)
+         (and-filters building? cleared? not-problem?) good-color)
     (sec "All Others Purported Not Building"
-                  (and-filters not-building? not-disputed? not-checked? not-problem?) bad-color)
+         (and-filters not-building? not-misclassified? not-disputed? not-checked? not-problem?) bad-color)
     (sec "All Other Purported Building"
-                  (and-filters building? not-disputed? not-checked? not-problem?) good-color)))
+         (and-filters building? not-misclassified? not-disputed? not-checked? not-problem?) good-color)))
 
 (define (generate-document papers)
   (define (gen-filtered f color) (generate-paper-list (filter f papers) color))

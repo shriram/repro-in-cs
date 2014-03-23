@@ -1,8 +1,8 @@
 #lang racket
 
 (provide output-dir 
-         dispute-file-name cleared-file-name problem-file-name
-         dispute-link cleared-link problem-link
+         misclass-file-name dispute-file-name cleared-file-name problem-file-name
+         misclass-link      dispute-link      cleared-link      problem-link
          build-notes-link)
 
 (define output-dir "data")
@@ -18,6 +18,8 @@
      (string-append (first sub-paths) "/" 
                     (make-link (rest sub-paths) file-name))]))
 
+(define (misclass-link path)
+  (make-link path "misclass.txt"))
 (define (dispute-link path)
   (make-link path "dispute.txt"))
 (define (cleared-link path)
@@ -30,6 +32,8 @@
 (define (make-file-name path file)
   (apply build-path (cons output-dir (append path (list file)))))
 
+(define (misclass-file-name path)
+  (make-file-name path "misclass.txt"))
 (define (dispute-file-name path)
   (make-file-name path "dispute.txt"))
 (define (cleared-file-name path)

@@ -10,7 +10,7 @@
                          build-results database-entry build-notes)
   #:transparent)
 
-(struct paper (group authors title path builds? dispute? cleared? problem?)
+(struct paper (group authors title path builds? misclassified? dispute? cleared? problem?)
   #:transparent)
 
 (define (strip-header l)
@@ -35,6 +35,7 @@
                     (cond [(string=? rpbr "Builds") true]
                           [(string=? rpbr "Build fails") false]
                           [else (error 'wrong-build-entry "~a" path)]))
+                  (file-exists? (misclass-file-name path))
                   (file-exists? (dispute-file-name path))
                   (file-exists? (cleared-file-name path))
                   (file-exists? (problem-file-name path)))))
