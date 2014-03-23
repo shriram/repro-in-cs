@@ -1,0 +1,27 @@
+Time [in minutes]: 20 min
+
+Platform [OS, libraries, etc.]:
+
+    Linux  3.2.0-60-generic #91-Ubuntu SMP <...>  x86_64 x86_64 x86_64 GNU/Linux
+    
+    openstream commit 6b71fbe4b3ddeae2575c11e1f8fc47e73d6438dd    
+
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+    I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+
+    Check out the sources:
+
+        $ git clone git://git.code.sf.net/p/open-stream/code open-stream
+
+    2. Build:
+
+        $ cd open-stream/
+        $ make
+
+
+Detailed evaluation:
+    
+    Builds, compiles programs, and appears to run!
