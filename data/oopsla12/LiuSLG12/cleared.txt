@@ -1,0 +1,78 @@
+Time [in minutes]: 20 min
+
+Platform [OS, libraries, etc.]:
+
+    Linux  3.2.0-60-generic #91-Ubuntu SMP <...>  x86_64 x86_64 x86_64 GNU/Linux
+    
+    python3 --version
+        Python 3.2.3
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+    I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+
+    1. Cloned Revision fe8ee75335e4b0c8a56547e1bbd4dbb85c8d501f from https://github.com/sadboy/DistAlgo
+    2. Compile and run an example file: 
+
+        python3 -m distalgo.compiler examples/ping.da
+        Written compiled file examples/ping.py.
+        
+        Total compilation time: 0.017072 second(s).
+        mgaudet@eva150:~/tmp/LiuSLG12/DistAlgo>python3 -m distalgo.runtime examples/ping.da
+        [2014-03-23 14:11:07,764]runtime:INFO: Running iteration 1 ...
+        [2014-03-23 14:11:07,813]runtime:INFO: Creating instances of Pong..
+        <...>
+
+Notes: 
+
+- Appears to *require* python 3.2 series -- python 3.4 fails: 
+
+
+        SolidALumbook:DistAlgo mgaudet$ python3 -m distalgo.compiler examples/ping.da 
+        Traceback (most recent call last):
+          File "/usr/local/Cellar/python3/3.4.0/Frameworks/Python.framework/Versions/3.4/lib/python3.4/runpy.py", line 171, in _run_module_as_main
+            "__main__", mod_spec)
+          File "/usr/local/Cellar/python3/3.4.0/Frameworks/Python.framework/Versions/3.4/lib/python3.4/runpy.py", line 86, in _run_code
+            exec(code, run_globals)
+          File "/Users/mgaudet/tmp/LiuSLG12/DistAlgo/distalgo/compiler/__main__.py", line 110, in <module>
+            main()
+          File "/Users/mgaudet/tmp/LiuSLG12/DistAlgo/distalgo/compiler/__main__.py", line 81, in main
+            pytree, classinfos = dist_compile(infd)
+          File "/Users/mgaudet/tmp/LiuSLG12/DistAlgo/distalgo/compiler/compiler.py", line 9, in dist_compile
+            pytree = dt.visit(distree)
+          File "/usr/local/Cellar/python3/3.4.0/Frameworks/Python.framework/Versions/3.4/lib/python3.4/ast.py", line 245, in visit
+            return visitor(node)
+          File "/Users/mgaudet/tmp/LiuSLG12/DistAlgo/distalgo/compiler/dist.py", line 50, in visit_Module
+            node = self.generic_visit(node)
+          File "/usr/local/Cellar/python3/3.4.0/Frameworks/Python.framework/Versions/3.4/lib/python3.4/ast.py", line 301, in generic_visit
+            value = self.visit(value)
+          File "/usr/local/Cellar/python3/3.4.0/Frameworks/Python.framework/Versions/3.4/lib/python3.4/ast.py", line 245, in visit
+            return visitor(node)
+          File "/Users/mgaudet/tmp/LiuSLG12/DistAlgo/distalgo/compiler/dist.py", line 58, in visit_ClassDef
+            return self.processPClass(node)
+          File "/Users/mgaudet/tmp/LiuSLG12/DistAlgo/distalgo/compiler/dist.py", line 106, in processPClass
+            node = SentReceivedTransformer(info).visit(node)
+          File "/usr/local/Cellar/python3/3.4.0/Frameworks/Python.framework/Versions/3.4/lib/python3.4/ast.py", line 245, in visit
+            return visitor(node)
+          File "/usr/local/Cellar/python3/3.4.0/Frameworks/Python.framework/Versions/3.4/lib/python3.4/ast.py", line 301, in generic_visit
+            value = self.visit(value)
+          File "/usr/local/Cellar/python3/3.4.0/Frameworks/Python.framework/Versions/3.4/lib/python3.4/ast.py", line 245, in visit
+            return visitor(node)
+          File "/Users/mgaudet/tmp/LiuSLG12/DistAlgo/distalgo/compiler/mesgcomp.py", line 19, in visit_FunctionDef
+            return self.generic_visit(node)
+          File "/usr/local/Cellar/python3/3.4.0/Frameworks/Python.framework/Versions/3.4/lib/python3.4/ast.py", line 301, in generic_visit
+            value = self.visit(value)
+          File "/usr/local/Cellar/python3/3.4.0/Frameworks/Python.framework/Versions/3.4/lib/python3.4/ast.py", line 245, in visit
+            return visitor(node)
+          File "/usr/local/Cellar/python3/3.4.0/Frameworks/Python.framework/Versions/3.4/lib/python3.4/ast.py", line 310, in generic_visit
+            new_node = self.visit(old_value)
+          File "/usr/local/Cellar/python3/3.4.0/Frameworks/Python.framework/Versions/3.4/lib/python3.4/ast.py", line 245, in visit
+            return visitor(node)
+          File "/Users/mgaudet/tmp/LiuSLG12/DistAlgo/distalgo/compiler/mesgcomp.py", line 77, in visit_Call
+            etype, mtype, Tuple(node.args[0].args, Load())))
+          File "/Users/mgaudet/tmp/LiuSLG12/DistAlgo/distalgo/compiler/mesgcomp.py", line 100, in _visit_call_main
+            event.vars))
+          File "/Users/mgaudet/tmp/LiuSLG12/DistAlgo/distalgo/compiler/mesgcomp.py", line 137, in genHandlerFuncDef
+            args = arguments(arglist, None, None, [], None, None, [], None)
+        TypeError: arguments constructor takes either 0 or 6 positional arguments
