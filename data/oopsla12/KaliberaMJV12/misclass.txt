@@ -3,6 +3,6 @@ This paper was built on two tools: btrace and JikesRVM.
 The code for both tools is available and compilable, however the modifications
 required to reproduce the paper results do *not* appear to be available. 
 
-Further investigation of this will require contacting the authors to see if
-their *changes* are available, not just the base packages the changes were
-built on. 
+Therefore, the code for _this paper_ is effectively unavailable. The
+unavailability of the source means that this paper is outside the
+scope of the original Collberg, et al. study.
