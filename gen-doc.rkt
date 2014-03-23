@@ -83,7 +83,12 @@
     (section "Progress")
     (tabular #:sep (hspace 1)
              #:style (style #f
-                            (list (background-color-property neutral-color)))
+                            (list (background-color-property neutral-color)
+                                  (table-columns (list (style #f '(right)) ;; NB: the style properties are found in table-cells
+                                                       (style #f '(center))
+                                                       (style #f '(right))
+                                                       (style #f '(center))
+                                                       (style #f '(left))))))
              (map
               (lambda (s)
                 (define these-papers-count (length (filter (sec-filter s) papers)))
