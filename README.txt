@@ -32,4 +32,6 @@ If you really want to build the Web site:
 
 This will generate data/index.html.
 
-Note: metadata/summary.csv is from Collberg, et al.
+Note: metadata/summary.csv and most of the data files in data/ are
+from Collberg, et al. We thank them for making their data public,
+which has enabled this project.
