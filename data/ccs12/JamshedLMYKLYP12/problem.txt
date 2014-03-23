@@ -22,5 +22,5 @@ It is indeed not fair to say it does not build.
 The authors assert that they cannot release the source for this
 project due to restrictions put on them by their industrial
 sponsors. Other projects by the lead author do indeed publish source.
-Of course, the unavailability of the source means that the results of
-this paper cannot be verified.
+However, the unavailability of the source means that this paper cannot
+be "reproduced" in the sense of Collberg, et al.
