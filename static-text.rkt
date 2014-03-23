@@ -6,6 +6,9 @@
 
 (define top-matter
   (list
+  @para{Welcome to repo-repe-repro: the repository to repeat an
+        experiment in ``reproducibility''!}
+
    @para{A group led by Christian Collberg attempted to
          @(hyperlink "http://reproducibility.cs.arizona.edu/"
                      "evaluate the buildability of artifacts")
@@ -48,35 +51,39 @@
          repository elsewhere, pull requests are easiest from GitHub;
          please help us keep our workload reasonable.)}
 
-   @para{To avoid language conflicts and complexity, our interface
-         will be simple text files. All the files of interest to you
-         are in the @tt{data} sub-directory.}
-   
-   @para{To @emph{dispute} a review, which anyone can do, please
-            find the directory corresponding to the paper and create
+  @itemlist[
+
+    @item{To @emph{dispute} a Collberg, et al. review---open to anyone---find
+            the directory corresponding to the paper and create
             a file named @tt{dispute.txt}. In it, explain why
-            you are disputing the review. In principle you can also 
-            use this to simply communicate some fact about the artifact:
-            e.g., there was no artifact available then, but there is
-            one now. This puts the fact into the public record but
-            would not cause anyone to re-run the evaluation. (If you do
-            dispute a review, please consider reviewing one or two other
-            disputed artifacts, so the work evens out.)}
-   
-   @para{We welcome 
-                @emph{reproduction} (in the sense used by Collberg, et al.:
-                see section 3 of
+            you are disputing the review.}
+
+    @item{To @emph{review} an artifact---open to anyone without a COI with
+          the paper---make sure you understand what Collberg, et al. did
+          (see section 3 of
                 @(hyperlink "measuring-tr.pdf"
-                            "their paper (cached copy)"))
-            by anyone meeting standard conflict-of-interest rules.
-            When you are done, make a judgment call about
-            whether the artifact passed or failed. If it passed, write
-            your findings in @tt{cleared.txt}. If it failed,
-            write your findings in @tt{problem.txt}. Note that multiple
-            people may well check an artifact, so don't erase a previous
-            person's review---just append to it. These files should also go
-            into the directory corresponding to the paper. Needless to say,
-            use these exact names.}
+                            "their paper")).
+          In addition, feel free to also run the system, but remember that that is
+          not their primary metric. Using the format given below,
+	  write your review in files as follows (if there's already one, append,
+          don't replace):
+
+      @itemlist[
+
+        @item{If you believe the artifact @emph{passes}, write
+          your findings in @tt{cleared.txt}.}
+
+        @item{If it @emph{fails},
+          write your findings in @tt{problem.txt}.}
+
+        @item{If the artifact has been @emph{misclassified} by Collberg, et al. and
+	  should not even be part of the study,
+          write your findings in @tt{misclass.txt}. For instance: the paper is
+          actually theoretical; the paper offers no code download at all; etc.}
+
+      ]}
+
+   ]
    
    @para{We need a standard for judgment. We believe a useful standard is
          @(hyperlink "http://en.wikipedia.org/wiki/Person_having_ordinary_skill_in_the_art"
@@ -88,15 +95,7 @@
          successful, if you had to use ingenuity, then the artifact should be regarded 
          as failing. If in doubt, feel free to discuss on social media. }
    
-   @para{Please feel free to not only build but also run the artifacts!}
-   
-   @para{When you are done with your review, commit the files and send us a
-         pull request. We will review your request
-         and then add it to the repository (and the result will appear on this
-         Web page). Note that we are likely to reject a review that violates
-         standard norms of discourse, as well as one that appears to be removing
-         someone else's review, etc., unless it is actually cleaning up a
-         prior mistake.}
+   @para{When you are done, commit and send a pull request.}
    ))
 
 (define review-format
@@ -112,7 +111,7 @@
        - I can build complex software like GCC and the Linux kernel
        Sequence of steps to build:
        SHA-1 of the downloaded files, dates of download, and URLs:
-       Detailed evaluation:}))
+       Detailed evaluation (including comments about running it):}))
 
 (define threats-to-validity
   (list

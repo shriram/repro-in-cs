@@ -1,4 +1,5 @@
-Recently, the results from
+Welcome to repo-repe-repro: the repository to repeat an experiment in
+``reproducibility''! Recently, the results from
 
 http://reproducibility.cs.arizona.edu/
 
