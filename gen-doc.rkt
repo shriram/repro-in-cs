@@ -101,7 +101,10 @@
                 (define ratio (floor (* 100 (/ these-papers-count paper-count))))
                 (list (sec-title s)
                       (string-append (number->string ratio) "%")
-                      (make-string ratio #\•)))
+                      (make-string (if (> these-papers-count 0)
+                                       (max ratio 1)
+                                       0)
+                                   #\•)))
               report-sections))
     (section "How to Review")
     review-protocol
