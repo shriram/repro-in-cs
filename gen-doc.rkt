@@ -63,7 +63,7 @@
     ;; don't use disputed? for the next two, because people may have checked
     ;; without a formal dispute filed!
     (sec "Purported Not Building But Found Building"
-         (and-filters not-building? cleared? not-problem?) bad-color)
+         (and-filters not-building? cleared? not-problem?) good-color)
     (sec "Purported Building But Found Not Building"
          (and-filters building? not-cleared? problem?) bad-color)
     (sec "Purported Not Building; Confirmed"
