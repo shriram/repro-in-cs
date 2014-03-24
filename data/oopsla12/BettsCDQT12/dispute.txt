@@ -1,0 +1,5 @@
+Collberg et al. failed installing Mono (.NET for Linux).  They could have tried
+a Windows machine, or simply installed the pre-built Mono that is in the Ubuntu
+package repositories (apt-get install mono).
+
+Also an online implementation at http://rise4fun.com/GPUVerify-OpenCL

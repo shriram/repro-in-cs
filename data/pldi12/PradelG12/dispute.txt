@@ -1,0 +1,3 @@
+Original analysis labeled this project as a failed build because they failed to install the Java
+runtime successfully.
+
