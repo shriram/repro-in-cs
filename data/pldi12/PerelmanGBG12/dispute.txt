@@ -1,0 +1,17 @@
+Our software builds easily on Windows and with minimal effort on Linux.
+Specifically:
+ * We apologize for the broken link to Roslyn. That has been corrected.
+    But the correct link could have been found with a web search. And,
+    more importantly, as the build instructions explain, it is only
+    required for the Visual Studio extension which, while it was demoed
+    at PLDI, was not referenced in our paper (except as future work)
+    and is not necessary to reproduce the results of our paper.
+ * The comment about TortoiseSVN appears to be due to confusion over
+    the CodePlex help page recommending it as an SVN client. Any SVN
+    client will work, in addition to the option to download the source
+    as a zip file.
+ * Although we had not attempted this before, the experiment code
+    does in fact build and run using Mono on Linux, albeit with a
+    few minutes work to fix a couple straightforward differences
+    between Mono and Microsoft .NET. The relevant changes have been
+    pushed to CodePlex.
