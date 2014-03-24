@@ -1,0 +1,3 @@
+Collberg et al did not succeed in building this software. The data file says:
+
+BUILD:ERROR_COMMENT[none,not_needed,comment] MISSING_THIRD_PARTY_PACKAGE
