@@ -11,9 +11,16 @@ The experiments corresponding to the paper implementation can be found in
 omega/examples/experiments. The program executable is found in 
 omega/omega_calc/obj/oc
 
+
+NOTE: You don't need to build the Rose library if you want to test the paper functionality alone. To build:
+> make depend
+> make
+
 A typical way of  running the experiment files would be:
 
-./oc ../../examples/experiments/gemm/codegen.input
+
+
+> ./oc ../../examples/experiments/gemm/codegen.input
 
 --Anand Venkat (anandv@cs.utah.edu)
 
