@@ -1,0 +1,29 @@
+Time [in minutes]: 30 mins -- mostly setting up a virtual machine!
+                   30 seconds of actual checkout-make
+
+
+Platform [OS, libraries, etc.]:
+
+   - Ubuntu 12.04, with 3.2.0-60-generic kernel installed
+   - required ubuntu package iptables-dev
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+
+    - I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+   - Make
+
+SHA-1 of the downloaded files, dates of download, and URLs:
+
+   - Checked out revision r34 from http://sourceforge.net/p/lighttunneling/code/HEAD/tree/
+   - r33 could easily be built by simply removing the missing file from the makefile.
+
+Detailed evaluation (including comments about running it):
+
+Notes: 
+
+    This code must be built with a pre-3.5 series kernel. Libipq has been removed 
+    as of 3.5, and is required for this package.
+    
+    I am not knowledgeable enough of the domain to *test* the code however.
