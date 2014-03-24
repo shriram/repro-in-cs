@@ -1,0 +1,50 @@
+Time [in minutes]:
+
+5
+
+Platform [OS, libraries, etc.]:
+
+Used a bare metal 'dl360' PC (Dell PowerEdge 360) from aptlab.net running
+Ubuntu 12.04 LTS and kernel 3.2.0 .
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+
+- I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+
+* `sudo apt-get install ocaml menhir cloc` (ocaml is listed as a dependency 
+    in the README; menhir and cloc  are not)
+
+* `git clone https://github.com/pbailis/cassandra-pbs.git`
+
+* `sudo apt-get install ant  openjdk-6-jdk`
+
+* `cd cassandra-pbs && ant`
+
+SHA-1 of the downloaded files, dates of download, and URLs:
+
+Source obtained from:
+    git clone https://github.com/pbailis/cassandra-pbs.git
+    Got revision 82f83b0 dated Feb 26, 2012
+
+Detailed evaluation:
+
+As stated in the disupte, the software (a fork of the popular Cassandra
+software) is easy to obtain and build.
+
+The data in the original dataset is inconsistent: it classifies this as a
+"build failed", but they did try out the online demo, seeming to think that
+it was the "real" implementation. They noted that the online demo worked.
+
+The paper only mentions the online demo, not the implementation in Cassandra,
+so I can see how a reader might miss the fact that there is source available
+for a real implementation. A link to the code is included on the demo page, but
+one needs to read through a fairly lengthy page to find it in the "Questions"
+section (as of March 24, 2014). The interactive demo and the link to the actual
+code is on this page (linked in the paper):
+
+    http://pbs.cs.berkeley.edu/
+
+The online demo is very cool and there's lots of good information on the page
+that contains it.

@@ -20,3 +20,6 @@ URL:
 ... which contains some information about the project, but no code.
 
 This problem is presumbably resolvable by contacting the authors.
+
+[Tester's note: Authors were very responsive via email, offered to provide the
+code soon.]
