@@ -1,0 +1,23 @@
+
+It seems that the wrong version of our tool has been used for testing.
+
+The right version of the tool can be found at the following link:
+http://ctop.cs.utah.edu/downloads/omega_rose.tar.gz
+
+The highlighted problem does not arise in this version and this is also the version
+that corresponds to our paper implementation.
+
+The experiments corresponding to the paper implementation can be found in
+omega/examples/experiments. The program executable is found in 
+omega/omega_calc/obj/oc
+
+A typical way of  running the experiment files would be:
+
+./oc ../../examples/experiments/gemm/codegen.input
+
+--Anand Venkat (anandv@cs.utah.edu)
+
+
+
+
+
