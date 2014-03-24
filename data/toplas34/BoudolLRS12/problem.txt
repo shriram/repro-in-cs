@@ -1,0 +1,23 @@
+I got farther than the reviewer in the original dataset; I had no problem
+installing the Bigloo compiler, which is required to run the code for the
+paper. 
+
+However, I ran into problem with the code for the paper itself; the file
+currently available from the paper website (as of March 24, 2014) seems
+truncated and/or corrupted. As downloaded, it contains mismatched parentheses
+that are not closed by the end of the file. Trying to fix this in the obvious
+way results in a new set of errors. On quick inspection, the code looks
+incomplete and has some apparent corruption like code appearing in odd places
+in comments.
+
+It appears that there has been corruption of the file on the paper webserver
+or that a bad version of the file has been uploaded somehow.
+
+Here is what I downloaded:
+
+    http://www-sop.inria.fr/members/Zhengqin.Luo/trwa-long/hopsos.scm
+    March 24, 2014
+    0dfc25064588bd567816631d289e4eb247c10560  hopsos.scm
+
+I tried the download with a few different tools (my web browser, wget) and from
+different hosts to make sure the corruption problem was not on my side.
