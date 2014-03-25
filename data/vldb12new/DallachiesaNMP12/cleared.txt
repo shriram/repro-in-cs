@@ -1,0 +1,53 @@
+Time [in minutes]:
+
+    12
+
+Platform [OS, libraries, etc.]:
+
+    Ubuntu 12.04, x86-64
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+
+    - I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+
+    $ wget http://disi.unitn.it/~themis/uncertaintssimilarity/sourcecode.zip
+    $ unzip sourcecode.zip
+    $ cd sourcecode/datagen
+    $ sudo apt-get install libgsl0-dev
+    $ make
+    $ cd ../dust
+    $ make
+    $ cd ../movingavg
+    $ make
+    $ cd ../munich
+    $ make
+    $ cd ../proud
+    $ make
+
+SHA-1 of the downloaded files, dates of download, and URLs:
+
+    ebb6f3de9290ce1f5c1863c9dd55924458530336  sourcecode.zip
+    Downloaded 24th March, 2014 from:
+
+        http://disi.unitn.it/~themis/uncertaintssimilarity/sourcecode.zip
+
+    Served file was timestamped 31st May, 2012.
+
+Detailed evaluation:
+
+    Compiled successfully using GCC 4.6.3-1ubuntu5.
+
+    I agree with "student1"'s assessment that the original errors reported
+    were a result of Boost being unavailable or improperly installed.  The
+    Ubuntu installation I tested on had Boost 1.46.1 installed by default
+    and I encountered no problems building against the installed version.
+    (Had it not been present, "sudo apt-get install libboost-dev" would
+    have been necessary.)  Installation of GSL was needed, as described
+    in the "Sequence of steps to build".
+
+    The documentation provided by the authors was scant but adequate.
+    The multiple Makefiles in various directories, and lack of automatic
+    configuration (e.g. Autoconf/Automake) made the build slightly
+    tedious, but not difficult.
