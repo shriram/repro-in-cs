@@ -1,0 +1,91 @@
+=================================================================
+The paper is marked as "does not build", but the build notes speak
+of a problem with running the program:
+
+1:NOTES[notes on attempted build]
+Attempt to generate sample traces failed with the following error:
+../pin/pin -inline 0 -t rectrace.so -- ./simple
+./simple : No such file or directory
+make: *** [all-test] Error 255
+1:END_NOTES
+
+We enclose below Christian Collberg's request email and our response.
+The package was not publicly available at that time, so we provided a 
+link (https://dl.dropboxusercontent.com/u/865990/oopslacode.tar.gz, still
+working). The exact tarball used by Collberg's team (with no change 
+whatsoever) is now publicly available on this website, too:
+
+http://www.dis.uniroma1.it/~firmani/researchmenuitem.html
+
+I successfully built and run the package on a PC running Debian 6.0.4, Linux Kernel 2.6.32.
+
+-- Donatella
+
+---------- Forwarded message ----------
+From: Donatella Firmani <firmani@dis.uniroma1.it>
+Date: Thu, Jul 25, 2013 at 4:22 PM
+Subject: Re: Your OOPSLA'12 paper
+To: ccollberg@gmail.com
+Cc: Giorgio Ausiello <ausiello@dis.uniroma1.it>, Camil Demetrescu <demetres@dis.uniroma1.it>, Irene Finocchi <finocchi@di.uniroma1.it>
+
+Dear Dr. Collberg,
+
+Sorry for my late reply, I am currently out of the office.
+
+I put together a minimal example to try out the implementation, as detailed below. I am including our code (which is a little rough, and uncommented). Please let me know if you have any questions or comments.
+
+You can download the code and a sample trace here https://dl.dropboxusercontent.com/u/865990/oopslacode.tar.gz
+
+Best,
+Donatella Firmani
+
+------------------------------Example------------------------------
+1. How to build the code:
+- Install glib2.0 and set the corresponding flags for GCC
+ in both gentrace/Makefile and proctrace/Makefile
+- cd gentrace; make
+(also compile simple.c for testing purposes)
+- cd proctrace; make
+
+2. How to generate a trace:
+- cd gentrace
+- make test
+ This generates the trace of a trivial program (./simple)
+ and you might want to set APPLIC differently
+- the trace file is now in the 'traces' folder
+
+3. Hoe to perform the experiments:
+- cd proctrace
+- copy the trace file in the 'traces' folder
+- make test
+ This will run all the available analysis tools
+ (including CCT, k-SF and k-CCF analysis)
+ for all the traces in proctrace/scripts/_config.pl
+- the output files are now in the 'logs' folder
+
+
+-----Original message----- 
+From: Christian Collberg
+Sent: Saturday, July 20, 2013 2:00 AM
+To: ausiello@dis.uniroma1.it
+Cc: demetres@dis.uniroma1.it ; finocchi@di.uniroma1.it ;
+firmani@dis.uniroma1.it
+
+Subject: Your OOPSLA'12 paper
+
+Dear Dr. Ausiello,
+
+I've been looking at your OOPSLA'12 paper
+  k-Calling context profiling
+and would like to try out the implementation. However,
+I haven't been able to find it online. Would you please
+let me know how I can obtain the source code so that I
+can try to build and run it?
+
+Thank you very much for your help!
+
+Christian Collberg
+ccollberg@gmail.com
+Department of Computer Science
+University of Arizona
+=================================================================
