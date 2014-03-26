@@ -1,0 +1,58 @@
+
+This dispute is submitted by authors of the paper.
+
+We'd like to point to a number of errors in the review of our artifact.
+
+data.txt
+  - "student5: the downloaded file just consists of bunch of word documents"
+
+    This is simply not true. Possibly this comment referred to a different
+    paper? We do not use MS Word. The tarball we provide consists of source
+    code, plaintext readme files, and some binary files (e.g. JARs etc).
+
+build_notes.txt
+  - "Btrace: can be downloaded from http://kenai.com/projects/btrace"
+
+    This is irrelevant. The artifact contains both the original version of
+    btrace and our modified version.  There is no need to download btrace.
+
+  - "I installed mercurial and then I tried to use the command $hg clone
+    http://jikesrvm.hg.sourceforge.net:8000/hgroot/jikesrvm/jikesrvm I got
+    abort: error: connection timed out, I tried 3 times and got the same
+    error"
+
+    While the mercurial repository of Jikes may have been down when the
+    reviewer tried, it is working now.  Moreover, to mitigate similar
+    problems we included Jikes source code into the artifact, in the very
+    same directory where the readme with the mercurial URL was mentioned. 
+    There was no need to download Jikes in the first place.
+
+    It seems that the review concluded that because of the failure to
+    download Jikes, the artifact cannot be built (see "jikes failed to
+    build" in data.txt). This is in our view an incorrect reasoning. (*)
+
+misclass.txt
+  - "The code for both tools is available and compilable, however the
+     modifications required to reproduce the paper results do *not* appear
+     to be available."
+
+    The modifications of both btrace and Jikes RVM are available in the
+    artifact.  See bytecode-instrumentation/btrace for modified btrace and
+    jikes-extension/jikesrvm for the modified Jikes RVM.
+
+    Now, we indeed tried to build our own artifact again now when told about
+    this study. The modified Jikes RVM is actually not compilable without
+    some effort (*), so even the statement in the review, this time in our
+    favor, is incorrect.
+
+(*) We found that the jikes extension is actually not compilable without
+some effort (e.g.  one has to include the DaCapo JARs into the build
+directory).  As we are authors we are conflicted to judge whether the effort
+needed is reasonable or not.  It does not seem that the reviewers in the
+study actually tried to build the modified Jikes RVM code.
+
+We will fix our artifact to make building of our Jikes RVM modification
+easier. However, we believe that only people who have some experience
+working with Jikes RVM could get any benefit from using or building on our
+tool, anyway. From the review it does not seem obvious that this was the
+case for the reviewers. 
