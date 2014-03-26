@@ -1,0 +1,52 @@
+Time [in minutes]: 5
+
+Platform [OS, libraries, etc.]: (Ubuntu-10.04 Linux)/linux-3.2.0-53-generic-pae (32-bit)
+# lscpu
+Architecture:          i686
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                8
+On-line CPU(s) list:   0-7
+Thread(s) per core:    2
+Core(s) per socket:    4
+Socket(s):             1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 30
+Stepping:              5
+CPU MHz:               1197.000
+BogoMIPS:              5740.77
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              256K
+L3 cache:              8192K
+
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+
+- I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+- Just downloaded the bzipped package as mentioned in the data.txt file. Extract and run.
+
+SHA-1 of the downloaded files, dates of download, and URLs:
+I downloaded only the following package directly from the Internet:
+http://www7.in.tum.de/tools/hsf/hsf-dist.tar.bz2 (Date Retrieved: 26/03/2014)
+sha1sum: 6ba8d8651d8c4b53e4aa1876666559fea88cebc3
+
+Detailed evaluation (including comments about running it):
+
+- The package has absolutely no README file. But just running the following
+command seems to show that the program is running fine:
+
+# ./qarmc.sh test.c
+
+- The package did not require any complation or linking. The package is
+distributed as a bunch of binaries (32-bit) (and shell scripts). Therefore, the 
+packages can not directly be tested on a 64-bit machine. The only way this can be
+executed is on a 32-bit Linux machine. Should this even be in the Build/Non-Built
+list??? This may as well go in the misclassified category as build process
+was not needed for this package.
+
+ 
