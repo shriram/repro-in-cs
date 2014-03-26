@@ -1,0 +1,32 @@
+Time [in minutes]: 30
+
+Platform [OS, libraries, etc.]: (Ubuntu-10.04 Linux)/Python-3.2 and a few libraries as mentioned in the auto-batch README file.
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+
+- I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+- I just followed the README and INSTALL file as mentioned in the auto-batch src directory.
+
+SHA-1 of the downloaded files, dates of download, and URLs:
+I downloaded only the following package directly from the Internet:
+https://crypto.stanford.edu/pbc/files/pbc-0.5.14.tar.gz (Date Retrieved: 26/03/2014)
+The rest were downloaded and install via apt-get command.
+
+Detailed evaluation (including comments about running it):
+
+- I performed the following steps in detail:
+   1- sudo apt-get install python3 python3-dev
+   2- sudo apt-get install m4 libssl-dev
+   3- git clone git://github.com/JHUISI/charm.git
+   4- Jump inside the charm directory.
+   5- sudo ./configure.sh
+   6- sudo make
+   7- sudo make install
+   8- sudo ldconfig
+   9- Go inside the auto-batch directory and you will now be able to run the python program.
+  10- Please make sure that the python version is >= 3.2. Also please make sure you have downloaded
+     the pbc library. The primary README file does not mention that this library is needed. I found
+     out about this requirement after reading the config.log file.
+ 
