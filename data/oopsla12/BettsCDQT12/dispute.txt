@@ -1,3 +1,35 @@
+Adding to the information in the comment below.
+
+The “build_notes.txt" file indicates that an external dependency for GPUVerify
+for Linux, mono, could not be installed.
+
+  make[1]: Leaving directory `/home/student1/Downloads/builds for oopsla12/BettsCDQT12/GPUVerify/mono-3.0.7'
+  make: *** [all] Error 2
+
+Mono is an external dependency. As a convenience we give instructions for
+building mono on our project page [1]. After installing mono the build
+instructions [1] should be easy to follow.
+
+There are three other alternatives for testing GPUVerify:
+
+1. You can try GPUVerify online:
+
+  http://rise4fun.com/GPUVerify-CUDA/
+  http://rise4fun.com/GPUVerify-OpenCL/
+
+2. You can download a nightly build of GPUVerify for Windows and avoid having
+to install mono. See the link under "Windows 64-bit download" on our download
+page [2].
+
+3. You can download our GPUVerify release that accompanies our OOPSLA'12 paper.
+NB: This download is Windows only. See the link under "Tool chain and benchmarks
+for the OOPSLA 2012 paper" on our download page [2].
+
+[1] http://multicore.doc.ic.ac.uk/tools/GPUVerify/docs/installation.html#getting-gpuverify
+[2] http://multicore.doc.ic.ac.uk/tools/GPUVerify/download.php
+
+---
+
 Collberg et al. failed installing Mono (.NET for Linux).  They could have tried
 a Windows machine, or simply installed the pre-built Mono that is in the Ubuntu
 package repositories (apt-get install mono).
