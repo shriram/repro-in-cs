@@ -72,36 +72,46 @@
 (define progress-color (color-string->color-list "BEE2F4"))
 (define misclass-color (color-string->color-list "DDB7E2"))
 
-(struct sec (title filter left-col-color right-col-color))
+(struct sec (title description filter left-col-color right-col-color))
 
 (define report-sections
   (list (sec "Purported Not Building; Disputed; Not Checked"
+             "The original study claimed that the paper did not build; someone has disputed this claim, but nobody has yet re-examined it."
              (and-filters not-building? disputed? not-checked?) bad-color neutral-color)
         (sec "Purported Building; Disputed; Not Checked"
+             "The original study claimed that the paper did build; someone has disputed this claim, but nobody has yet re-examined it."
              (and-filters building? disputed? not-checked?) good-color neutral-color)
         (sec "Conflicting Checks!"
+             "The re-examination has produced conflicting findings."
              (and-filters cleared? problem?) neutral-color bad-color)
         (sec "Misclassified"
+             "On re-examination, this paper should not have been included in the original study at all."
              misclassified? neutral-color misclass-color)
         ;; don't use disputed? for the next two, because people may have checked
         ;; without a formal dispute filed!
         (sec "Purported Not Building But Found Building"
+             "The original study claimed that the paper did not build, but the re-examination has found it does build."
              (and-filters not-building? cleared? not-problem?) bad-color good-color)
         (sec "Purported Building But Found Not Building"
+             "The original study claimed that the paper did build, but the re-examination has found it does not build."
              (and-filters building? not-cleared? problem?) good-color bad-color)
         (sec "Purported Not Building; Confirmed"
+             "The original study claimed that the paper did not build, and the re-examination has confirmed this."
              (and-filters not-building? not-cleared? problem?) bad-color bad-color)
         (sec "Purported Building; Confirmed"
+             "The original study claimed that the paper did build, and the re-examination has confirmed this."
              (and-filters building? cleared? not-problem?) good-color good-color)
         (sec "All Others Purported Not Building"
+             "The original study claimed that the paper did not build, and nobody has initiated re-examination."
              (and-filters not-building? not-misclassified? not-disputed? not-checked? not-problem?) bad-color neutral-color)
         (sec "All Other Purported Building"
+             "The original study claimed that the paper did build, and nobody has initiated re-examination."
              (and-filters building? not-misclassified? not-disputed? not-checked? not-problem?) good-color neutral-color)))
 
 (define (generate-document papers)
-  (define (gen-filtered f color) (generate-paper-list (filter f papers) color))
-  (define (make-section title relevant-papers left-color right-color)
+  (define (make-section title description relevant-papers left-color right-color)
     (list (section title " (" (number->string (length relevant-papers)) ")")
+          (para (emph description))
           (generate-paper-list (shuffle relevant-papers) left-color right-color)))
   (define paper-count (length papers))
   (decode
@@ -133,7 +143,7 @@
     review-protocol
     review-format
     (map (lambda (s)
-           (make-section (sec-title s) (filter (sec-filter s) papers) (sec-left-col-color s) (sec-right-col-color s)))
+           (make-section (sec-title s) (sec-description s) (filter (sec-filter s) papers) (sec-left-col-color s) (sec-right-col-color s)))
          report-sections)
     (section "Threats to Validity")
     threats-to-validity
