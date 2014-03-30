@@ -74,16 +74,17 @@
 
 (struct sec (title description filter left-col-color right-col-color))
 
+;; hello!
 (define report-sections
   (list (sec "Purported Not Building; Disputed; Not Checked"
              "The original study claimed that the paper did not build; someone has disputed this claim, but nobody has yet re-examined it."
-             (and-filters not-building? disputed? not-checked?) bad-color neutral-color)
+             (and-filters not-misclassified? not-building? disputed? not-checked?) bad-color neutral-color)
         (sec "Purported Building; Disputed; Not Checked"
              "The original study claimed that the paper did build; someone has disputed this claim, but nobody has yet re-examined it."
-             (and-filters building? disputed? not-checked?) good-color neutral-color)
+             (and-filters not-misclassified? building? disputed? not-checked?) good-color neutral-color)
         (sec "Conflicting Checks!"
              "The re-examination has produced conflicting findings."
-             (and-filters cleared? problem?) neutral-color bad-color)
+             (and-filters not-misclassified? cleared? problem?) neutral-color bad-color)
         (sec "Misclassified"
              "On re-examination, this paper should not have been included in the original study at all."
              misclassified? neutral-color misclass-color)
@@ -91,22 +92,22 @@
         ;; without a formal dispute filed!
         (sec "Purported Not Building But Found Building"
              "The original study claimed that the paper did not build, but the re-examination has found it does build."
-             (and-filters not-building? cleared? not-problem?) bad-color good-color)
+             (and-filters not-misclassified? not-building? cleared? not-problem?) bad-color good-color)
         (sec "Purported Building But Found Not Building"
              "The original study claimed that the paper did build, but the re-examination has found it does not build."
-             (and-filters building? not-cleared? problem?) good-color bad-color)
+             (and-filters not-misclassified? building? not-cleared? problem?) good-color bad-color)
         (sec "Purported Not Building; Confirmed"
              "The original study claimed that the paper did not build, and the re-examination has confirmed this."
-             (and-filters not-building? not-cleared? problem?) bad-color bad-color)
+             (and-filters not-misclassified? not-building? not-cleared? problem?) bad-color bad-color)
         (sec "Purported Building; Confirmed"
              "The original study claimed that the paper did build, and the re-examination has confirmed this."
-             (and-filters building? cleared? not-problem?) good-color good-color)
+             (and-filters not-misclassified? building? cleared? not-problem?) good-color good-color)
         (sec "All Others Purported Not Building"
              "The original study claimed that the paper did not build, and nobody has initiated re-examination."
-             (and-filters not-building? not-misclassified? not-disputed? not-checked? not-problem?) bad-color neutral-color)
+             (and-filters not-misclassified? not-building? not-misclassified? not-disputed? not-checked? not-problem?) bad-color neutral-color)
         (sec "All Other Purported Building"
              "The original study claimed that the paper did build, and nobody has initiated re-examination."
-             (and-filters building? not-misclassified? not-disputed? not-checked? not-problem?) good-color neutral-color)))
+             (and-filters not-misclassified? building? not-misclassified? not-disputed? not-checked? not-problem?) good-color neutral-color)))
 
 (define (generate-document papers)
   (define (make-section title description relevant-papers left-color right-color)
