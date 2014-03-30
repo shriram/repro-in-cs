@@ -1,0 +1,19 @@
+Time [in minutes]: 20 min
+
+Platform [OS, libraries, etc.]:
+
+    Linux  3.2.0-60-generic #91-Ubuntu SMP <...>  x86_64 x86_64 x86_64 GNU/Linux
+
+    mgaudet@eva150:~/tmp/DolanMG13/llvm>gcc --version
+    gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+
+    I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+
+    1. Cloned Revision c4417fee250ad6f256fe122c6fa8c5a4d3ec44ed from https://github.com/stedolan/llvm 
+
+    2. ./configure && make seems to do the trick.
+
