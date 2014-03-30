@@ -1,0 +1,38 @@
+Our Stochastic Cracking code builds correctly on our system,
+however it was indeed failed to run on some other systems.
+
+https://github.com/felix-halim/scrack
+
+The culprit was that some systems could not execute fread() for large files.
+We have fixed this problem on these patches:
+
+https://github.com/felix-halim/scrack/pull/1
+https://github.com/felix-halim/scrack/pull/2
+
+We have added travis-ci to ensure that our code builds and runs correctly:
+
+https://travis-ci.org/felix-halim/scrack
+
+It succesfully runs the two commands :
+
+./run.sh 10000000.data crack 100000 Random 1e-2 NOUP 30
+./run.sh 100000000.data crack 100000 Random 1e-2 NOUP 30
+
+
+
+Next, we want to comment on the build_notes by Collberg, et al.:
+
+"Could possibly be a corrupt data issue. I'm still curious how they could compress 400mb of data to 31.6kb."
+
+The Skyserver data resides in different server.
+It is not committed to the github repo because it is too large (2.2 GB).
+If you run this command:
+
+./run.sh skyserver.data dd1r 200000 SkyServer 1e-7 NOUP 60
+
+It will attempt to download the 2.2 GB Skyserver data and queries from another site:
+
+http://felix-halim.net/research/scrack/data/skyserver.data
+http://felix-halim.net/research/scrack/data/skyserver.queries
+
+Thank you for reviewing our codes, please checkout and verify our patches.
