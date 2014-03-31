@@ -47,8 +47,10 @@ g++ -lpthread -o wham sequence.o hash.o embedhash.o main.o aligner.o interval.o 
 g++ -c -O3 -w builder.cpp
 g++ -lpthread -o wham-build sequence.o hash.o embedhash.o builder.o aligner.o interval.o edit_distance.o error.o short.o hitset.o model.o perfcounters.o writer.o
 
-% ./wham_b
--bash: ./wham_b: No such file or directory
+% ./wham
+specify the base name.
+See usage message by specifying -h/--help.
+
 % ./wham-build 
 specify the length of reads using -l
 
@@ -66,3 +68,46 @@ Detailed evaluation (including comments about running it):
 
 Although the supplied makefile causes the C++ compiler to emit several
 warnings, the software appears to build flawlessly.
+
+It is difficult to determine what went wrong with the Colberg et
+al. student. They did run g++ as sudo, which is odd but should not
+have caused problems. They also used GCC 4.6. I do not have this
+version installed on my machine, but I did confirm that the software
+also builds with GCC 4.2 and 4.8:
+
+% make
+g++-4.8 -c -O3 -w hash.cpp
+g++-4.8 -c -O3 -w embedhash.cpp
+g++-4.8 -c -O3 -w main.cpp
+g++-4.8 -c -O3 -w sequence.cpp
+g++-4.8 -c -O3 -w aligner.cpp
+g++-4.8 -c -O3 -w interval.cpp
+g++-4.8 -c -O3 -w edit_distance.cpp
+g++-4.8 -c -O3 -w error.cpp
+g++-4.8 -c -O3 -w short.cpp
+g++-4.8 -c -O3 -w hitset.cpp
+g++-4.8 -c -O3 -w perfcounters.cpp
+g++-4.8 -c -O3 -w model.cpp
+g++-4.8 -c -O3 -w writer.cpp
+g++-4.8 -lpthread -o wham sequence.o hash.o embedhash.o main.o aligner.o interval.o edit_distance.o error.o short.o hitset.o model.o perfcounters.o writer.o
+g++-4.8 -c -O3 -w builder.cpp
+g++-4.8 -lpthread -o wham-build sequence.o hash.o embedhash.o builder.o aligner.o interval.o edit_distance.o error.o short.o hitset.o model.o perfcounters.o writer.o
+
+% make
+make
+g++-4.2 -c -O3 -w hash.cpp
+g++-4.2 -c -O3 -w embedhash.cpp
+g++-4.2 -c -O3 -w main.cpp
+g++-4.2 -c -O3 -w sequence.cpp
+g++-4.2 -c -O3 -w aligner.cpp
+g++-4.2 -c -O3 -w interval.cpp
+g++-4.2 -c -O3 -w edit_distance.cpp
+g++-4.2 -c -O3 -w error.cpp
+g++-4.2 -c -O3 -w short.cpp
+g++-4.2 -c -O3 -w hitset.cpp
+g++-4.2 -c -O3 -w perfcounters.cpp
+g++-4.2 -c -O3 -w model.cpp
+g++-4.2 -c -O3 -w writer.cpp
+g++-4.2 -lpthread -o wham sequence.o hash.o embedhash.o main.o aligner.o interval.o edit_distance.o error.o short.o hitset.o model.o perfcounters.o writer.o
+g++-4.2 -c -O3 -w builder.cpp
+g++-4.2 -lpthread -o wham-build sequence.o hash.o embedhash.o builder.o aligner.o interval.o edit_distance.o error.o short.o hitset.o model.o perfcounters.o writer.o
