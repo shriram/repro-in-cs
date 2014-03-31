@@ -47,8 +47,10 @@ g++ -lpthread -o wham sequence.o hash.o embedhash.o main.o aligner.o interval.o 
 g++ -c -O3 -w builder.cpp
 g++ -lpthread -o wham-build sequence.o hash.o embedhash.o builder.o aligner.o interval.o edit_distance.o error.o short.o hitset.o model.o perfcounters.o writer.o
 
-% ./wham_b
--bash: ./wham_b: No such file or directory
+% ./wham
+specify the base name.
+See usage message by specifying -h/--help.
+
 % ./wham-build 
 specify the length of reads using -l
 
