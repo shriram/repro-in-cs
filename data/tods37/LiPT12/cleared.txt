@@ -1,0 +1,68 @@
+Time [in minutes]: 4
+
+Platform [OS, libraries, etc.]: 
+
+% uname -a
+Darwin northstar 13.1.0 Darwin Kernel Version 13.1.0: Thu Jan 16 19:40:37 PST 2014; root:xnu-2422.90.20~2/RELEASE_X86_64 x86_64
+
+% g++ --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 5.1 (clang-503.0.38) (based on LLVM 3.4svn)
+Target: x86_64-apple-darwin13.1.0
+Thread model: posix
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+
+I can build complex software like GCC and the Linux kernel.
+
+Sequence of steps to build:
+
+* Downloaded tarball from 
+http://research.cs.wisc.edu/wham/downloadswham-v0-1-3-tar-gz/
+
+* Typed `make` and immediately got a working binary.
+
+* Lightly edited makefile to supress warnings (replace
+  `-Wno-write-strings` with `-w`), and replace a single tab character
+  with a newline, which was causing Emacs to warn about a suspicious
+  line.
+
+With these changes, make runs flawlessly
+
+% make
+g++ -c -O3 -w hash.cpp
+g++ -c -O3 -w embedhash.cpp
+g++ -c -O3 -w main.cpp
+g++ -c -O3 -w sequence.cpp
+g++ -c -O3 -w aligner.cpp
+g++ -c -O3 -w interval.cpp
+g++ -c -O3 -w edit_distance.cpp
+g++ -c -O3 -w error.cpp
+g++ -c -O3 -w short.cpp
+g++ -c -O3 -w hitset.cpp
+g++ -c -O3 -w perfcounters.cpp
+g++ -c -O3 -w model.cpp
+g++ -c -O3 -w writer.cpp
+g++ -lpthread -o wham sequence.o hash.o embedhash.o main.o aligner.o interval.o edit_distance.o error.o short.o hitset.o model.o perfcounters.o writer.o
+g++ -c -O3 -w builder.cpp
+g++ -lpthread -o wham-build sequence.o hash.o embedhash.o builder.o aligner.o interval.o edit_distance.o error.o short.o hitset.o model.o perfcounters.o writer.o
+
+% ./wham_b
+-bash: ./wham_b: No such file or directory
+% ./wham-build 
+specify the length of reads using -l
+
+SHA-1 of the downloaded files, dates of download, and URLs:
+
+http://www.cs.wisc.edu/wham/wp-content/plugins/download-monitor/download.php?id=3
+
+Accessed on March 30 2014
+
+SHA-1 hash is as follows
+
+e1ecc46d4ab3af47518fbdee4b8efab2c7a89bb9  wham-v0.1.5.tar.gz
+
+Detailed evaluation (including comments about running it):
+
+Although the supplied makefile causes the C++ compiler to emit several
+warnings, the software appears to build flawlessly.
