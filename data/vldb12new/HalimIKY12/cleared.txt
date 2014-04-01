@@ -1,0 +1,42 @@
+Time [in minutes]: 10 minutes (excluding download of the big dataset)
+
+Platform [OS, libraries, etc.]: OS X 10.9.2 with Command Line Tools installed.
+Relevant build info:
+
+$ g++ --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr
+--with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 5.1 (clang-503.0.38) (based on LLVM 3.4svn)
+Target: x86_64-apple-darwin13.1.0
+Thread model: posix
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+
+- I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+
+git clone https://github.com/felix-halim/scrack.git
+./run.sh 10000000.data crack 100000 Random 1e-2 NOUP 30
+./run.sh 100000000.data crack 100000 Random 1e-2 NOUP 30
+./run.sh batch
+
+SHA-1 of the downloaded files, dates of download, and URLs:
+
+Downloaded on 2014-04-01. The current HEAD of the repo is the following commit:
+https://github.com/felix-halim/scrack/commit/a94f7da2aac62d2f1eab8db282f59f409efe2a08
+
+Detailed evaluation (including comments about running it):
+
+Things have worked well (on OS X) as specified by the dispute.txt file.
+
+I also run the "batch" command which was described in the run.sh script itself,
+even though it was not mentioned in the instructions, and everything still
+worked.
+
+The only problem (not really related to the software, only to the harness) was
+in downloading the big dataset - the download got stuck and I needed to change
+the scripts to be able to interrupt it and resume it (that is, switch from wget
+to wget -c, and do that outside of the makefile since make likes to delete
+incomplete targets, unless they're marked with .PRECIOUS). But I suppose little
+can be done, short of moving the file to a service like Dropbox, Copy.com or similar.
