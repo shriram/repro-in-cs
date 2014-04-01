@@ -1,0 +1,94 @@
+Time [in minutes]: 45min when redoing it to write a proper description
+
+Platform [OS, libraries, etc.]:
+
+Ubuntu 13.10, 32 bit
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+
+- I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+
+SHA-1 of the downloaded files, dates of download, and URLs:
+
+Downloaded on 2014-Apr-01.
+
+$ sha1sum oopslacode.tar.gz
+b6750d6c902a83996bf272c23825dd87048c4f3e  oopslacode.tar.gz
+
+From either the author's website [1] or the Dropbox URL in the original data.txt
+- the sha1sum is the same.
+
+[1] http://www.dis.uniroma1.it/~firmani/my_software/oopslacode.tar.gz
+[2] https://dl.dropboxusercontent.com/u/865990/oopslacode.tar.gz
+
+Detailed evaluation (including comments about running it):
+
+The instructions work correctly, and I expect they are easy to execute for
+anybody fluent in writing C Makefiles for *x systems by hand; I think that might
+be an acceptable standard for researchers in the field, especially for
+researchers trying to reproduce the work, but I must note that it's a more
+challenging level than most other software I've tried rebuilding in this
+project.
+
+The quality of build scripts is less than I like, and modern build tools like
+autotools or cmake can provide for better compilation experiences.
+
+Finally, the distribution I used (Debian) is still a (distant) relative of the
+one mentioned by the author. I would not be surprised if a different packaging
+
+Comments:
+- The tarball includes no instructions. I first tried compiling the software only based on the URL in the tarball
+
+- "Install glib2.0 and set the corresponding flags for GCC in both
+  gentrace/Makefile and proctrace/Makefile"
+
+- Run:
+$ sudo apt-get install g++ libglib2.0-dev
+
+- Replace the setting of INCLUDE in gentrace/Makefile with:
+  INCLUDE = $(shell pkg-config --cflags glib-2.0) -I $(INC_DIR)
+
+That might be more portable, and on my machine is equivalent to:
+
+  INCLUDE = -I/usr/include/glib-2.0 -I/usr/lib/i386-linux-gnu/glib-2.0/include -I $(INC_DIR)
+
+  $ cd gentrace; make
+worked
+  $ cd proctrace; make
+
+also worked (this Makefile already had the correct settings, unlike the other one).
+
+Either approach requires
+- locating by hand where the libraries are installed (by looking at dpkg -L libglib2.0-dev)
+- knowing about the tool to automate this job, and knowing the package name to supply to pkg-config (this is the step I'd have liked the authors to do; cmake would still be better).
+
+- "(also compile simple.c for testing purposes)"
+  It's sufficient to use:
+    $ make simple
+  Surprisingly, this was the stumbling block for reviewers.
+
+- Generating a trace:
+  cd gentrace
+  make test
+
+This first failed because the operating system had excessively restrictive
+settings, but the software gave correct instructions for solving the problem:
+
+E:  The Operating System configuration prevents Pin from using the default (parent) injection mode.
+E:  To resolve this, either execute the following (as root):
+E:  $ echo 0 > /proc/sys/kernel/yama/ptrace_scope
+E:  Or use the "-injection child" option.
+E:  For more information, regarding child injection, see Injection section in the Pin User Manual.
+
+Executing "echo 0 > /proc/sys/kernel/yama/ptrace_scope" as root solved the
+problem, as promised.
+At this point there are no further stumbling blocks:
+
+- Repeat `make test` inside gentrace.
+- cd ../proctrace
+- make test
+
+- Human-readable tables appear inside logs. I'm not sure what they mean, but I
+  guess I should read the paper for that.
