@@ -1,0 +1,47 @@
+
+[From the authors of the paper]
+
+First, our original paper did not advertise or claim a publicly
+available or easy-to-use implementation with thorough installation
+instructions, but we gladly provided all our source code when
+Dr. Collberg requested it.
+
+The original "study" reports a compile error.  A simple Google search
+for the error message suggests they tried to compile LLVM using clang,
+and LLVM-3.0 has a known error that doesn't work with clang:
+http://lists.cs.uiuc.edu/pipermail/llvmdev/2012-May/049806.html.  It
+is easy to get past this issue via web search or by asking us about it.
+
+We just now (April 2014) confirmed our system builds using the tarball
+we provided.  There are two pieces: the runtime and an LLVM pass.  In
+more detail:
+
+* The runtime builds without problem on an unmodified ubuntu VM.  The
+  original "study" also reported no problems with this step.  A build
+  transcript and some system info is below.
+
+* The LLVM pass takes longer to build but has [only] the dependencies
+ of LLVM and dragonegg.  The former is an obvious dependency and the
+ latter is a standard tool in the space.  Our LLVM pass is no more
+ difficult to build in our view than any other LLVM pass -- if someone
+ knows how to build LLVM passes, they should have little trouble.  If
+ they don't, that's not really a reflection on our work, nor did we
+ include general instructions about LLVM passes when sending
+ Dr. Collberg our source code.
+
+===
+
+vagrant@precise64:~/cvsandbox/ifrit/ifrit/Runtime2$ make
+g++ -O3  -fPIC `pkg-config --cflags --libs glib-2.0` -Wall -c -O3  -fPIC `pkg-config --cflags --libs glib-2.0` -Wall -o IFR.o IFR.c
+g++ -O3  -fPIC `pkg-config --cflags --libs glib-2.0` -Wall -c -O3  -fPIC `pkg-config --cflags --libs glib-2.0` -Wall -o IFR_Runtime.o IFR_Runtime.cpp
+g++ -O3  -shared -fPIC -pthread -lgthread-2.0 -lrt -lglib-2.0 IFR_Runtime.o IFR.o -o libIFR_Runtime.so
+vagrant@precise64:~/cvsandbox/ifrit/ifrit/Runtime2$ uname -r
+3.2.0-58-generic
+vagrant@precise64:~/cvsandbox/ifrit/ifrit/Runtime2$ g++ -v
+Using built-in specs.
+COLLECT_GCC=g++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.6/lto-wrapper
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu/Linaro 4.6.4-1ubuntu1~12.04' --with-bugurl=file:///usr/share/doc/gcc-4.6/README.Bugs --enable-languages=c,c++,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.6 --enable-shared --enable-linker-build-id --with-system-zlib --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.6 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --enable-plugin --enable-objc-gc --disable-werror --with-arch-32=i686 --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 4.6.4 (Ubuntu/Linaro 4.6.4-1ubuntu1~12.04) 
