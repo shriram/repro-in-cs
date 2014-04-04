@@ -1,0 +1,12 @@
+In Arizona's reproducibility study there were issues in building Falcon's
+dependencies (specifically sfslite). To redress these issues, we updated
+our website (www.cs.utexas.edu/falcon) to include a virtual machine image
+that satisfies Falcon's dependencies. This VM serves as the development box
+for the Falcon project and can be used to build its components. Additionally,
+we include a utility that copies binaries (along with their shared library
+dependencies) to a remote machine so that Falcon's code can run outside of
+the virtual environment.
+
+In case of any difficulty, please contact Joshua Leners.
+
+-- Joshua Leners <leners@cs.utexas.edu>
