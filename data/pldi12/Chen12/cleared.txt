@@ -1,0 +1,25 @@
+Time [in minutes]:
+
+Less than 10.
+
+Platform [OS, libraries, etc.]:
+
+Gentoo Linux 3.12.13, gcc 4.7.3-r1
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+
+- I can build complex software like GCC and the Linux Kernel
+
+Sequence of steps to build:
+
+ $ wget http://ctop.cs.utah.edu/downloads/omega_rose.tar.gz
+ $ tar xf omega_rose.tar.gz
+ $ cd omega
+ $ make depend
+ $ make
+
+ Run example: $ ./bin/oc examples/experiments/gemm/codegen.input
+
+Detailed evaluation:
+
+  This was very straightforward to download and build.
