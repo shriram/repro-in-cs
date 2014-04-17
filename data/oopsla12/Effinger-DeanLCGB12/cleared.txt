@@ -1,0 +1,52 @@
+Time [in minutes]: ~20
+
+Platform [OS, libraries, etc.]: Ubuntu 13.0 (saucy), GCC 4.6.4
+
+Skill level (at least the following; tell us if you have a paper-specific skill):
+- I can build complex software like GCC and the Linux kernel
+
+Sequence of steps to build:
+
+tar zxvf ifrit.tar.gz 
+cd ifrit/
+cd Runtime2/
+emacs Makefile 
+make
+cd ..
+cd llvm-3.0/
+mkdir obj
+cd obj/
+../src/configure  --prefix=$PWD/../install
+make
+make install
+cd ../../
+cd dragonegg-3.0.src/
+export LLVM_CONFIG=$PWD/../llvm-3.0/install/bin/llvm-config
+GCC=/usr/bin/gcc make
+cd ../test/
+/usr/bin/g++-4.6 -I/usr/include/glib-2.0 -I/usr/lib/i386-linux-gnu/glib-2.0/include -lglib-2.0 -fplugin=/home/vagrant/ifrit/dragonegg-3.0.src/dragonegg.so -fplugin-arg-dragonegg-insert-drd-calls -L/home/vagrant/ifrit/Runtime2 -pthread -o test test.c -lIFR_Runtime -lglib-2.0 -lgthread-2.0
+
+SHA-1 of the downloaded files, dates of download, and URLs:
+
+7f968ce75bd85050ec465cf8f9a313a4a4d7ce5c  ifrit.tar.gz
+
+Monday, April 14
+
+https://dl.dropboxusercontent.com/u/19229/ifrit.tar.gz
+
+Detailed evaluation (including comments about running it):
+
+The instructions in the README worked fine. I did have to install
+the gcc-plugin-dev library, which is available as a standard packet on
+Ubuntu. Also, as hinted in the README, I had to pass some extra
+arguments to g++ to build the final test binary to avoid a linker
+error with glib-2.0.
+
+The test binary produces the following output.
+
+[IFRit] Hash-table-based implementation in use.
+[IFRit] Single-threaded optimization enabled.
+[IFRit] Partitioning global state into 32 partitions.
+[IFRit] Bye!
+Hello world
+Final value of x: 2000
