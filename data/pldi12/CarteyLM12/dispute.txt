@@ -1,0 +1,11 @@
+We, the authors, would like to dispute the result.
+
+The reason for the build failure was, as suggested in the "build_notes.txt",
+that the incorrect version of CUDA was used (5.5 was used, but 3.1 was required).
+Using the correct version of CUDA, the tool builds and runs successfully for us.
+
+Whilst we applaud the aims of the original study, we would like to point out
+that in a study of reproducibility, one ought to take care to reproduce the
+original experiment exactly. Not using the right version of dependencies is just
+an example of the poor experimental practices in computer science they're railing
+against.
