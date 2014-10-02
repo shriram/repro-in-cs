@@ -1,0 +1,55 @@
+The 'artifact' of this paper is a machine-checkable proof. The
+introduction indicates that the infrastructure needed to check this
+proof is available on request:
+
+  "The EasyCrypt input file corresponding to the proof presented in
+   Section 4 appears in an extended version [7]; all the
+   infrastructure needed to machine-check this proof is available on
+   request."
+
+Instead, as shown in the build notes, the analyst obtained the code
+from a link found in a web search
+(http://www.easycrypt.info/#download). A glance at the notes shows
+that the code downloaded is that of a candidate release of EasyCrypt
+(v1.0), rather than the version used in the paper (v0.2), which can
+also be downloaded from the same location. So, the outcome of the
+evaluation, although successful, could not possibly be a measure of
+the reproducibility of the paper's results.
+
+Should the analysts have contacted the authors (or should they have
+downloaded the right version of EasyCrypt), they would have been able
+to reproduce the paper's results without significant effort. To
+sustain this claim, we give detailed instructions on how to get and
+build EasyCrypt v0.2, and check the proof on a fresh Debian 7.6
+install (the latest stable release). The whole process could be
+completed in under 5 minutes and does not require any particular
+skills besides identifying the packages corresponding to external
+dependencies (listed in the README file).
+
+1) Install external dependencies 
+
+ sudo apt-get install ocaml libocamlgraph-ocaml-dev alt-ergo cvc3
+
+2) Get EasyCrypt 0.2
+
+ wget http://old.easycrypt.info/easycrypt-0.2.tgz
+ tar zxf easycrypt-0.2.tgz
+
+3) Build and install Why3 and EasyCrypt (following instructions in the
+README file)
+
+ cd easycrypt-0.2/why3-0.71/
+ ./configure --disable-ide
+ make
+ sudo make install
+ make byte
+ sudo make install-lib
+ why3config --detect
+ cd ..
+ ./configure
+ make
+ sudo make install
+
+4) Check the proof reported in the paper
+
+ ./easycrypt examples/ZAEP.ec
